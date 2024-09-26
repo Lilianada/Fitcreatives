@@ -5,14 +5,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #FCFCFE;
+  --foreground: #f9f8f2;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #ffffff;
-    --foreground: #f9f8f2;
+    --background: #0a0a0a;
+  --foreground: #ededed;
   }
 }
 
