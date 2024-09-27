@@ -1,5 +1,8 @@
+import { useState } from "react";
 import Image from "next/image";
+import { BiMenuAltRight } from "react-icons/bi";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const navItems = [
   {
@@ -23,9 +26,14 @@ const navItems = [
 function DesktopHeader() {
   return (
     <div className="hidden w-full max-w-2xl md:flex justify-between items-center bg-blue rounded-xl px-2 py-2">
-        <div className="flex text-xl gap-1">
-            <Image src="/assets/Fitcreative-Logo.svg" alt="logo" width={100} height={50} />
-        </div>
+      <div className="flex text-xl gap-1">
+        <Image
+          src="/assets/Fitcreative-Logo.svg"
+          alt="logo"
+          width={100}
+          height={50}
+        />
+      </div>
       <nav className="flex gap-6 items-center justify-center text-gray-100">
         {navItems.map((item) => (
           <Link
@@ -36,34 +44,148 @@ function DesktopHeader() {
             {item.title}
           </Link>
         ))}
-        <Link href="/login" className="text-base font-medium bg-yellow text-gray-700 px-4 py-2 rounded-lg">
-            Join community
+        <Link
+          href="/login"
+          className="text-base font-medium bg-yellow text-gray-700 px-4 py-2 rounded-lg"
+        >
+          Join community
         </Link>
       </nav>
     </div>
   );
 }
 
+const itemVariants = {
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 300, damping: 24 },
+  },
+  closed: {
+    opacity: 0,
+    y: 20,
+    transition: { duration: 0.2 },
+  },
+};
+
+function MobileNavItem({ url, children }) {
+  return (
+    <motion.li variants={itemVariants}>
+      <Link href={url} className="block py-2">
+        {children}
+      </Link>
+    </motion.li>
+  );
+}
+
+export function MobileNavigation(props) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <motion.nav
+      initial={false}
+      animate={isOpen ? "open" : "closed"}
+      className="menu"
+      {...props}
+    >
+      <motion.button
+        whileTap={{ scale: 0.97 }}
+        onClick={() => setIsOpen(!isOpen)}
+        className="group flex items-center py-2 text-sm font-medium text-white"
+      >
+         <BiMenuAltRight className="size-8 text-white" />
+        
+      </motion.button>
+
+        <motion.div
+        initial="closed"
+        animate={isOpen ? "open" : "closed"}
+        variants={{
+          open: {
+            opacity: 1,
+            y: 0,
+            clipPath: "inset(0% 0% 0% 0% round 10px)",
+            transition: {
+              type: "spring",
+              bounce: 0,
+              duration: 0.7,
+              delayChildren: 0.3,
+              staggerChildren: 0.05,
+            },
+          },
+          closed: {
+            opacity: 0,
+            y: -20,
+            clipPath: "inset(10% 50% 90% 50% round 10px)",
+            transition: {
+              type: "spring",
+              bounce: 0,
+              duration: 0.5,
+            },
+          },
+        }}
+        className="fixed inset-x-4 top-28 z-50 origin-top rounded-3xl bg-blue p-8 ring-1 ring-zinc-900/5"
+        style={{ pointerEvents: isOpen ? "auto" : "none" }}
+      >
+          <motion.div className="flex">
+            <h2 className="text-sm font-medium text-yellow">
+              Explore
+            </h2>
+          </motion.div>
+
+          <nav className="mt-6">
+          <motion.ul
+            initial="closed"
+            animate={isOpen ? "open" : "closed"}
+            variants={{
+              open: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.1,
+                },
+              },
+              closed: {
+                opacity: 0,
+              },
+            }}
+            className="-my-2 divide-y divide-zinc-100 text-base text-gray-100"
+          >
+            {
+              navItems.map((item) => (
+                <MobileNavItem key={item} url={item.url}>
+                  {item.title}
+                </MobileNavItem>
+              ))
+            }
+            </motion.ul>
+          </nav>
+        </motion.div>
+    </motion.nav>
+  );
+}
+
+
 function MobileHeader() {
-    return (
-        <div className="flex w-full max-w-2xl md:hidden justify-between items-center bg-blue rounded-lg px-2 py-3">
-        <nav className="flex lg:hidden gap-6 items-center justify-between text-gray-100">
+  return (
+    <div className="flex justify-between w-full md:hidden  bg-blue rounded-lg px-2 py-3">
         <div className="flex text-xl gap-1">
-            <Image src="/assets/Logo-icon.svg" alt="logo" width={60} height={50} />
+          <Image
+            src="/assets/Logo-icon.svg"
+            alt="logo"
+            width={60}
+            height={50}
+          />
         </div>
-        <button className="text-base font-medium hover:text-gray-900">
-            
-        </button>
-        </nav>
-        </div>
-    );
-    }
+        <MobileNavigation />
+    </div>
+  );
+}
 
 export default function Header() {
   return (
-    <header className="w-[90%] m-auto grid place-items-center">
-        <DesktopHeader />
-        <MobileHeader />
+    <header className="w-[95%] sm:w-[90%] m-auto grid place-items-center">
+      <DesktopHeader className='pointer-events-auto' />
+      <MobileHeader />
     </header>
   );
 }
