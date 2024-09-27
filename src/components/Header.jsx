@@ -47,11 +47,13 @@ function DesktopHeader() {
 function MobileHeader() {
     return (
         <div className="flex w-full max-w-2xl md:hidden justify-between items-center bg-blue rounded-lg px-2 py-3">
-        <nav className="flex lg:hidden gap-6 items-center justify-center text-gray-100">
+        <nav className="flex lg:hidden gap-6 items-center justify-between text-gray-100">
         <div className="flex text-xl gap-1">
             <Image src="/assets/Logo-icon.svg" alt="logo" width={60} height={50} />
         </div>
-        {/* <button className="text-base font-medium hover:text-gray-900">Menu</button> */}
+        <button className="text-base font-medium hover:text-gray-900">
+            
+        </button>
         </nav>
         </div>
     );
