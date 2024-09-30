@@ -25,7 +25,7 @@ const navItems = [
 
 function DesktopHeader() {
   return (
-    <div className="hidden w-full max-w-2xl md:flex justify-between items-center bg-blue rounded-xl px-2 py-2">
+    <div className="hidden w-full max-w-2xl md:flex justify-between items-center bg-lightblue rounded-xl px-2 py-2">
       <div className="flex text-xl gap-1">
         <Image
           src="/assets/Fitcreative-Logo.svg"
@@ -167,7 +167,7 @@ export function MobileNavigation(props) {
 
 function MobileHeader() {
   return (
-    <div className="flex justify-between w-full md:hidden  bg-blue rounded-lg px-2 py-3">
+    <div className="flex justify-between w-full md:hidden  bg-lightblue rounded-lg px-2 py-3">
         <div className="flex text-xl gap-1">
           <Image
             src="/assets/Logo-icon.svg"

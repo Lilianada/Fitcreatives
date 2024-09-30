@@ -4,7 +4,7 @@ import React from "react";
 export default function Hero() {
   return (
     <section className="relative grid place-items-center w-full pt-16 pb-32 sm:pb-52">
-      <div className="bg-blue mt-4 w-full p-6 rounded-xl relative grid place-items-center h-[500px] content-start">
+      <div className="bg-lightblue mt-4 w-full p-6 rounded-xl relative grid place-items-center h-[500px] content-start">
       <div className=" px-3 py-1 w-fit rounded-lg">
         <p className="text-yellow text-xs">Fitcreatives - Online fitness community</p>
       </div>
