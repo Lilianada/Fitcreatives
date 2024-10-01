@@ -1,7 +1,7 @@
 'use client';
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import SecondHero from "@/components/SecondHero";
+import Hero from "@/components/Mission";
+import SecondHero from "@/components/Hero";
 import Services from "@/components/Services";
 
 

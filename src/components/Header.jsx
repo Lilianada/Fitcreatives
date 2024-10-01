@@ -21,11 +21,15 @@ const navItems = [
     title: "Blog",
     url: "blog",
   },
+  {
+    title: "Shop",
+    url: "shop",
+  },
 ];
 
 function DesktopHeader() {
   return (
-    <div className="hidden w-full max-w-2xl md:flex justify-between items-center bg-lightblue rounded-xl px-2 py-2">
+    <div className="hidden w-full max-w-3xl md:flex justify-between items-center bg-lightblue rounded-xl px-2 py-2">
       <div className="flex text-xl gap-1">
         <Image
           src="/assets/Fitcreative-Logo.svg"
