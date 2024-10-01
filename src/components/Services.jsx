@@ -4,7 +4,7 @@ export default function Services() {
   return (
     <div className="py-24 sm:py-32 relative">
       <div className="bg-light rounded-xl">
-        <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto max-w-2xl sm:px-6 lg:max-w-7xl lg:px-8">
           <h2 className="text-base/7 font-semibold text-lightblue">
             Who we are?
           </h2>

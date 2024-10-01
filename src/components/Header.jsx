@@ -29,7 +29,7 @@ const navItems = [
 
 function DesktopHeader() {
   return (
-    <div className="hidden w-full max-w-3xl md:flex justify-between items-center bg-lightblue rounded-xl px-2 py-2">
+    <div className="hidden w-full max-w-3xl md:flex justify-between items-center bg-dark rounded-xl px-2 py-2">
       <div className="flex text-xl gap-1">
         <Image
           src="/assets/Fitcreative-Logo.svg"
@@ -43,14 +43,14 @@ function DesktopHeader() {
           <Link
             key={item}
             href={item}
-            className="text-base font-medium hover:text-gray-900"
+            className="text-base font-medium hover:text-yellow"
           >
             {item.title}
           </Link>
         ))}
         <Link
           href="/login"
-          className="text-base font-medium bg-yellow text-gray-700 px-4 py-2 rounded-lg"
+          className="text-base font-medium bg-yellow text-gray-700 px-4 py-2 rounded-lg hover:bg-lime-200"
         >
           Join community
         </Link>
@@ -128,7 +128,7 @@ export function MobileNavigation(props) {
             },
           },
         }}
-        className="fixed inset-x-4 top-28 z-50 origin-top rounded-3xl bg-blue p-8 ring-1 ring-zinc-900/5"
+        className="fixed inset-x-4 top-28 z-50 origin-top rounded-3xl bg-dark p-8 ring-1 ring-zinc-900/5"
         style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
           <motion.div className="flex">
@@ -171,7 +171,7 @@ export function MobileNavigation(props) {
 
 function MobileHeader() {
   return (
-    <div className="flex justify-between w-full md:hidden  bg-lightblue rounded-lg px-2 py-3">
+    <div className="flex justify-between w-full md:hidden bg-dark rounded-lg px-2 py-3">
         <div className="flex text-xl gap-1">
           <Image
             src="/assets/Logo-icon.svg"
@@ -187,7 +187,7 @@ function MobileHeader() {
 
 export default function Header() {
   return (
-    <header className="w-[95%] sm:w-[90%] m-auto grid place-items-center">
+    <header className="w-full sm:w-[90%] m-auto grid place-items-center">
       <DesktopHeader className='pointer-events-auto' />
       <MobileHeader />
     </header>

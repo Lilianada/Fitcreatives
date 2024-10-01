@@ -2,20 +2,20 @@
 
 import Image from "next/image"
 
-export default function SecondHero() {
+export default function Hero() {
 
   return (
-    <div className="w-full mt-12">
+    <div className="w-full sm:w-[90%] max-4xl rounded-xl mt-12">
 
-      <div className="relative isolate overflow-hidden ">
+      <div className="relative isolate overflow-hidden">
         <Image
           alt="Fitcreatives"
           width={1020}
           height={900}
-          src="/assets/testimage.jpeg"
-          className="absolute inset-0 -z-10 h-full w-full object-cover rounded-xl"
+          src="/assets/Untitled-design.svg"
+          className="absolute inset-0 -z-10 h-full w-full object-cover object-right rounded-xl"
         />
-        <div className="mx-auto max-w-2xl py-32">
+        <div className="mx-auto max-w-2xl py-20 px-8">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-light ring-1 ring-black/10 hover:ring-white/20">
             Stay Fit, Stay Creative
