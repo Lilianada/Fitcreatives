@@ -1,3 +1,4 @@
+
 const navigation = {
   main: [
     {
@@ -75,8 +76,8 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-light mx-auto max-w-7xl px-6 py-20 sm:py-24 lg:px-8 ">
-      <div className="overflow-hidden border-t-2 border-gray-200 py-12">
+    <footer className="w-full bg-dark mx-auto max-w-7xl px-6 pt-20 sm:pt-24 lg:px-8 ">
+      <div className="overflow-hidden border-t-2 border-gray-700 py-12">
         <nav
           aria-label="Footer"
           className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
@@ -85,7 +86,7 @@ export default function Footer() {
             <div key={item.title} className="pb-6">
               <a
                 href={item.url}
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                className="text-sm leading-6 text-gray-400 hover:text-gray-500"
               >
                 {item.title}
               </a>
@@ -104,7 +105,7 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <p className="mt-10 text-center text-xs leading-5 text-gray-500">
+        <p className="mt-10 text-center text-xs leading-5 text-gray-400">
           &copy;2024 by Fitcreatives. All rights reserved.
         </p>
       </div>
