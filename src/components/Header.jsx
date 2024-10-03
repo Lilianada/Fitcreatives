@@ -149,7 +149,7 @@ export function MobileNavigation(props) {
                 opacity: 0,
               },
             }}
-            className="-my-2 divide-y divide-zinc-100 text-base text-gray-100"
+            className="-my-2 divide-y divide-zinc-300 text-base text-gray-600"
           >
             {navItems.map((item) => (
               <MobileNavItem key={item} url={item.url}>

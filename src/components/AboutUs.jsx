@@ -25,7 +25,7 @@ export default function AboutUs() {
           </div>
 
           <div className="flex flex-col md:grid grid-cols-2 grid-rows-2 gap-4">
-            <div className="relative bg-light flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
+            <div className="bg-light flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
               <div className="p-8 sm:p-10">
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
                   Supportive Community
@@ -38,7 +38,7 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <div className="relative bg-light flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
+            <div className="bg-light flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
               <div className="p-8 sm:p-10">
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
                 Expert Guidance
@@ -51,7 +51,7 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <div className="relative bg-light flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
+            <div className="bg-light flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
               <div className="p-8 sm:p-10">
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
                 Fitness Challenges & Competitions
@@ -63,7 +63,7 @@ export default function AboutUs() {
               </div>
             </div>
             
-            <div className="relative bg-light flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
+            <div className="bg-light flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
             <div className="p-8 sm:p-10">
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
                   Live Workouts & Classes

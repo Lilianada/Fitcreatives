@@ -1,23 +1,14 @@
-'use client'
-
-import Image from "next/image"
 
 export default function Hero() {
 
   return (
-    <div className="w-full max-4xl rounded-xl mt-12">
+    <div className="w-full max-4xl rounded-xl mt-12 bg-backdrop bg-right-bottom">
 
-      <div className="relative isolate overflow-hidden">
-        <Image
-          alt="Fitcreatives"
-          width={1020}
-          height={900}
-          src="/assets/Untitled-design.png"
-          className="absolute inset-0 -z-10 h-full w-full object-cover object-right rounded-xl"
-        />
-        <div className="mx-auto max-w-2xl py-32 px-8">
+      <div className="overflow-hidden">
+       
+        <div className="mx-auto max-w-2xl py-32 px-4">
           <div className="hidden sm:mb-4 sm:flex justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-light ring-1 ring-black/10 hover:ring-white/20">
+            <div className=" rounded-full px-3 py-1 text-sm leading-6 text-light ring-1 ring-white/20 hover:ring-white/20">
             Stay Fit, Stay Creative
             </div>
           </div>
