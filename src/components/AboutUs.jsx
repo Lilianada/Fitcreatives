@@ -5,7 +5,7 @@ export default function AboutUs() {
     <div className="bg-dark py-16 sm:py-24">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <div className="w-full flex justify-center">
-          <h2 className="text-center text-base/7 font-semibold text-gray-600 w-fit px-4 rounded-lg bg-zinc-100 border-2">
+        <h2 className="text-center text-base/7 font-medium text-yellow w-fit px-4 rounded-lg border-zinc-100/65 border-2">
             About Us
           </h2>
         </div>

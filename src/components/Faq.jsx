@@ -46,7 +46,7 @@ export default function FrequentlyAsked() {
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-40">
         <div className="mx-auto max-w-4xl divide-y divide-white/10">
         <div className="w-full flex justify-center">
-          <h2 className="text-center text-base/7 font-semibold text-gray-600 w-fit px-4 rounded-lg bg-zinc-100 border-2">
+        <h2 className="text-center text-base/7 font-medium text-yellow w-fit px-4 rounded-lg border-zinc-100/65 border-2">
             Frequently asked questions
           </h2>
         </div>
