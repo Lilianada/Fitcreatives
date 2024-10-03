@@ -5,7 +5,6 @@ import FindTrainer from "@/components/FindTrainer";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
 
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <FindTrainer />
-      {/* <Services /> */}
       <FrequentlyAsked />
       <Footer />
     </div>
