@@ -66,9 +66,9 @@ export default function FindTrainer() {
           ))}
         </ul>
 
-        <div className="flex justify-center mt-16">
+        <div className="flex justify-center mt-8">
           <Link
-          href="/login"
+          href="/trainers"
           className="text-base font-medium bg-yellow text-dark px-8 py-2 rounded-lg hover:bg-lime-200"
         >
           View all trainers

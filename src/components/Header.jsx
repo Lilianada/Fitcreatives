@@ -27,6 +27,19 @@ const navItems = [
   },
 ];
 
+const itemVariants = {
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 300, damping: 24 },
+  },
+  closed: {
+    opacity: 0,
+    y: 20,
+    transition: { duration: 0.2 },
+  },
+};
+
 function DesktopHeader() {
   return (
     <div className="hidden w-full max-w-3xl md:flex justify-between items-center bg-yellow rounded-xl px-4 py-2 mt-4 mb-4">
@@ -58,19 +71,6 @@ function DesktopHeader() {
     </div>
   );
 }
-
-const itemVariants = {
-  open: {
-    opacity: 1,
-    y: 0,
-    transition: { type: "spring", stiffness: 300, damping: 24 },
-  },
-  closed: {
-    opacity: 0,
-    y: 20,
-    transition: { duration: 0.2 },
-  },
-};
 
 function MobileNavItem({ url, children }) {
   return (

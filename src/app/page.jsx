@@ -1,5 +1,6 @@
 'use client';
 import AboutUs from "@/components/AboutUs";
+import BlogSection from "@/components/BlogSection";
 import FrequentlyAsked from "@/components/Faq";
 import FindTrainer from "@/components/FindTrainer";
 import Footer from "@/components/Footer";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <FindTrainer />
+      <BlogSection/>
       <FrequentlyAsked />
       <Footer />
     </div>
