@@ -1,5 +1,6 @@
 'use client';
 import AboutUs from "@/components/AboutUs";
+import FrequentlyAsked from "@/components/Faq";
 import FindTrainer from "@/components/FindTrainer";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -15,6 +16,7 @@ export default function Home() {
       <AboutUs />
       <FindTrainer />
       {/* <Services /> */}
+      <FrequentlyAsked />
       <Footer />
     </div>
   );
