@@ -43,7 +43,7 @@ const faqs = [
 export default function FrequentlyAsked() {
   return (
     <div className='w-full'>
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-40">
         <div className="mx-auto max-w-4xl divide-y divide-white/10">
         <div className="w-full flex justify-center">
           <h2 className="text-center text-base/7 font-semibold text-gray-600 w-fit px-4 rounded-lg bg-zinc-100 border-2">

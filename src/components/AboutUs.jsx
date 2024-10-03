@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AboutUs() {
   return (
-    <div className="bg-dark py-24 sm:py-32">
+    <div className="bg-dark py-16 sm:py-24">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <div className="w-full flex justify-center">
           <h2 className="text-center text-base/7 font-semibold text-gray-600 w-fit px-4 rounded-lg bg-zinc-100 border-2">

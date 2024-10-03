@@ -32,7 +32,7 @@ function DesktopHeader() {
     <div className="hidden w-full max-w-3xl md:flex justify-between items-center bg-yellow rounded-xl px-4 py-2 sticky mt-4 mb-4">
       <div className="flex text-xl gap-1">
         <Image
-          src="/assets/Fitcreative-Logo.svg"
+          src="/assets/Fitcreative-Logo.png"
           alt="logo"
           width={100}
           height={50}
@@ -50,7 +50,7 @@ function DesktopHeader() {
         ))}
         <Link
           href="/login"
-          className="text-base font-medium bg-dark text-light px-4 py-2 rounded-lg hover:bg-lime-200"
+          className="text-base font-medium bg-dark text-light px-4 py-2 rounded-lg hover:bg-dark/85"
         >
           Join community
         </Link>
