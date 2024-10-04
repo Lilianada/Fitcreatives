@@ -76,11 +76,11 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-dark mx-auto max-w-7xl px-6 pt-20 sm:pt-24 lg:px-8 ">
+    <footer className="w-full bg-dark mx-auto max-w-7xl px-2 pt-20 sm:pt-24 lg:px-8 ">
       <div className="overflow-hidden border-t-2 border-gray-700 py-12">
         <nav
           aria-label="Footer"
-          className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
+          className="-mb-6 columns-3 sm:flex sm:justify-center sm:space-x-12"
         >
           {navigation.main.map((item) => (
             <div key={item.title} className="pb-6">

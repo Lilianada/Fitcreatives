@@ -24,7 +24,11 @@ const posts = [
   {
     title: "How to use search engine optimization to drive sales",
     href: "#",
-    category: { name: "Weightloss", href: "#", color: "bg-pink-100 text-pink-800" },
+    category: {
+      name: "Weightloss",
+      href: "#",
+      color: "bg-pink-100 text-pink-800",
+    },
     description:
       "Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.",
     date: "Mar 10, 2020",
@@ -65,11 +69,11 @@ function classNames(...classes) {
 
 export default function BlogSection() {
   return (
-    <div className="px-6 lg:px-8 py-16 sm:py-24">
-      <div className="relative mx-auto max-w-lg lg:max-w-7xl">
+    <section className="py-16 sm:py-24">
+      <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div>
           <div className="w-full flex justify-center">
-          <h2 className="text-center text-base/7 font-medium text-yellow w-fit px-4 rounded-lg border-zinc-100/65 border-2">
+            <h2 className="text-center text-base/7 font-medium text-yellow w-fit px-4 rounded-lg border-zinc-100/65 border-2">
               Read Our Blog
             </h2>
           </div>
@@ -77,7 +81,7 @@ export default function BlogSection() {
             Fitness Tips, Workouts, and More
           </h3>
         </div>
-        <div className="grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+        <div className="grid gap-4 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
           {posts.map((post) => (
             <div key={post.title} className="bg-light p-4 rounded-lg">
               <div>
@@ -127,13 +131,13 @@ export default function BlogSection() {
         </div>
         <div className="flex justify-center mt-8">
           <Link
-          href="/blog"
-          className="text-base font-medium bg-yellow text-dark px-8 py-2 rounded-lg hover:bg-lime-200"
-        >
-          View all posts
-        </Link>
+            href="/blog"
+            className="text-base font-medium bg-yellow text-dark px-8 py-2 rounded-lg hover:bg-lime-200"
+          >
+            View all posts
+          </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
