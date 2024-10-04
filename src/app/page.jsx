@@ -6,6 +6,7 @@ import FindTrainer from "@/components/FindTrainer";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import CallToAction from "@/components/CallToAction";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <FindTrainer />
       <BlogSection/>
       <FrequentlyAsked />
+      <CallToAction/>
       <Footer />
     </div>
   );
