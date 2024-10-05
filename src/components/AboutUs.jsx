@@ -58,7 +58,7 @@ export default function AboutUs() {
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                 We organize fitness challenges and competitions to keep our
-                members motivated and engaged.
+                members motivated and engaged through their fitness journey.
                 </p>
               </div>
             </div>
@@ -66,11 +66,10 @@ export default function AboutUs() {
             <div className="bg-light flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
             <div className="p-8 sm:p-10">
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
-                  Live Workouts & Classes
+                  Social Events
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  We offer live workouts and classes to help our members stay
-                  active and healthy.
+                  We organise fitness meetups, social events and gatherings. Events are members-only unless otherwise specified. 
                 </p>
               </div>
             </div>
