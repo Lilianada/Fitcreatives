@@ -7,7 +7,7 @@ export default function Index() {
   return (
     <div className="w-full min-h-[calc(100vh_-_12rem)]">
       <Hero />
-      {/* <RevealBento/> */}
+      <RevealBento/>
     </div>
   );
 }
