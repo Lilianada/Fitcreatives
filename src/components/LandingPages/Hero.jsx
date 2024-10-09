@@ -18,16 +18,16 @@ export default function Hero() {
             </Button>
         </div>
         <div className="border-t">
-          <div className="flex flex-col sm:flex-row justify-between gap-4 p-4 text-center text-muted-foreground">
-            <Button variant="outline"  className="flex flex-col h-18 w-full dark:bg-stone-900/50">
+          <div className="flex flex-col sm:flex-row justify-between gap-4 p-4 text-center text-muted-foreground bg-stone-100/50 dark:bg-stone-900/20">
+            <Button variant="outline"  className="flex flex-col h-18 w-full">
               <p className="text-lg">Find a Trainer</p>
               <p className="text-sm">Search for a personal trainer</p>
             </Button>
-            <Button variant="outline"  className="flex flex-col h-18 w-full bg-stone-100/50 dark:bg-stone-900/50">
+            <Button variant="outline"  className="flex flex-col h-18 w-full">
               <p className="text-lg">Find a Gym</p>
               <p className="text-sm">Search for gyms near you</p>
             </Button>
-            <Button variant="outline"  className="flex flex-col h-18 w-full bg-stone-100/50 dark:bg-stone-900/50">
+            <Button variant="outline"  className="flex flex-col h-18 w-full">
               <p className="text-lg">Community Events</p>
               <p className="text-sm">Join the growing community</p>
             </Button>
