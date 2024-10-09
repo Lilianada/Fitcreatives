@@ -1,6 +1,7 @@
+import Footer from "@/components/LandingPages/Footer";
+import Header from "@/components/LandingPages/Header";
 import { ThemeProvider } from "@/components/LandingPages/theme-provider";
 import "@/styles/globals.css";
-
 
 export const metadata = {
   title: "Create Next App",
@@ -10,11 +11,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-      >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          
-        {children}
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="grid gap-4 items-center justify-items-center p-4 sm:px-8 sm:py-4 max-w-4xl mx-auto">
+            <Header />
+            <main className="w-full">{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
