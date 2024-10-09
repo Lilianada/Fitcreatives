@@ -1,4 +1,4 @@
-import localFont from "next/font/local";
+import { ThemeProvider } from "@/components/LandingPages/theme-provider";
 import "@/styles/globals.css";
 
 
@@ -12,7 +12,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
       >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          
         {children}
+        </ThemeProvider>
       </body>
     </html>
   );

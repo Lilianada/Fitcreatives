@@ -58,8 +58,7 @@ module.exports = {
   			}
   		},
   		backgroundImage: {
-  			backdrop: 'url('/assets/Untitled-design.png',
-  			')': '
+  			backdrop: "url('/assets/Untitled-design.png')" 
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
