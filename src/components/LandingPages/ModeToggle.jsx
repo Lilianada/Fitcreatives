@@ -26,7 +26,7 @@ export function ModeToggle() {
         className={`h-[1.5rem] w-[1.5rem] absolute transition-transform duration-500 ${
           theme === "dark"
             ? "scale-0 rotate-90"
-            : "scale-100 rotate-0 text-stone-600"
+            : "scale-100 rotate-0 text-orange-400"
         }`}
       />
       <MoonIcon
