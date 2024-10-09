@@ -39,7 +39,7 @@ function MenuButtons({ icon: Icon, text, href }) {
 export default function Header() {
   return (
     <header className="w-full m-4">
-      <div className="flex justify-between border rounded-lg px-4 py-3">
+      <div className="flex justify-between border border-zinc-700 rounded-lg px-4 py-3">
         <div className="flex items-center">
           <Image
             src="/assets/Logo-icon.svg"
@@ -47,7 +47,7 @@ export default function Header() {
             width={30}
             height={15}
           />
-          <h2>Fitcreatives</h2>
+          <h2 className="text-zinc-400">Fitcreatives</h2>
         </div>
         <div className="flex gap-3">
           <MenuButtons icon={UsersIcon} text="Trainers" href="/trainers" />
