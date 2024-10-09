@@ -17,22 +17,22 @@ export function ModeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="relative flex items-center justify-center w-14 h-10 p-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 transition-colors duration-300"
+      className="relative flex items-center justify-center w-14 h-10 p-2 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-900 border border-stone-300 dark:border-stone-700 transition-colors duration-300"
       aria-label="Toggle theme"
     >
       <SunIcon
         className={`h-[1.5rem] w-[1.5rem] absolute transition-transform duration-500 ${
           theme === "dark"
             ? "scale-0 rotate-90"
-            : "scale-100 rotate-0 text-zinc-600"
+            : "scale-100 rotate-0 text-stone-600"
         }`}
       />
       <MoonIcon
-      className={`h-[1.5rem] w-[1.5rem] absolute transition-transform duration-500 ${
-        theme === "dark"
-          ? "scale-100 rotate-0 text-orange-400"
-          : "scale-0 rotate-90"
-      }`}
+        className={`h-[1.5rem] w-[1.5rem] absolute transition-transform duration-500 ${
+          theme === "dark"
+            ? "scale-100 rotate-0 text-orange-400"
+            : "scale-0 rotate-90"
+        }`}
       />
     </button>
   );
