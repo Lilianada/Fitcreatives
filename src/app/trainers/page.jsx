@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Trainers() {
   return (
-    <div>
+    <div className='border p-4 rounded-2xl'>
       <Hero/>
     </div>
   )

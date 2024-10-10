@@ -1,5 +1,4 @@
-{
-    "trainers": [
+[
         {
             "id": 1,
             "first_name": "Sheryl",
@@ -271,4 +270,3 @@
             "instagram": "consequat lectus in est risus auctor sed tristique in tempus"
         }
     ]
-}
