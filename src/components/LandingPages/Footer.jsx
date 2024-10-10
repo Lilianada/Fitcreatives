@@ -40,7 +40,7 @@ export default function Footer() {
             <div className="text-muted-foreground text-xs">Local time in Lagos, Nigeria</div>
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 my-2">
             <MenuButtons icon={TwitterLogoIcon} text="Twitter" href="#" />
             <MenuButtons icon={InstagramLogoIcon} text="Instagram" href="#" />
             <MenuButtons icon={MessageSquareIcon} text="Contact Us" href="/contact" />
