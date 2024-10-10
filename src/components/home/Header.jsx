@@ -1,7 +1,6 @@
 'use client'; 
 
-import { UsersIcon, MapPinIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
-import MenuButtons from "./MenuButtons";
+import { UsersIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { ModeToggle } from "./ModeToggle";
 import { BiParty, BiMenuAltRight } from "react-icons/bi";
 import { motion } from "framer-motion";

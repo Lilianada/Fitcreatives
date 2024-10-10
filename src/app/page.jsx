@@ -1,6 +1,6 @@
-import { MissionSection } from "@/components/LandingPages/Mission";
-import FrequentlyAskedQtn from "@/components/LandingPages/Faq";
-import Hero from "@/components/LandingPages/Hero";
+import { MissionSection } from "@/components/home/Mission";
+import FrequentlyAskedQtn from "@/components/home/Faq";
+import Hero from "@/components/home/Hero";
 
 export default function Home() {
   return (

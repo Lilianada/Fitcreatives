@@ -71,7 +71,7 @@ export default function CallToAction() {
     transition={{
       staggerChildren: 0.05,
     }}
-    className="border p-4 rounded-2xl"
+    className="border p-4 rounded-2xl w-full"
   >
       <div className="grid place-items-center">
         <h2 className="text-3xl text-center">

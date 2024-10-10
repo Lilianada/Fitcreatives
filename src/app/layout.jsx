@@ -1,7 +1,7 @@
-import CallToAction from "@/components/LandingPages/CallToAction";
-import Footer from "@/components/LandingPages/Footer";
-import Header from "@/components/LandingPages/Header";
-import { ThemeProvider } from "@/components/LandingPages/theme-provider";
+import CallToAction from "@/components/home/CallToAction";
+import Footer from "@/components/home/Footer";
+import Header from "@/components/home/Header";
+import { ThemeProvider } from "@/components/home/theme-provider";
 import "@/styles/globals.css";
 
 export const metadata = {

@@ -6,6 +6,12 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 function MenuButtons({ icon: Icon, text, href, activeLink, setActiveLink }) {
   const handleClick = (href) => {
@@ -40,20 +46,29 @@ function MenuButtons({ icon: Icon, text, href, activeLink, setActiveLink }) {
 }
 
 export default function Menu({ navItems = [] }) {
-    const [activeLink, setActiveLink] = useState("/");
-  
-    return (
-      <div className="flex gap-4">
-        {navItems.map((item, index) => (
-          <MenuButtons
-            key={index}
-            icon={item.icon}
-            text={item.title}
-            href={item.url}
-            activeLink={activeLink}
-            setActiveLink={setActiveLink}
-          />
-        ))}
-      </div>
-    );
-  }
+  const [activeLink, setActiveLink] = useState("/");
+
+  return (
+    <div className="flex gap-4">
+      {navItems.map((item, index) => (
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <MenuButtons
+                key={index}
+                icon={item.icon}
+                text={item.title}
+                href={item.url}
+                activeLink={activeLink}
+                setActiveLink={setActiveLink}
+              />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p className="text-orange-400">{item.title}</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      ))}
+    </div>
+  );
+}
