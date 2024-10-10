@@ -1,9 +1,27 @@
 'use client';
 
 import React, { useEffect, useState } from "react";
-import MenuButtons from "./MenuButtons";
 import { InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { MessageSquareIcon } from "lucide-react";
+import Menu from "./MenuButtons";
+
+const navItems = [
+    {
+        title: "Twitter",
+        url: "#",
+        icon: TwitterLogoIcon,
+    },
+    {
+        title: "Instagram",
+        url: "#",
+        icon: InstagramLogoIcon,
+    },
+    {
+        title: "Contact Us",
+        url: "/",
+        icon: MessageSquareIcon,
+    },
+]
 
 export default function Footer() {
   const [dateTime, setDateTime] = useState("");
@@ -41,9 +59,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-wrap gap-2 my-2">
-            <MenuButtons icon={TwitterLogoIcon} text="Twitter" href="#" />
-            <MenuButtons icon={InstagramLogoIcon} text="Instagram" href="#" />
-            <MenuButtons icon={MessageSquareIcon} text="Contact Us" href="/contact" />
+            <Menu navItems={navItems} />
           </div>
 
           <div className="text-center">

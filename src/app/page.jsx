@@ -1,5 +1,4 @@
 import { MissionSection } from "@/components/LandingPages/Mission";
-import CallToAction from "@/components/LandingPages/CallToAction";
 import FrequentlyAskedQtn from "@/components/LandingPages/Faq";
 import Hero from "@/components/LandingPages/Hero";
 
@@ -9,7 +8,6 @@ export default function Home() {
       <Hero />
       <MissionSection/>
       <FrequentlyAskedQtn />
-      <CallToAction />
     </div>
   );
 }

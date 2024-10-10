@@ -7,29 +7,31 @@ import { BiParty, BiMenuAltRight } from "react-icons/bi";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link";
 import { Button } from "../ui/button";
+import { HomeIcon } from "@radix-ui/react-icons";
+import Menu from "./MenuButtons";
+import Link from "next/link";
 
 const navItems = [
   {
+    title: "Home",
+    url: "/",
+    icon: HomeIcon,
+  },
+  {
     title: "Trainers",
-    url: "trainers",
+    url: "/trainers",
     icon: UsersIcon,
   },
   {
     title: "Find Gym",
-    url: "/find-gyms",
+    url: "/find-gym",
     icon: MapPinIcon,
   },
   {
     title: "Events",
-    url: "pricing",
+    url: "/events",
     icon: BiParty,
-  },
-  {
-    title: "Shop",
-    url: "shop",
-    icon: ShoppingCartIcon,
   },
 ];
 
@@ -46,12 +48,14 @@ const itemVariants = {
   },
 };
 
-function MobileNavItem({ url, children }) {
+function MobileNavItem({ url, children, close }) {
   return (
-    <motion.li variants={itemVariants}>
-      <Button variant="outline" href={url} className="flex gap-3 p-2 border rounded-lg w-full justify-normal">
+    <motion.li variants={itemVariants} onClick={close}>
+       <Link href={url}>
+      <Button variant="outline" className="flex gap-3 p-2 border rounded-lg w-full justify-normal">
         {children}
       </Button>
+      </Link>
     </motion.li>
   );
 }
@@ -127,7 +131,7 @@ export function MobileNavigation(props) {
             className="-my-2 text-base space-y-3"
           >
             {navItems.map((item) => (
-              <MobileNavItem key={item} url={item.url}>
+              <MobileNavItem key={item} url={item.url} close={() => setIsOpen(false)}>
                 <item.icon className="size-5 text-orange-400" />
                 {item.title}
               </MobileNavItem>
@@ -156,10 +160,7 @@ export default function Header() {
 
         {/* desktop */}
         <div className="hidden md:flex gap-3">
-          <MenuButtons icon={UsersIcon} text="Trainers" href="/trainers" />
-          <MenuButtons icon={MapPinIcon} text="Find Gym" href="/gym" />
-          <MenuButtons icon={BiParty} text="Events" href="/events" />
-          <MenuButtons icon={ShoppingCartIcon} text="Shop" href="/shop" />
+          <Menu navItems={navItems} />
           <ModeToggle />
         </div>
 

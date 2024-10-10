@@ -1,3 +1,4 @@
+import CallToAction from "@/components/LandingPages/CallToAction";
 import Footer from "@/components/LandingPages/Footer";
 import Header from "@/components/LandingPages/Header";
 import { ThemeProvider } from "@/components/LandingPages/theme-provider";
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
           <div className="grid gap-4 items-center justify-items-center p-4 sm:px-8 sm:py-4 max-w-4xl mx-auto">
             <Header />
             <main className="w-full">{children}</main>
+            <CallToAction />
             <Footer />
           </div>
         </ThemeProvider>
