@@ -1,4 +1,4 @@
-import { MissionSection } from "@/components/LandingPages/Block";
+import { MissionSection } from "@/components/LandingPages/Mission";
 import CallToAction from "@/components/LandingPages/CallToAction";
 import FrequentlyAskedQtn from "@/components/LandingPages/Faq";
 import Hero from "@/components/LandingPages/Hero";

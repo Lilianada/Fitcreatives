@@ -3,7 +3,7 @@
 import React from "react";
 import { FiMail } from "react-icons/fi";
 import { Button } from "../ui/button";
-import { Block } from "./Block";
+import { Block } from "./Mission";
 import { Input } from "../ui/input";
 import { motion } from "framer-motion";
 

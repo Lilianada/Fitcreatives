@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
+import { FiArrowDown, FiArrowRight } from "react-icons/fi";
 
 export const Block = ({ className, children, whileHover }) => {
   return (
@@ -39,19 +39,19 @@ export const Block = ({ className, children, whileHover }) => {
 
 const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-4 grid items-center my-auto bg-background text-foreground">
-    <div className="my-12">
+    <div className="my-12 space-y-4">
       <img
         src="https://api.dicebear.com/8.x/lorelei-neutral/svg?seed=John"
         alt="avatar"
-        className="mb-4 size-14 rounded-full"
+        className="size-14 rounded-full"
       />
       <h2 className="text-3xl font-medium leading-tight">
         Our Mission
-        <br />
-        <span className="flex items-center gap-1 text-orange-400 hover:underline">
-          <FiArrowRight />
-        </span>
       </h2>
+      <div className="text-4xl text-orange-400 ">
+        <FiArrowRight className="hidden sm:block" />
+        <FiArrowDown className="block sm:hidden" />
+      </div>
     </div>
   </Block>
 );
@@ -69,7 +69,6 @@ const AboutBlock = () => (
     </p>
   </Block>
 );
-
 
 const BlockSocials = ({ title, text, whileHover }) => (
   <Block
@@ -124,7 +123,5 @@ export const MissionSection = () => (
       }}
     />
     <AboutBlock />
-    {/* <LocationBlock />
-    <EmailListBlock /> */}
   </motion.div>
 );
