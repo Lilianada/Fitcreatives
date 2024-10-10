@@ -21,7 +21,7 @@ export default function Hero() {
         </Button>
       </div>
       <div className="border-t">
-          <HoverDevCards />
+        <HoverDevCards />
       </div>
     </section>
   );

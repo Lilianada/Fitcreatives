@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
 
-const Block = ({ className, children, whileHover }) => {
+export const Block = ({ className, children, whileHover }) => {
   return (
     <motion.div
       variants={{
@@ -68,36 +68,6 @@ const AboutBlock = () => (
   </Block>
 );
 
-const LocationBlock = () => (
-  <Block className="col-span-12 flex flex-col items-center gap-4 md:col-span-3">
-    <FiMapPin className="text-3xl" />
-    <p className="text-center text-lg text-muted-foreground">
-      Worldwide community
-    </p>
-  </Block>
-);
-
-const EmailListBlock = () => (
-  <Block className="col-span-12 md:col-span-9">
-    <p className="mb-3 text-lg">Join the community</p>
-    <form
-      onSubmit={(e) => e.preventDefault()}
-      className="flex items-center gap-2"
-    >
-      <input
-        type="email"
-        placeholder="Enter your email"
-        className="w-full rounded border border-stone-700 bg-stone-800 px-3 py-1.5 transition-colors focus:border-red-300 focus:outline-0"
-      />
-      <button
-        type="submit"
-        className="flex items-center gap-2 whitespace-nowrap rounded bg-stone-50 px-3 py-2 text-sm font-medium text-stone-900 transition-colors hover:bg-stone-300"
-      >
-        <FiMail /> Join the community
-      </button>
-    </form>
-  </Block>
-);
 
 const BlockSocials = ({ title, text, whileHover }) => (
   <Block
