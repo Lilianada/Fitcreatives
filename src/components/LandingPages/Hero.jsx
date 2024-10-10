@@ -21,9 +21,7 @@ export default function Hero() {
         </Button>
       </div>
       <div className="border-t">
-        <div className="text-muted-foreground bg-stone-100/50 dark:bg-stone-900/20">
           <HoverDevCards />
-        </div>
       </div>
     </section>
   );

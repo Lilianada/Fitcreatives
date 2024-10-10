@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
-import { SiGithub, SiTiktok, SiTwitter, SiYoutube } from "react-icons/si";
 
 const Block = ({ className, children, whileHover }) => {
   return (
@@ -27,7 +26,7 @@ const Block = ({ className, children, whileHover }) => {
       }}
       whileHover={whileHover}
       className={twMerge(
-        "col-span-4 rounded-lg border border-zinc-700 bg-zinc-800 p-6",
+        "col-span-4 rounded-lg border  bg-background text-foreground p-6",
         className
       )}
     >
@@ -37,96 +36,28 @@ const Block = ({ className, children, whileHover }) => {
 };
 
 const HeaderBlock = () => (
-  <Block className="col-span-12 row-span-2 md:col-span-6">
+  <Block className="col-span-12 row-span-2 md:col-span-4 grid items-center my-auto bg-background text-foreground">
     <img
       src="https://api.dicebear.com/8.x/lorelei-neutral/svg?seed=John"
       alt="avatar"
       className="mb-4 size-14 rounded-full"
     />
-    <h1 className="mb-12 text-4xl font-medium leading-tight">
-      Hi, I'm Tom.{" "}
-      <span className="text-zinc-400">
-        I build cool websites like this one.
-      </span>
-    </h1>
-    <a
-      href="#"
-      className="flex items-center gap-1 text-red-300 hover:underline"
+    <h2 className="text-3xl font-medium leading-tight">
+      Our Mission<br/>
+      <span className="flex items-center gap-1 text-orange-400 hover:underline"
     >
-      Contact me <FiArrowRight />
-    </a>
+       <FiArrowRight />
+      </span>
+    </h2>
   </Block>
 );
 
-const SocialsBlock = () => (
-  <>
-    <Block
-      whileHover={{
-        rotate: "2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-red-500 md:col-span-3"
-    >
-      <a
-        href="#"
-        className="grid h-full place-content-center text-3xl text-white"
-      >
-        <SiYoutube />
-      </a>
-    </Block>
-    <Block
-      whileHover={{
-        rotate: "-2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-green-600 md:col-span-3"
-    >
-      <a
-        href="#"
-        className="grid h-full place-content-center text-3xl text-white"
-      >
-        <SiGithub />
-      </a>
-    </Block>
-    <Block
-      whileHover={{
-        rotate: "-2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-zinc-50 md:col-span-3"
-    >
-      <a
-        href="#"
-        className="grid h-full place-content-center text-3xl text-black"
-      >
-        <SiTiktok />
-      </a>
-    </Block>
-    <Block
-      whileHover={{
-        rotate: "2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-blue-500 md:col-span-3"
-    >
-      <a
-        href="#"
-        className="grid h-full place-content-center text-3xl text-white"
-      >
-        <SiTwitter />
-      </a>
-    </Block>
-  </>
-);
-
 const AboutBlock = () => (
-  <Block className="col-span-12 text-3xl leading-snug">
+  <Block className="col-span-12 text-lg leading-snug  bg-background text-foreground">
     <p>
-      My passion is building cool stuff.{" "}
-      <span className="text-zinc-400">
-        I build primarily with React, Tailwind CSS, and Framer Motion. I love
-        this stack so much that I even built a website about it. I've made over
-        a hundred videos on the subject across YouTube and TikTok.
+    Fitcreatives is community platform for creatives {" "}
+      <span className="text-muted-foreground">
+      share experiences, and motivate each other to stay fit and maintain a healthy lifestyle amidst busy creative careers. We offer resources, tips, and workout routines tailored to creatives' unique needs and schedules.
       </span>
     </p>
   </Block>
@@ -135,13 +66,13 @@ const AboutBlock = () => (
 const LocationBlock = () => (
   <Block className="col-span-12 flex flex-col items-center gap-4 md:col-span-3">
     <FiMapPin className="text-3xl" />
-    <p className="text-center text-lg text-zinc-400">Cyberspace</p>
+    <p className="text-center text-lg text-muted-foreground">Worldwide community</p>
   </Block>
 );
 
 const EmailListBlock = () => (
   <Block className="col-span-12 md:col-span-9">
-    <p className="mb-3 text-lg">Join my mailing list</p>
+    <p className="mb-3 text-lg">Join the community</p>
     <form
       onSubmit={(e) => e.preventDefault()}
       className="flex items-center gap-2"
@@ -149,52 +80,19 @@ const EmailListBlock = () => (
       <input
         type="email"
         placeholder="Enter your email"
-        className="w-full rounded border border-zinc-700 bg-zinc-800 px-3 py-1.5 transition-colors focus:border-red-300 focus:outline-0"
+        className="w-full rounded border border-stone-700 bg-stone-800 px-3 py-1.5 transition-colors focus:border-red-300 focus:outline-0"
       />
       <button
         type="submit"
-        className="flex items-center gap-2 whitespace-nowrap rounded bg-zinc-50 px-3 py-2 text-sm font-medium text-zinc-900 transition-colors hover:bg-zinc-300"
+        className="flex items-center gap-2 whitespace-nowrap rounded bg-stone-50 px-3 py-2 text-sm font-medium text-stone-900 transition-colors hover:bg-stone-300"
       >
-        <FiMail /> Join the list
+        <FiMail /> Join the community
       </button>
     </form>
   </Block>
 );
 
-const Logo = () => (
-  <svg
-    width="40"
-    height="auto"
-    viewBox="0 0 50 39"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className="mx-auto mb-12 fill-zinc-50"
-  >
-    <path
-      d="M16.4992 2H37.5808L22.0816 24.9729H1L16.4992 2Z"
-      stopColor="#000000"
-    ></path>
-    <path
-      d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z"
-      stopColor="#000000"
-    ></path>
-  </svg>
-);
-
-const Footer = () => (
-  <footer className="mt-12">
-    <p className="text-center text-zinc-400">
-      Made with ❤️ by{" "}
-      <a href="#" className="text-red-300 hover:underline">
-        @tomisloading
-      </a>
-    </p>
-  </footer>
-);
-
 export const RevealBento = () => (
-  <div className="min-h-screen bg-zinc-900 px-4 py-12 text-zinc-50">
-    <Logo />
     <motion.div
       initial="initial"
       animate="animate"
@@ -204,11 +102,54 @@ export const RevealBento = () => (
       className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4"
     >
       <HeaderBlock />
-      {/* <SocialsBlock /> */}
+      <BlockSocials
+        title="Supportive Community"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus illum totam. Culpa, ducimus numquam!"
+        whileHover={{
+          rotate: "2.5deg",
+          scale: 1.1,
+        }}
+      />
+      <BlockSocials
+        title="Expert Guidance"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus illum totam. Culpa, ducimus numquam!"
+        whileHover={{
+          rotate: "-2.5deg",
+          scale: 1.1,
+        }}
+      />
+      <BlockSocials
+        title="Fitness"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus illum totam. Culpa, ducimus numquam!"
+        whileHover={{
+          rotate: "-2.5deg",
+          scale: 1.1,
+        }}
+      />
+      <BlockSocials
+        title="Network"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus illum totam. Culpa, ducimus numquam!"
+        whileHover={{
+          rotate: "2.5deg",
+          scale: 1.1,
+        }}
+      />
       <AboutBlock />
       <LocationBlock />
       <EmailListBlock />
     </motion.div>
-    <Footer />
-  </div>
+);
+
+const BlockSocials = ({ title, text, whileHover }) => (
+  <Block
+    whileHover={whileHover}
+    className="border col-span-6 md:col-span-4 flex flex-col gap-2"
+  >
+    <h3 className="text-base font-medium">{title}</h3>
+    <p
+      className="mt-1 text-xs text-stone-400 dark:text-stone-400 "
+    >
+      {text}
+    </p>
+  </Block>
 );

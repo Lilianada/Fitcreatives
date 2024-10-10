@@ -6,7 +6,7 @@ import { BiParty } from "react-icons/bi";
 const HoverCards = () => {
   return (
     <div className="p-4">
-      <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
         <Card
           title="Find a Trainer"
           subtitle="Search for a personal tariner"
@@ -33,7 +33,7 @@ const Card = ({ title, subtitle, Icon, href }) => {
       <h3 className="font-medium text-base text-stone-950 dark:text-stone-100 group-hover:text-white relative z-10 duration-300">
         {title}
       </h3>
-      <p className="text-xs text-stone-400 dark:text-stone-400 group-hover:text-orange-200 relative z-10 duration-300">
+      <p className="mt-1 text-xs text-stone-400 dark:text-stone-400 group-hover:text-orange-200 relative z-10 duration-300">
         {subtitle}
       </p>
     </a>
