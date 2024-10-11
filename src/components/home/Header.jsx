@@ -164,7 +164,7 @@ export default function Header() {
         </div>
 
         {/* mobile */}
-        <div className="flex md:hidden">
+        <div className="flex md:hidden max-w-xl sm:max-w-4xl">
           <MobileNavigation />
         </div>
       </div>

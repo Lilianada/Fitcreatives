@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="grid gap-4 items-center justify-items-center p-4 sm:px-8 sm:py-4 max-w-4xl mx-auto">
+          <div className="grid gap-4 items-center justify-items-center py-2 px-4 sm:px-8 sm:py-4 max-w-xl lg:max-w-4xl mx-auto">
             <Header />
             <main className="w-full">{children}</main>
             <CallToAction />
