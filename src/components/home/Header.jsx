@@ -104,7 +104,7 @@ export function MobileNavigation(props) {
             },
           },
         }}
-        className="fixed inset-x-4 top-32 z-50 origin-top rounded-2xl bg-background border px-4 py-8"
+        className="fixed inset-x-4 top-32 z-50 origin-top rounded-2xl bg-background border px-4 py-8  " 
         style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
         <motion.div className="flex justify-between items-center">
@@ -145,15 +145,9 @@ export function MobileNavigation(props) {
 
 export default function Header() {
   return (
-    <header className="w-full m-4">
+    <header className="w-full m-4 relative">
       <div className="flex justify-between border border-[hsl(var(--border))] rounded-2xl px-4 py-3">
         <div className="flex items-center">
-          {/* <Image
-            src="/assets/Logo-icon.svg"
-            alt="Fitcreatives"
-            width={30}
-            height={15}
-          /> */}
           <h2 className="text-foreground font-medium">Fitcreatives</h2>
         </div>
 
@@ -164,7 +158,7 @@ export default function Header() {
         </div>
 
         {/* mobile */}
-        <div className="flex md:hidden max-w-xl sm:max-w-4xl">
+        <div className="flex md:hidden max-w-xl sm:max-w-4xl ">
           <MobileNavigation />
         </div>
       </div>
