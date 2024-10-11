@@ -66,7 +66,7 @@ export function MobileNavigation(props) {
     <motion.nav
       initial={false}
       animate={isOpen ? "open" : "closed"}
-      className="menu"
+      className="menu max-w-4xl mx-auto"
       {...props}
     >
       <motion.button

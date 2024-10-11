@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Card, CardContent } from "../ui/card";
 
 export default function TrainerCard() {
-  const url = "https://randomuser.me/api/?results=50";
+  const url = "https://randomuser.me/api/?results=10";
   const [trainers, setTrainers] = useState([]);
 
   useEffect(() => {
@@ -22,12 +22,12 @@ export default function TrainerCard() {
   }, []);
 
   return (
-    <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 ">
+    <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4 ">
       {trainers.map((trainer, index) => (
         <div className="border rounded-lg p-4">
         <Card
           key={index}
-          className=" h-[400px] bg-cover relative p-4 flex items-end"
+          className="w-full h-[400px] bg-cover relative p-4 flex items-end"
           style={{ backgroundImage: `url(${trainer.picture.large})` }}
         >
           <CardContent className="w-full p-0">
