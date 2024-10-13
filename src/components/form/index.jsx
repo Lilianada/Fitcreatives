@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { Button } from "@/components/ui/button"
 import {
@@ -11,16 +13,53 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form"
 
-export function DialogDemo() {
+export function InputForm() {
+  
+
+  return (
+    <Form {...form}>
+      <form onSubmit={handleSubmit()} className="w-2/3 space-y-6">
+        <FormField
+          control={control}
+          name="username"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Username</FormLabel>
+              <FormControl>
+                <Input placeholder="shadcn" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is your public display name.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <Button type="submit">Submit</Button>
+      </form>
+    </Form>
+  )
+}
+
+export function FormDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Edit Profile</Button>
+        <Button variant="outline">Join Community</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
+          <DialogTitle>Join Community</DialogTitle>
           <DialogDescription>
             Make changes to your profile here. Click save when you're done.
           </DialogDescription>
@@ -46,6 +85,8 @@ export function DialogDemo() {
     </Dialog>
   )
 }
+
+
 
 export default function CommunityForm() {
   return (
