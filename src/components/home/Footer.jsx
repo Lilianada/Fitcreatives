@@ -48,14 +48,14 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-stone-100/50 dark:bg-stone-900/20 w-full border rounded-2xl text-foreground">
+    <footer className="bg-stone-100/50 dark:bg-stone-900/20 w-full border rounded-2xl text-foreground mb-4">
       <div className="p-4">
         <div className="grid gap-2 place-items-center">
           <h2 className="text-foreground font-medium text-xl">Fitcreatives</h2>
 
           <div className="flex flex-col text-center">
-            <p className="text-foreground text-sm">{dateTime}</p>
-            <div className="text-muted-foreground text-xs">Local time in Lagos, Nigeria</div>
+            <p className="text-foreground text-xs sm:text-sm">{dateTime}</p>
+            <div className="text-muted-foreground text-[10px] sm:text-xs">Local time in Lagos, Nigeria</div>
           </div>
 
           <div className="flex flex-wrap gap-2 my-2">
@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
 
           <div className="text-center">
-            <p className="text-xs text-muted-foreground">
+            <p className="text-[10px] sm:text-xs text-muted-foreground">
               © 2024 Fitcreatives. All rights reserved.
             </p>
           </div>

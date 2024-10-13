@@ -27,13 +27,13 @@ export default function TrainerCard() {
         <div className="border rounded-lg p-4">
         <Card
           key={index}
-          className="w-full h-[400px] bg-cover relative p-4 flex items-end"
+          className="w-full h-[300px] bg-cover relative p-4 flex items-end"
           style={{ backgroundImage: `url(${trainer.picture.large})` }}
         >
           <CardContent className="w-full p-0">
-            <div className="w-full mx-auto bg-stone-900 bg-opacity-70 text-white p-4 rounded-lg">
-              <h3 className="font-bold">{`${trainer.name.first} ${trainer.name.last}`}</h3>
-              <p>{trainer.email}</p>
+            <div className="w-full mx-auto bg-stone-900 bg-opacity-70 text-white p-3 rounded-lg">
+              <h3 className="font-bold text-base capitalize">{`${trainer.name.first} ${trainer.name.last}`}</h3>
+              <p className="text-sm capitalize">{trainer.email}</p>
             </div>
           </CardContent>
         </Card>

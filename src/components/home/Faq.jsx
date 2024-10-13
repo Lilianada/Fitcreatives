@@ -70,7 +70,7 @@ export default function FrequentlyAskedQtn() {
         {faq.map((item, index) => {
           return (
             <AccordionItem value={item.value} key={index}>
-              <AccordionTrigger className="hover:text-orange-400 underline-offset-0">
+              <AccordionTrigger className="hover:text-orange-400 underline-offset-0 text-left">
                 {item.question}
               </AccordionTrigger>
               <AccordionContent>{item.answer}</AccordionContent>

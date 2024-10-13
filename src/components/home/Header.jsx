@@ -66,7 +66,7 @@ export function MobileNavigation(props) {
     <motion.nav
       initial={false}
       animate={isOpen ? "open" : "closed"}
-      className="menu max-w-4xl mx-auto"
+      className="menu"
       {...props}
     >
       <motion.button
@@ -104,7 +104,7 @@ export function MobileNavigation(props) {
             },
           },
         }}
-        className="fixed inset-x-4 top-32 z-50 origin-top rounded-2xl bg-background border px-4 py-8  " 
+        className="fixed inset-4 top-32 z-50 origin-top rounded-2xl bg-background border px-4 py-8 max-w-xl sm:max-w-4xl " 
         style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
         <motion.div className="flex justify-between items-center">

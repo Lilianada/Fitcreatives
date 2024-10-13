@@ -28,7 +28,7 @@ export const Block = ({ className, children, whileHover }) => {
       }}
       whileHover={whileHover}
       className={twMerge(
-        "col-span-4 rounded-lg border  bg-background text-foreground p-6",
+        "col-span-4 rounded-lg border  bg-background text-foreground p-4",
         className
       )}
     >
@@ -70,10 +70,10 @@ const AboutBlock = () => (
   </Block>
 );
 
-const BlockSocials = ({ title, text, whileHover }) => (
+const Blocks = ({ title, text, whileHover }) => (
   <Block
     whileHover={whileHover}
-    className="border col-span-6 md:col-span-4 flex flex-col gap-2"
+    className="border col-span-12 sm:col-span-6 md:col-span-4 flex flex-col gap-2"
   >
     <h3 className="text-base font-medium">{title}</h3>
     <p className="mt-1 text-xs text-stone-400 dark:text-stone-400 ">{text}</p>
@@ -90,7 +90,7 @@ export const MissionSection = () => (
     className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4 border p-4 rounded-2xl"
   >
     <HeaderBlock />
-    <BlockSocials
+    <Blocks
       title="Supportive Community"
       text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus illum totam."
       whileHover={{
@@ -98,7 +98,7 @@ export const MissionSection = () => (
         scale: 1.1,
       }}
     />
-    <BlockSocials
+    <Blocks
       title="Expert Guidance"
       text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus illum totam."
       whileHover={{
@@ -106,7 +106,7 @@ export const MissionSection = () => (
         scale: 1.1,
       }}
     />
-    <BlockSocials
+    <Blocks
       title="Fitness"
       text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus illum totam."
       whileHover={{
@@ -114,7 +114,7 @@ export const MissionSection = () => (
         scale: 1.1,
       }}
     />
-    <BlockSocials
+    <Blocks
       title="Network"
       text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus illum totam."
       whileHover={{
