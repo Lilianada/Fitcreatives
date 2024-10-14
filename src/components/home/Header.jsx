@@ -129,8 +129,8 @@ export function MobileNavigation(props) {
             }}
             className="-my-2 text-base space-y-3"
           >
-            {navItems.map((item) => (
-              <MobileNavItem key={item} url={item.url} close={() => setIsOpen(false)}>
+            {navItems.map((item, index) => (
+              <MobileNavItem key={index} url={item.url} close={() => setIsOpen(false)}>
                 <item.icon className="size-5 text-orange-400" />
                 {item.title}
               </MobileNavItem>

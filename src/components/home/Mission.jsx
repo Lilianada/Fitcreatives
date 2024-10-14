@@ -58,7 +58,7 @@ const HeaderBlock = () => (
 
 const AboutBlock = () => (
   <Block className="col-span-12 text-lg leading-snug  bg-background text-foreground">
-    <p>
+    <p className="text-base">
       Fitcreatives is community platform for creatives{" "}
       <span className="text-muted-foreground">
         share experiences, and motivate each other to stay fit and maintain a
@@ -70,7 +70,7 @@ const AboutBlock = () => (
   </Block>
 );
 
-const Blocks = ({ title, text, whileHover }) => (
+export const Blocks = ({ title, text, whileHover }) => (
   <Block
     whileHover={whileHover}
     className="border col-span-12 sm:col-span-6 md:col-span-4 flex flex-col gap-2"

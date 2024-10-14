@@ -1,10 +1,7 @@
 'use client';
 
-import React, { useState } from "react";
-import { Button } from "../ui/button";
+import React from "react";
 import HoverDevCards from "./HoverCards";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import CustomDialog from "../form";
 
 export default function Hero() {
@@ -23,9 +20,9 @@ export default function Hero() {
         <CustomDialog
           triggerText={
             <>
-              <div className="h-4 w-4 rounded-full border-dashed border-2 border-primary animate-spin"></div>
+              <div className="h-4 w-4 mr-2 rounded-full border-dashed border-2 border-primary animate-spin"></div>
               Join the community
-              <div className="h-4 w-4 rounded-full border-dashed border-2 border-primary animate-spin"></div>
+              <div className="h-4 w-4 ml-2 rounded-full border-dashed border-2 border-primary animate-spin"></div>
             </>
           }
         />

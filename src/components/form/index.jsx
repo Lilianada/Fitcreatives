@@ -60,7 +60,6 @@ export function InputForm() {
   );
 }
 
-
 export default function CommunityForm({ triggerText }) {
   const [formData, setFormData] = useState({
     name: "",
@@ -117,7 +116,10 @@ export default function CommunityForm({ triggerText }) {
 
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Join the Community</DialogTitle>
+          <DialogTitle>Community Membership Form</DialogTitle>
+          <DialogDescription className="">
+            Fill in the form to join the community
+          </DialogDescription>
         </DialogHeader>
 
         <Progress value={(currentStep + 1) * (100 / steps)} className="mb-4" />
@@ -126,42 +128,58 @@ export default function CommunityForm({ triggerText }) {
           {currentStep === 0 && (
             <>
               <div className="flex flex-col gap-1">
-                <Label htmlFor="name">Name</Label>
+                <Label className="mb-2 font-medium" htmlFor="name">
+                  Name
+                </Label>
                 <Input
                   id="name"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                 />
               </div>
 
               <div className="flex flex-col gap-1">
-                <Label htmlFor="email">Email Address</Label>
+                <Label className="mb-2 font-medium" htmlFor="email">
+                  Email Address
+                </Label>
                 <Input
                   id="email"
                   type="email"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                 />
               </div>
 
               <div className="flex flex-col gap-1">
-                <Label htmlFor="contactNumber">Tel number</Label>
+                <Label className="mb-2 font-medium" htmlFor="contactNumber">
+                  Tel number
+                </Label>
                 <Input
                   id="contactNumber"
                   type="tel"
                   value={formData.contactNumber}
-                  onChange={(e) => setFormData({ ...formData, contactNumber: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, contactNumber: e.target.value })
+                  }
                 />
               </div>
 
               <div className="flex flex-col gap-1">
-                <Label htmlFor="age">Age</Label>
+                <Label className="mb-2 font-medium" htmlFor="age">
+                  Age
+                </Label>
                 <Input
                   id="age"
                   type="number"
                   min="18"
                   value={formData.age}
-                  onChange={(e) => setFormData({ ...formData, age: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, age: e.target.value })
+                  }
                 />
               </div>
             </>
@@ -170,20 +188,28 @@ export default function CommunityForm({ triggerText }) {
           {currentStep === 1 && (
             <>
               <div className="flex flex-col gap-1">
-                <Label htmlFor="location">Location</Label>
+                <Label className="mb-2 font-medium" htmlFor="location">
+                  Location
+                </Label>
                 <Input
                   id="location"
                   value={formData.location}
-                  onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, location: e.target.value })
+                  }
                 />
               </div>
 
               <div className="flex flex-col gap-1">
-                <Label htmlFor="fitnessGoal">Primary Fitness Goal</Label>
+                <Label className="mb-2 font-medium" htmlFor="fitnessGoal">
+                  Primary Fitness Goal
+                </Label>
                 <Select
                   id="fitnessGoal"
                   value={formData.fitnessGoal}
-                  onValueChange={(value) => setFormData({ ...formData, fitnessGoal: value })}
+                  onValueChange={(value) =>
+                    setFormData({ ...formData, fitnessGoal: value })
+                  }
                 >
                   <SelectTrigger className="w-full">
                     <SelectValue placeholder="Select a goal" />
@@ -193,8 +219,12 @@ export default function CommunityForm({ triggerText }) {
                       <SelectLabel>Goals</SelectLabel>
                       <SelectItem value="weight_loss">Weight Loss</SelectItem>
                       <SelectItem value="muscle_gain">Muscle Gain</SelectItem>
-                      <SelectItem value="improved_endurance">Improved Endurance</SelectItem>
-                      <SelectItem value="stress_reduction">Stress Reduction</SelectItem>
+                      <SelectItem value="improved_endurance">
+                        Improved Endurance
+                      </SelectItem>
+                      <SelectItem value="stress_reduction">
+                        Stress Reduction
+                      </SelectItem>
                       <SelectItem value="other">Other</SelectItem>
                     </SelectGroup>
                   </SelectContent>
@@ -202,11 +232,15 @@ export default function CommunityForm({ triggerText }) {
               </div>
 
               <div className="flex flex-col gap-1">
-                <Label htmlFor="experienceLevel">Experience Level</Label>
+                <Label className="mb-2 font-medium" htmlFor="experienceLevel">
+                  Experience Level
+                </Label>
                 <Select
                   id="experienceLevel"
                   value={formData.experienceLevel}
-                  onValueChange={(value) => setFormData({ ...formData, experienceLevel: value })}
+                  onValueChange={(value) =>
+                    setFormData({ ...formData, experienceLevel: value })
+                  }
                 >
                   <SelectTrigger className="w-full">
                     <SelectValue placeholder="Select a level" />
@@ -223,11 +257,15 @@ export default function CommunityForm({ triggerText }) {
               </div>
 
               <div className="flex flex-col gap-1">
-                <Label htmlFor="creativeField">Creative Field (Optional)</Label>
+                <Label className="mb-2 font-medium" htmlFor="creativeField">
+                  Creative Field (Optional)
+                </Label>
                 <Input
                   id="creativeField"
                   value={formData.creativeField}
-                  onChange={(e) => setFormData({ ...formData, creativeField: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, creativeField: e.target.value })
+                  }
                 />
               </div>
             </>
@@ -236,32 +274,53 @@ export default function CommunityForm({ triggerText }) {
           {currentStep === 2 && (
             <>
               <div className="flex flex-col gap-1">
-                <Label htmlFor="workoutSchedule">Workout Schedule</Label>
+                <Label className="mb-2 font-medium" htmlFor="workoutSchedule">
+                  Workout Schedule
+                </Label>
                 <Input
                   id="workoutSchedule"
                   placeholder="Preferred days and times for workouts"
                   value={formData.workoutSchedule}
-                  onChange={(e) => setFormData({ ...formData, workoutSchedule: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      workoutSchedule: e.target.value,
+                    })
+                  }
                 />
               </div>
 
               <div className="flex flex-col gap-1">
-                <Label htmlFor="dietaryPreferences">Dietary Restrictions or Preferences</Label>
+                <Label
+                  className="mb-2 font-medium"
+                  htmlFor="dietaryPreferences"
+                >
+                  Dietary Restrictions or Preferences
+                </Label>
                 <Input
                   id="dietaryPreferences"
                   placeholder="e.g., vegetarian, vegan, allergies"
                   value={formData.dietaryPreferences}
-                  onChange={(e) => setFormData({ ...formData, dietaryPreferences: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      dietaryPreferences: e.target.value,
+                    })
+                  }
                 />
               </div>
 
               <div className="flex flex-col gap-1">
-                <Label htmlFor="injuries">Injuries or Medical Conditions</Label>
+                <Label className="mb-2 font-medium" htmlFor="injuries">
+                  Injuries or Medical Conditions
+                </Label>
                 <Input
                   id="injuries"
                   placeholder="If applicable"
                   value={formData.injuries}
-                  onChange={(e) => setFormData({ ...formData, injuries: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, injuries: e.target.value })
+                  }
                 />
               </div>
             </>
@@ -270,32 +329,50 @@ export default function CommunityForm({ triggerText }) {
           {currentStep === 3 && (
             <>
               <div className="flex flex-col gap-1">
-                <Label htmlFor="fitnessExperience">Fitness Experience</Label>
+                <Label className="mb-2 font-medium" htmlFor="fitnessExperience">
+                  Fitness Experience
+                </Label>
                 <Input
                   id="fitnessExperience"
                   placeholder="Any previous fitness experience or certifications"
                   value={formData.fitnessExperience}
-                  onChange={(e) => setFormData({ ...formData, fitnessExperience: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      fitnessExperience: e.target.value,
+                    })
+                  }
                 />
               </div>
 
               <div className="flex flex-col gap-1">
-                <Label htmlFor="referral">Referral</Label>
+                <Label className="mb-2 font-medium" htmlFor="referral">
+                  Referral
+                </Label>
                 <Input
                   id="referral"
                   placeholder="How did you hear about FitCreatives?"
                   value={formData.referral}
-                  onChange={(e) => setFormData({ ...formData, referral: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, referral: e.target.value })
+                  }
                 />
               </div>
 
               <div className="flex flex-col gap-1">
-                <Label htmlFor="emergencyContact">Emergency Contact Information</Label>
+                <Label className="mb-2 font-medium" htmlFor="emergencyContact">
+                  Emergency Contact Information
+                </Label>
                 <Input
                   id="emergencyContact"
                   placeholder="Emergency contact details"
                   value={formData.emergencyContact}
-                  onChange={(e) => setFormData({ ...formData, emergencyContact: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      emergencyContact: e.target.value,
+                    })
+                  }
                 />
               </div>
             </>
@@ -304,12 +381,18 @@ export default function CommunityForm({ triggerText }) {
 
         <DialogFooter className="flex justify-between">
           {currentStep > 0 && (
-            <Button variant="outline" onClick={prevStep}>
+            <Button
+              variant="outline"
+              className="font-semibold"
+              onClick={prevStep}
+            >
               Previous
             </Button>
           )}
           {currentStep < steps - 1 ? (
-            <Button onClick={nextStep}>Next</Button>
+            <Button className="font-semibold" onClick={nextStep}>
+              Next
+            </Button>
           ) : (
             <Button onClick={handleSubmit}>Submit</Button>
           )}
@@ -318,8 +401,6 @@ export default function CommunityForm({ triggerText }) {
     </Dialog>
   );
 }
-
-
 
 export function ClubForm() {
   return <div></div>;
