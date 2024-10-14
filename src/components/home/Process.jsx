@@ -66,7 +66,7 @@ export default function Process() {
                 <span>3</span>
               </div>
               <h3 className="text-base font-medium capitalize  text-orange-400">
-                Follow our platforms
+                Find a trainer and gym
               </h3>
               <p className="mt-1 text-xs text-stone-400 dark:text-stone-400 ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,

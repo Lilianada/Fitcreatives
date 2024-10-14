@@ -61,7 +61,7 @@ const AboutBlock = () => (
     <p className="text-base">
       Fitcreatives is community platform for creatives{" "}
       <span className="text-muted-foreground">
-        share experiences, and motivate each other to stay fit and maintain a
+        to share experiences, and motivate each other to stay fit and maintain a
         healthy lifestyle amidst busy creative careers. We offer resources,
         tips, and workout routines tailored to creatives' unique needs and
         schedules.
@@ -87,7 +87,7 @@ export const MissionSection = () => (
     transition={{
       staggerChildren: 0.05,
     }}
-    className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4 border p-4 rounded-2xl"
+    className="mx-auto grid grid-flow-dense grid-cols-12 gap-4 border p-4 rounded-2xl"
   >
     <HeaderBlock />
     <Blocks
