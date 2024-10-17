@@ -8,6 +8,11 @@ module.exports = {
   ],
   theme: {
   	extend: {
+		screens: {
+			'smScreen': {'max': '809px'},
+			'mdScreen': {'min': '810px', 'max': '1439px'},
+			'lgScreen': {'min': '1440px'}
+		  },
   		colors: {
   			yellow: '#ffe14f',
   			dark: '#191919',

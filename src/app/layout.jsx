@@ -19,11 +19,18 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="grid gap-4 items-center justify-items-center py-2 px-4 sm:px-8 sm:py-4 max-w-xl md:max-w-2xl lg:max-w-5xl mx-auto relative">
-            <Header />
-            <main className="w-full  min-h-[calc(100vh_-_12rem)] ">{children}</main>
-            <CallToAction />
-            <Footer />
+          <div className="w-auto min-h-screen">
+            <div className="smScreen:w-[500px] mdScreen:w-[810px] lgScreen:w-[1024px] mx-auto">
+              <div className="grid gap-4 items-center justify-items-center p-4 mdScreen:px-8 relative">
+                <Header />
+                <main className="w-full min-h-[calc(100vh_-_12rem)] ">
+                  {children}
+                </main>
+
+                <CallToAction />
+                <Footer />
+              </div>
+            </div>
           </div>
         </ThemeProvider>
       </body>

@@ -9,7 +9,7 @@ export default function Home() {
     <div className="w-full grid gap-8">
       <Hero />
       <MissionSection/>
-      <Process />
+      {/* <Process /> */}
       <Clubs />
       <FrequentlyAskedQtn />
     </div>

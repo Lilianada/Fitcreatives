@@ -24,7 +24,7 @@ export default function TrainerCard() {
   return (
     <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4 ">
       {trainers.map((trainer, index) => (
-        <div className="border rounded-lg p-4">
+        <div className="border rounded-lg p-4" key={index}>
         <Card
           key={index}
           className="w-full h-[300px] bg-cover relative p-4 flex items-end"

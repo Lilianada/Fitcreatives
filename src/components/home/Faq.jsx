@@ -33,11 +33,6 @@ const faq = [
       value: "item-5",
     },
     {
-      question: "How much does it cost to join Fitcreatives?",
-      answer: "We offer a range of membership plans, including a free trial. You can choose from monthly or yearly subscriptions, with access to exclusive content, workouts, and community features.",
-      value: "item-6",
-    },
-    {
       question: "What community features are available?",
       answer: "Fitcreatives has a vibrant community where you can connect with other members, share your fitness journey, participate in challenges, and get support from like-minded creatives.",
       value: "item-7",

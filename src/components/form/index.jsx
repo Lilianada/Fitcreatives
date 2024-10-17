@@ -103,7 +103,7 @@ export default function CommunityForm({ triggerText }) {
   };
 
   return (
-    <Dialog>
+    <Dialog className='m-4'>
       <DialogTrigger asChild>
         <Button
           variant="outline"
@@ -125,15 +125,15 @@ export default function CommunityForm({ triggerText }) {
         <Progress value={(currentStep + 1) * (100 / steps)} className="mb-4" />
 
         <div className="grid gap-4 py-4">
-          {currentStep === 0 && <PersonalInfo />}
+          {currentStep === 0 && <PersonalInfo formData={formData} />}
 
           {currentStep === 1 && (
-            <IndividualInfo />
+            <IndividualInfo formData={formData} />
           )}
 
-          {currentStep === 2 && <FitnessInfo />}
+          {currentStep === 2 && <FitnessInfo formData={formData}  />}
 
-          {currentStep === 3 && <OtherInfo />}
+          {currentStep === 3 && <OtherInfo formData={formData} />}
         </div>
 
         <DialogFooter className="flex justify-between">
@@ -159,7 +159,7 @@ export default function CommunityForm({ triggerText }) {
   );
 }
 
-const PersonalInfo = () => {
+const PersonalInfo = ({formData}) => {
   return (
     <>
       <div className="flex flex-col gap-1">
@@ -219,7 +219,7 @@ const PersonalInfo = () => {
   );
 };
 
-const IndividualInfo = () => {
+const IndividualInfo = ({formData}) => {
     return (
         <>
         <div className="flex flex-col gap-1">
@@ -260,7 +260,7 @@ const IndividualInfo = () => {
     )
 }
 
-const FitnessInfo = () => {
+const FitnessInfo = ({formData}) => {
   return (
     <>
       <div className="flex flex-col gap-1">
@@ -368,7 +368,7 @@ const FitnessInfo = () => {
   );
 };
 
-const OtherInfo = () => {
+const OtherInfo = ({formData}) => {
   return (
     <>
       <div className="flex flex-col gap-1">
