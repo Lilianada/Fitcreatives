@@ -6,12 +6,12 @@ export default function Clubs() {
     <section className="border rounded-2xl text-foreground bg-background p-4">
       <div className="flex h-full w-full items-center justify-center">
         <div className="flex flex-col sm:grid h-full w-full gap-4 grid-cols-4 grid-rows-5 rounded-lg">
-          <div className="col-span-4 row-span-2 border p-4 rounded-lg">
+          <div className="col-span-4 row-span-2 border p-4 rounded-lg bg-logoBackdrop bg-cover">
             <div className="my-12 space-y-4">
               <img
-                src="https://api.dicebear.com/8.x/lorelei-neutral/svg?seed=John"
+                src="/assets/logo_bg.svg"
                 alt="avatar"
-                className="size-14 rounded-full"
+                className="size-14 rounded-full bg-light"
               />
               <h2 className="text-3xl font-medium leading-tight">
                 Join our clubs

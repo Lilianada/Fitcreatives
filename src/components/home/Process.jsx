@@ -42,7 +42,7 @@ export default function Process() {
               </div>
               <div className="flex items-center gap-4">
                 <img
-                  src="https://api.dicebear.com/8.x/lorelei-neutral/svg?seed=John"
+                  src="/assets/logo_bg.svg"
                   alt="avatar"
                   className="size-10 rounded-full"
                 />

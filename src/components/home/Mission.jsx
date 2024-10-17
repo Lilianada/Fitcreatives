@@ -41,9 +41,9 @@ const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-4 grid items-center my-auto bg-background text-foreground">
     <div className="my-12 space-y-4">
       <img
-        src="/assets/logo_bg.png"
+        src="/assets/logo_bg.svg"
         alt="avatar"
-        className="size-14 rounded-full bg-cover bg-center bg-light"
+        className="size-14 rounded-full bg-light"
       />
       <h2 className="text-3xl font-medium leading-tight">
         Our Mission
