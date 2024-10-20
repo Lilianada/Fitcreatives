@@ -45,12 +45,30 @@ const HeaderBlock = () => (
         alt="avatar"
         className="size-14 rounded-full bg-light"
       />
-      <h2 className="text-3xl font-medium leading-tight">
-        Our Mission
-      </h2>
+      <h2 className="text-3xl font-medium leading-tight">Our Mission</h2>
       <div className="text-4xl text-orange-400 ">
-        <FiArrowRight className="hidden sm:block" />
-        <FiArrowDown className="block sm:hidden" />
+        <motion.div
+          className="text-4xl text-orange-400"
+          animate={{ y: [0, 10, 0] }}
+          transition={{
+            repeat: Infinity,
+            duration: 1.5,
+            ease: "easeInOut",
+          }}
+        >
+          <FiArrowRight className="hidden sm:block" />
+        </motion.div>
+        <motion.div
+          className="text-4xl text-orange-400"
+          animate={{ y: [0, 10, 0] }}
+          transition={{
+            repeat: Infinity,
+            duration: 1.5,
+            ease: "easeInOut",
+          }}
+        >
+          <FiArrowDown className="block sm:hidden" />
+        </motion.div>
       </div>
     </div>
   </Block>
