@@ -11,12 +11,12 @@ export default function Clubs() {
       <div className="flex h-full w-full items-center justify-center">
         <div className="flex flex-col sm:grid h-full w-full gap-4 grid-cols-4 grid-rows-5 rounded-lg">
           <motion.div
-            className="col-span-4 row-span-2 border p-4 rounded-lg bg-logoBackdrop bg-cover"
+            className="col-span-4 row-span-2 border p-4 rounded-lg bg-logoBackdrop bg-contain bg-no-repeat bg-center grid content-center" 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <div className="my-12 space-y-4">
+            <div className="my-6 space-y-4">
               <motion.img
                 src="/assets/logo_bg.svg"
                 alt="avatar"
@@ -52,7 +52,7 @@ export default function Clubs() {
             style={{
               backgroundImage: `url("/assets/clubs.png")`,
               backgroundSize: "cover",
-              backgroundPosition: "right",
+              backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
             initial={{ opacity: 0, x: -50 }}
@@ -84,16 +84,17 @@ export default function Clubs() {
           ].map((club, index) => (
             <motion.div
               key={index}
-              className="col-span-2 row-span-1 border p-4 rounded-lg"
+              className="col-span-2 row-span-1 border p-4 rounded-lg bg-[#101010]"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
             >
-              <div className="flex flex-col">
+              <div className="flex flex-col gap-2">
+                <div className="h-7 w-8 rounded-lg bg-[#161616] p-[10px]"></div>
                 <h3 className="text-base font-medium">{club.title}</h3>
-                <p className="mt-1 text-xs text-stone-400 dark:text-stone-400 ">
+                <p className="text-xs text-stone-400 dark:text-stone-400 ">
                   {club.description}
                 </p>
               </div>
