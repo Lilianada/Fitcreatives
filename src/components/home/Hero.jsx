@@ -13,7 +13,7 @@ export default function Hero() {
           <img src="/assets/Untitled-design.png" alt="" className="bg-cover bg-center w-full h-full rounded-tl-2xl rounded-tr-2xl"/>
         </div> */}
         <div className="w-fit flex justify-center py-2 px-4 border border-foreground rounded-lg text-muted-foreground">
-          <p className="text-base">Fitness Club</p>
+          <p className="text-sm">Fitness Club</p>
         </div>
         <p className="text-2xl sm:text-3xl font-medium text-center text-light max-w-[280px] sm:max-w-[350px]">
           Your fitness journey gets easier with us
@@ -21,9 +21,9 @@ export default function Hero() {
         <CustomDialog
           triggerText={
             <>
-              <div className="h-4 w-4 mr-4 rounded-full border-dashed border-2 border-primary animate-spin"></div>
-              Fitcreatives
-              <div className="h-4 w-4 ml-4 rounded-full border-dashed border-2 border-primary animate-spin"></div>
+              <div className="h-4 w-4 mr-4 rounded-full border-dashed border-2 border-light animate-spin"></div>
+              <h3 className='text-xl sm:text-2xl font-medium text-light'>Fitcreatives</h3>
+              <div className="h-4 w-4 ml-4 rounded-full border-dashed border-2 border-light animate-spin "></div>
             </>
           }
         />
