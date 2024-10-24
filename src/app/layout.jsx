@@ -24,8 +24,8 @@ export default function RootLayout({ children }) {
               <div className="smScreen:w-[500px] mdScreen:w-[810px] lgScreen:w-[1024px] mx-auto">
                 <div className="flex flex-col gap-4 items-center justify-items-center relative">
                   <Header />
-                  <CallToAction />
                   <main className="w-full">{children}</main>
+                  <CallToAction />
                   <Footer />
                 </div>
               </div>

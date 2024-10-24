@@ -28,7 +28,7 @@ export const Block = ({ className, children, whileHover }) => {
       }}
       whileHover={whileHover}
       className={twMerge(
-        "col-span-4 rounded-lg border bg-stone-50 dark:bg-stone-900/50 text-foreground p-4",
+        "col-span-4 rounded-lg border  bg-background text-foreground p-4",
         className
       )}
     >
@@ -75,7 +75,7 @@ const HeaderBlock = () => (
 );
 
 const AboutBlock = () => (
-  <Block className="col-span-12 text-lg leading-snug  bg-background text-foreground">
+  <Block className="col-span-12 text-lg leading-snug bg-stone-50 dark:bg-stone-900/50 text-foreground">
     <p className="text-base">
       Fitcreatives is community platform for creatives{" "}
       <span className="text-muted-foreground">

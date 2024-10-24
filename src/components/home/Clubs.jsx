@@ -11,7 +11,7 @@ export default function Clubs() {
       <div className="flex h-full w-full items-center justify-center">
         <div className="flex flex-col sm:grid h-full w-full gap-4 grid-cols-4 grid-rows-5 rounded-lg">
           <motion.div
-            className="col-span-4 row-span-2 border p-4 rounded-lg bg-logoBackdrop bg-contain bg-no-repeat bg-center grid content-center" 
+            className="col-span-4 row-span-2 border p-4 rounded-lg bg-logoBackdrop bg-cover bg-no-repeat bg-center grid content-center bg-opacity-35" 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -84,7 +84,7 @@ export default function Clubs() {
           ].map((club, index) => (
             <motion.div
               key={index}
-              className="col-span-2 row-span-1 border p-4 rounded-lg dark:bg-[#101010]"
+              className="col-span-2 row-span-1 border p-4 rounded-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, y: 10 }}

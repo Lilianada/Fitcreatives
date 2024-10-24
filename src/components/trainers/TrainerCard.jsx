@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Card, CardContent } from "../ui/card";
 
 export default function TrainerCard() {
-  const url = "https://randomuser.me/api/?results=10";
+  const url = "https://randomuser.me/api/?results=12";
   const [trainers, setTrainers] = useState([]);
 
   useEffect(() => {
@@ -32,8 +32,8 @@ export default function TrainerCard() {
         >
           <CardContent className="w-full p-0">
             <div className="w-full mx-auto bg-stone-900 bg-opacity-70 text-white p-3 rounded-lg">
-              <h3 className="font-bold text-base capitalize">{`${trainer.name.first} ${trainer.name.last}`}</h3>
-              <p className="text-sm capitalize">{trainer.email}</p>
+              <h3 className="font-bold text-sm capitalize truncate">{`${trainer.name.first} ${trainer.name.last}`}</h3>
+              <p className="text-xs truncate">{trainer.email}</p>
             </div>
           </CardContent>
         </Card>

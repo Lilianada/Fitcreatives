@@ -1,4 +1,4 @@
-import { useState, forwardRef } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import {
   NavigationMenu,
@@ -13,10 +13,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-const MenuButtons = forwardRef(function MenuButtons(
-  { icon: Icon, text, href, activeLink, setActiveLink },
-  ref // accept ref here
-) {
+function MenuButtons({ icon: Icon, text, href, activeLink, setActiveLink }) {
   const handleClick = (href) => {
     setActiveLink(href);
   };
@@ -28,7 +25,6 @@ const MenuButtons = forwardRef(function MenuButtons(
           <NavigationMenuItem>
             <Link href={href} legacyBehavior passHref>
               <NavigationMenuLink
-                ref={ref} // forward ref to this element
                 onClick={() => handleClick(href)}
                 className={`text-xs sm:text-base relative flex items-center justify-center gap-2 min-w-14 w-auto h-10 p-2 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-900 border border-stone-300 dark:border-stone-700 transition-colors duration-300 ${
                   activeLink === href ? "bg-stone-100 dark:bg-stone-900" : ""
@@ -47,7 +43,7 @@ const MenuButtons = forwardRef(function MenuButtons(
       </NavigationMenu>
     </div>
   );
-});
+}
 
 export default function Menu({ navItems = [] }) {
   const [activeLink, setActiveLink] = useState("/");
@@ -55,9 +51,12 @@ export default function Menu({ navItems = [] }) {
   return (
     <div className="flex gap-4">
       {navItems.map((item, index) => (
-        <TooltipProvider key={index}>
+        <TooltipProvider
+              key={index}
+        >
           <Tooltip>
             <TooltipTrigger asChild>
+            <div className="flex items-center">
               <MenuButtons
                 icon={item.icon}
                 text={item.title}
@@ -65,9 +64,10 @@ export default function Menu({ navItems = [] }) {
                 activeLink={activeLink}
                 setActiveLink={setActiveLink}
               />
+            </div>
             </TooltipTrigger>
             <TooltipContent>
-              <p className="text-orange-400">{item.title}</p>
+              <p className="text-light">{item.title}</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
