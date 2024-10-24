@@ -21,17 +21,14 @@ export default function RootLayout({ children }) {
         >
           <div className="w-auto min-h-screen">
             <div className="p-4 mdScreen:px-8 ">
-            <div className="smScreen:w-[500px] mdScreen:w-[810px] lgScreen:w-[1024px] mx-auto">
-              <div className="flex flex-col gap-4 items-center justify-items-center relative">
-                <Header />
-                <main className="w-full min-h-[calc(100vh_-_12rem)] ">
-                  {children}
-                </main>
-
-                <CallToAction />
-                <Footer />
+              <div className="smScreen:w-[500px] mdScreen:w-[810px] lgScreen:w-[1024px] mx-auto">
+                <div className="flex flex-col gap-4 items-center justify-items-center relative">
+                  <Header />
+                  <CallToAction />
+                  <main className="w-full">{children}</main>
+                  <Footer />
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </ThemeProvider>

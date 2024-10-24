@@ -84,7 +84,7 @@ export default function Clubs() {
           ].map((club, index) => (
             <motion.div
               key={index}
-              className="col-span-2 row-span-1 border p-4 rounded-lg bg-[#101010]"
+              className="col-span-2 row-span-1 border p-4 rounded-lg dark:bg-[#101010]"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, y: 10 }}
@@ -92,7 +92,7 @@ export default function Clubs() {
               transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
             >
               <div className="flex flex-col gap-2">
-                <div className="h-7 w-8 rounded-lg bg-[#161616] p-[10px]"></div>
+                <div className="h-7 w-8 rounded-lg dark:bg-[#161616] bg-[#e9e9e9] p-[10px]"></div>
                 <h3 className="text-base font-medium">{club.title}</h3>
                 <p className="text-xs text-stone-400 dark:text-stone-400 ">
                   {club.description}
