@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { BiParty } from "react-icons/bi";
 
 const events = [
   {
@@ -45,7 +46,7 @@ const events = [
   },
   {
     id: 5,
-    eventName: "Wellness Workshop",
+    eventName: "Nutrition & Wellness Workshop",
     date: "2024-11-30",
     time: "10:00 AM - 12:00 PM",
     place: "Sheraton Hotel, Central Area, Abuja",
@@ -58,16 +59,20 @@ export default function Details() {
   return (
     <section className="w-full border rounded-2xl bg-background text-foreground p-4">
       <div className="border rounded-xl mb-4">
-        <p className="text-3xl font-medium p-4 text-center">Upcoming Events</p>
+        <p className="text-xl sm:text-3xl font-medium p-4 text-center">
+            <BiParty className="inline-block text-xl mr-3 text-orange-400" />
+             Upcoming Events 
+            <BiParty className="inline-block text-xl ml-3 text-orange-400" />
+        </p>
       </div>
       <Accordion type="single" collapsible className="w-full">
         {events.map((item) => {
           return (
             <AccordionItem value={item.id} key={item.id}>
-              <AccordionTrigger className="text-orange-300 underline-offset-0 w-full">
-                <h3 className="flex justify-between items-center font-semibold text-xl w-full">
+              <AccordionTrigger className="text-orange-400 underline-offset-0 w-full">
+                <h3 className="flex justify-between items-center font-semibold text-base md:text-xl w-full">
                   {item.eventName}
-                  <span className="text-muted-foreground text-sm mr-4">
+                  <span className="text-muted-foreground text-xs sm:text-sm mr-4">
                     {item.date}
                   </span>
                 </h3>
