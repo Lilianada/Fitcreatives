@@ -60,9 +60,9 @@ export default function Details() {
     <section className="w-full border rounded-2xl bg-background text-foreground p-4">
       <div className="border rounded-xl mb-4">
         <p className="text-xl sm:text-3xl font-medium p-4 text-center">
-            <BiParty className="inline-block text-xl mr-3 text-orange-400" />
-             Upcoming Events 
-            <BiParty className="inline-block text-xl ml-3 text-orange-400" />
+          <BiParty className="inline-block text-xl mr-3 text-orange-400" />
+          Upcoming Events
+          <BiParty className="inline-block text-xl ml-3 text-orange-400" />
         </p>
       </div>
       <Accordion type="single" collapsible className="w-full">
@@ -86,11 +86,11 @@ export default function Details() {
                   {item.place}
                 </p>
                 <p>
-                <span className="text-muted-foreground text-sm mr-4">
+                  <span className="text-muted-foreground text-sm mr-4">
                     Time:
-                    </span>
-                    {item.time}
-                    </p>
+                  </span>
+                  {item.time}
+                </p>
               </AccordionContent>
             </AccordionItem>
           );

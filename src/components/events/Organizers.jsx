@@ -1,3 +1,4 @@
+import { HandshakeIcon } from "lucide-react";
 import React from "react";
 
 const organizers = [
@@ -49,7 +50,11 @@ export default function Organizers() {
   return (
     <section className="w-full grid sm:place-items-center border rounded-2xl p-4">
       <div className="border rounded-xl mb-4 w-full">
-        <h3 className="text-xl md:text-3xl font-medium py-4 text-center">Meet the Organizers</h3>
+        <h3 className="text-xl md:text-3xl font-medium py-4 text-center">
+        <HandshakeIcon className="inline-block text-xl mr-3 text-orange-400" />
+          Meet the Organizers
+          <HandshakeIcon className="inline-block text-xl ml-3 text-orange-400" />
+          </h3>
       </div>
       <div className="w-full grid grid-cols-3 gap-4 justify-between">
         {organizers.map((organizer) => (

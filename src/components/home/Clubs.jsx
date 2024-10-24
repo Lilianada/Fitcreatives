@@ -11,7 +11,7 @@ export default function Clubs() {
       <div className="flex h-full w-full items-center justify-center">
         <div className="flex flex-col sm:grid h-full w-full gap-4 grid-cols-4 grid-rows-5 rounded-lg">
           <motion.div
-            className="col-span-4 row-span-2 border p-4 rounded-lg bg-logoBackdrop bg-cover bg-no-repeat bg-center grid content-center bg-opacity-35" 
+            className="col-span-4 row-span-2 border p-4 rounded-lg bg-lightLogoBg dark:bg-darkLogoBg bg-cover bg-no-repeat bg-center grid content-center bg-opacity-35" 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
