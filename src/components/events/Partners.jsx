@@ -1,4 +1,5 @@
 "use client";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,32 +8,36 @@ const imageArray = [
   {
     name: "Transistor",
     url: "https://tailwindui.com/plus/img/logos/158x48/transistor-logo-gray-900.svg",
-    urlDark: "https://tailwindui.com/plus/img/logos/158x48/transistor-logo-white.svg",
+    urlDark:
+      "https://tailwindui.com/plus/img/logos/158x48/transistor-logo-white.svg",
   },
   {
     name: "Reform",
     url: "https://tailwindui.com/plus/img/logos/158x48/reform-logo-gray-900.svg",
-    urlDark: "https://tailwindui.com/plus/img/logos/158x48/reform-logo-white.svg",
+    urlDark:
+      "https://tailwindui.com/plus/img/logos/158x48/reform-logo-white.svg",
   },
   {
     name: "Tuple",
     url: "https://tailwindui.com/plus/img/logos/158x48/tuple-logo-gray-900.svg",
-    urlDark: "https://tailwindui.com/plus/img/logos/158x48/tuple-logo-white.svg",
+    urlDark:
+      "https://tailwindui.com/plus/img/logos/158x48/tuple-logo-white.svg",
   },
   {
     name: "SavvyCal",
     url: "https://tailwindui.com/plus/img/logos/158x48/savvycal-logo-gray-900.svg",
-    urlDark: "https://tailwindui.com/plus/img/logos/158x48/savvycal-logo-white.svg",
+    urlDark:
+      "https://tailwindui.com/plus/img/logos/158x48/savvycal-logo-white.svg",
   },
   {
     name: "Statamic",
     url: "https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg",
-    urlDark: "https://tailwindui.com/plus/img/logos/158x48/statamic-logo-white.svg",
+    urlDark:
+      "https://tailwindui.com/plus/img/logos/158x48/statamic-logo-white.svg",
   },
 ];
 
 export default function Partners() {
-  // Settings for the react-slick slider
   const settings = {
     dots: false,
     infinite: true,
@@ -76,7 +81,13 @@ export default function Partners() {
 
   return (
     <section className="border px-4 pb-8 pt-4 rounded-2xl relative overflow-hidden">
-      <div className="border rounded-lg bg-stone-50 dark:bg-stone-900/75 p-4">
+      <div className="my-6 text-center">
+        <p className="text-sm">
+          We are proud to be associated with the following partners who have
+          helped us in our journey.
+        </p>
+      </div>
+      <div className="border rounded-lg bg-stone-50 dark:bg-stone-900/75 p-2">
         <Slider {...settings}>
           {imageArray.map((image, index) => (
             <div key={index} className="p-2">
@@ -98,17 +109,11 @@ export default function Partners() {
           ))}
         </Slider>
       </div>
-      <div className="w-full grid place-items-center absolute bottom-16">
+      {/* <div className="w-full grid place-items-center absolute bottom-16">
         <p className="text-sm rounded-lg py-2 px-4 border bg-stone-50 dark:bg-stone-900/75 text-muted-foreground w-fit">
           Partners
         </p>
-      </div>
-      <div className="mt-6 text-center">
-        <p className="text-sm">
-          We are proud to be associated with the following partners who have
-          helped us in our journey.
-        </p>
-      </div>
+      </div> */}
     </section>
   );
 }
