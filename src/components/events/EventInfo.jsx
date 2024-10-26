@@ -3,10 +3,10 @@
 import React from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { BiParty } from "react-icons/bi";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { BiParty } from "react-icons/bi";
 
 export default function EventInfo() {
   const settings = {
@@ -16,11 +16,11 @@ export default function EventInfo() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0,
+    autoplaySpeed: 3000,
     cssEase: "linear",
     pauseOnHover: false,
     swipeToSlide: true,
-    variableWidth: false, // Disable variable width to keep all slides uniform
+    variableWidth: true,
     arrows: false,
     responsive: [
       {
@@ -40,13 +40,6 @@ export default function EventInfo() {
           initialSlide: 2,
         },
       },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
     ],
   };
 
@@ -60,21 +53,21 @@ export default function EventInfo() {
   return (
     <section className="border p-4 rounded-2xl">
       <div className="flex h-full  w-full items-center justify-center">
-        <div className="grid h-full w-full gap-4 p-2 grid-cols-4 sm:grid-rows-4">
-          <div className="col-span-2 row-span-4 border p-4 rounded-lg flex flex-col justify-center bg-stone-50 dark:bg-stone-900/50 text-foreground">
-            <h3 className="text-lg font-semibold">Events Access</h3>
-            <p className="text-sm text-muted-foreground">
+        <div className="grid h-full w-full gap-4 p-2 grid-cols-4 lg:grid-rows-4">
+          {/* Info */}
+          <div className="col-span-4 lg:col-span-2 lg:row-span-4 border p-4 rounded-lg flex flex-col justify-center bg-stone-50 dark:bg-stone-900/50 text-foreground">
+            <h3 className="text-xl sm:text-2xl mb-3 font-semibold">Events Access</h3>
+            <p className="text-sm sm:text-base text-muted-foreground">
               For access to our events, you need to be a subscribed member of
-              any one of our clubs.
-              <br />
-              If you are not a member, you can join any of our clubs by clicking
-              the button.
+              any one of our clubs. If you are not a member, you can join any of
+              our clubs by filling the form.
             </p>
           </div>
 
-          <div className="col-span-2 row-span-2 border p-4 rounded-lg flex flex-col">
-            <h3 className="mb-3 text-base font-semibold">Join our clubs</h3>
-            <form className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-2 mt-2 sm:mt-0">
+          {/* Form */}
+          <div className="col-span-4 lg:col-span-2 lg:row-span-2 border p-4 rounded-lg flex flex-col">
+            <h3 className="mb-3 text-base sm:text-2xl font-semibold">Join our clubs</h3>
+            <form className="flex flex-col md:flex-row sm:items-center gap-4 sm:gap-2 mt-2 sm:mt-0">
               <Input
                 type="email"
                 placeholder="Enter your email"
@@ -90,17 +83,16 @@ export default function EventInfo() {
             </form>
           </div>
 
-          <div className="col-span-2 row-span-2 border p-4 rounded-lg relative overflow-hidden h-fit">
+          <div className="col-span-4 lg:col-span-2 lg:row-span-2 border p-4 rounded-lg relative overflow-hidden h-12rem">
             {/* Added `overflow-hidden` to keep items within the container */}
-            <Slider {...settings} className="w-full">
+            <Slider {...settings}>
               {clubs.map((club, index) => (
-                <div key={index} className="p-2 min-w-fit">
-                  {" "}
+                <div key={index} className="p-2">
                   <div className="flex items-center gap-2">
                     <div className="bg-stone-900/65 rounded-lg py-2 px-3">
                       <BiParty />
                     </div>
-                    <h4 className="text-sm font-semibold">{club}</h4>
+                    <h4 className="text-sm sm:text-base font-bold">{club}</h4>
                   </div>
                 </div>
               ))}
