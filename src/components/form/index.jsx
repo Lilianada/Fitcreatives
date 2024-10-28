@@ -108,7 +108,7 @@ export default function CommunityForm({ triggerText }) {
         <Button
           variant="outline"
           size="lg"
-          className="cursor-pointer rounded-lg border border-foreground text-sm border-dashed px-4 py-2 text-muted-foreground bg-primary-foreground transition-all duration-300"
+          className="cursor-pointer rounded-lg border border-foreground text-sm border-dashed px-4 py-2 text-muted-foreground bg-primary-background transition-all duration-300"
         >
           {triggerText}
         </Button>

@@ -12,7 +12,7 @@ export default function Hero() {
           Your fitness journey gets easier with us
         </p>
         <div
-          className="rounded-lg border text-sm border-dashed px-3 py-2 text-muted-foreground transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none flex gap-2">
+          className="rounded-lg border border-light text-sm border-dashed px-3 py-2 text-muted-foreground  flex gap-2 ">
               <div className="h-4 w-4 mr-4 rounded-full border-dashed border-2 border-light animate-spin"></div>
               <p className='text-sm font-medium text-light'>Fitcreatives</p>
               <div className="h-4 w-4 ml-4 rounded-full border-dashed border-2 border-light animate-spin "></div>

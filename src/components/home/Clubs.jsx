@@ -50,7 +50,7 @@ export default function Clubs() {
   return (
     <section className="border rounded-2xl text-foreground bg-background p-4">
       <div className="flex h-full w-full items-center justify-center">
-        <div className="flex flex-col sm:grid h-full w-full gap-4 grid-cols-4 grid-rows-5 rounded-lg">
+        <div className="flex flex-col sm:grid h-full w-full gap-4 grid-cols-4 grid-rows-4 rounded-lg">
           <motion.div
             className="col-span-4 row-span-2 border p-4 rounded-lg bg-lightLogoBg dark:bg-darkLogoBg bg-cover bg-no-repeat bg-center grid content-center bg-opacity-35"
             initial={{ opacity: 0, y: -20 }}
@@ -89,7 +89,7 @@ export default function Clubs() {
           </motion.div>
 
           <motion.div
-            className="hidden sm:block col-span-2 row-span-4 border p-4 rounded-lg"
+            className="hidden lg:block col-span-2 row-span-4 border p-4 rounded-lg"
             style={{
               backgroundImage: `url("/assets/clubs.png")`,
               backgroundSize: "cover",
