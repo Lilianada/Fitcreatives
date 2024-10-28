@@ -4,7 +4,6 @@ import { UsersIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { ModeToggle } from "./ModeToggle";
 import { BiParty, BiMenuAltRight } from "react-icons/bi";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useState } from "react";
 import { Button } from "../ui/button";
 import { HomeIcon } from "@radix-ui/react-icons";
@@ -104,7 +103,7 @@ export function MobileNavigation(props) {
             },
           },
         }}
-        className="fixed inset-4 top-32 z-50 origin-top rounded-2xl bg-background border px-4 py-8 max-w-xl sm:max-w-4xl " 
+        className="fixed inset-x-8 top-32 right-8 z-50 origin-top rounded-2xl bg-background border px-4 py-8 max-w-xl sm:max-w-4xl " 
         style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
         <motion.div className="flex justify-between items-center">
@@ -141,7 +140,6 @@ export function MobileNavigation(props) {
     </motion.nav>
   );
 }
-
 
 export default function Header() {
   return (

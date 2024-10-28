@@ -67,7 +67,7 @@ export default function CallToAction() {
             <div className="grid place-items-center gap-2">
               <AvatarStack />
               <motion.p
-                className="text-muted-foreground text-sm"
+                className="text-muted-foreground text-xs sm:text-sm"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.4 }}
