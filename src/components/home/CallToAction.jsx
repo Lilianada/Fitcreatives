@@ -80,19 +80,18 @@ export default function CallToAction() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
             >
               <CommunityForm
-               triggerText={
-                 <>
-                      <div className="h-4 w-4 mr-3 rounded-full border-dashed border-2 border-primary animate-spin"></div>
-                      Join the Community
-                      <div className="h-4 w-4 ml-3 rounded-full border-dashed border-2 border-primary animate-spin"></div>
-              {/* </Button> */}
-                    </>
-                  }
-                  />
+                triggerText={
+                  <>
+                    <div className="h-4 w-4 mr-3 rounded-full border-dashed border-2 border-primary animate-spin"></div>
+                    Join the Community
+                    <div className="h-4 w-4 ml-3 rounded-full border-dashed border-2 border-primary animate-spin"></div>
+                  </>
+                }
+              />
             </motion.div>
           </div>
         </div>
