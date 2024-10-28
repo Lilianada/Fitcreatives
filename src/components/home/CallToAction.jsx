@@ -3,6 +3,7 @@
 import React from "react";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
+import CommunityForm from "../form";
 
 const avatarVariants = {
   initial: { opacity: 0, y: 10 },
@@ -82,15 +83,16 @@ export default function CallToAction() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <Button
-                variant="outline"
-                size="lg"
-                className="rounded-lg border text-sm border-dashed px-3 py-2 text-muted-foreground transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none flex gap-2"
-              >
-                <div className="h-4 w-4 rounded-full border-dashed border-2 border-primary animate-spin"></div>
-                Join the Community
-                <div className="h-4 w-4 rounded-full border-dashed border-2 border-primary animate-spin"></div>
-              </Button>
+              <CommunityForm
+               triggerText={
+                 <>
+                      <div className="h-4 w-4 mr-3 rounded-full border-dashed border-2 border-primary animate-spin"></div>
+                      Join the Community
+                      <div className="h-4 w-4 ml-3 rounded-full border-dashed border-2 border-primary animate-spin"></div>
+              {/* </Button> */}
+                    </>
+                  }
+                  />
             </motion.div>
           </div>
         </div>

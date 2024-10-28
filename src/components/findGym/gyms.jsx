@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function gyms() {
+export default function Gyms() {
   return (
-    <div>
+    <section>
       
-    </div>
+    </section>
   )
 }

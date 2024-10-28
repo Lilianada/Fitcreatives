@@ -152,13 +152,13 @@ export default function Header() {
         </div>
 
         {/* desktop */}
-        <div className="hidden md:flex gap-3">
+        <div className="hidden mdScreen:flex gap-3">
           <Menu navItems={navItems} />
           <ModeToggle />
         </div>
 
         {/* mobile */}
-        <div className="flex md:hidden max-w-xl sm:max-w-4xl ">
+        <div className="flex mdScreen:hidden max-w-xl sm:max-w-4xl ">
           <MobileNavigation />
         </div>
       </div>

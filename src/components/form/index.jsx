@@ -103,7 +103,7 @@ export default function CommunityForm({ triggerText }) {
   };
 
   return (
-    <Dialog className='m-4'>
+    <Dialog className="m-4">
       <DialogTrigger asChild>
         <Button
           variant="outline"
@@ -125,15 +125,21 @@ export default function CommunityForm({ triggerText }) {
         <Progress value={(currentStep + 1) * (100 / steps)} className="mb-4" />
 
         <div className="grid gap-4 py-4">
-          {currentStep === 0 && <PersonalInfo formData={formData} />}
-
-          {currentStep === 1 && (
-            <IndividualInfo formData={formData} />
+          {currentStep === 0 && (
+            <PersonalInfo formData={formData} setFormData={setFormData} />
           )}
 
-          {currentStep === 2 && <FitnessInfo formData={formData}  />}
+          {currentStep === 1 && (
+            <IndividualInfo formData={formData} setFormData={setFormData} />
+          )}
 
-          {currentStep === 3 && <OtherInfo formData={formData} />}
+          {currentStep === 2 && (
+            <FitnessInfo formData={formData} setFormData={setFormData} />
+          )}
+
+          {currentStep === 3 && (
+            <OtherInfo formData={formData} setFormData={setFormData} />
+          )}
         </div>
 
         <DialogFooter className="flex justify-between">
@@ -159,7 +165,7 @@ export default function CommunityForm({ triggerText }) {
   );
 }
 
-const PersonalInfo = ({formData}) => {
+const PersonalInfo = ({ formData, setFormData }) => {
   return (
     <>
       <div className="flex flex-col gap-1">
@@ -214,15 +220,14 @@ const PersonalInfo = ({formData}) => {
           }
         />
       </div>
-      
     </>
   );
 };
 
-const IndividualInfo = ({formData}) => {
-    return (
-        <>
-        <div className="flex flex-col gap-1">
+const IndividualInfo = ({ formData, setFormData }) => {
+  return (
+    <>
+      <div className="flex flex-col gap-1">
         <Label className="mb-2 font-medium" htmlFor="age">
           Age
         </Label>
@@ -236,7 +241,7 @@ const IndividualInfo = ({formData}) => {
       </div>
       <div className="flex flex-col gap-1">
         <Label className="mb-2 font-medium" htmlFor="weight">
-          Weight
+          Weight (kg)
         </Label>
         <Input
           id="weight"
@@ -247,7 +252,7 @@ const IndividualInfo = ({formData}) => {
       </div>
       <div className="flex flex-col gap-1">
         <Label className="mb-2 font-medium" htmlFor="height">
-          Height
+          Height (cm)
         </Label>
         <Input
           id="height"
@@ -256,11 +261,11 @@ const IndividualInfo = ({formData}) => {
           onChange={(e) => setFormData({ ...formData, height: e.target.value })}
         />
       </div>
-      </>
-    )
-}
+    </>
+  );
+};
 
-const FitnessInfo = ({formData}) => {
+const FitnessInfo = ({ formData, setFormData }) => {
   return (
     <>
       <div className="flex flex-col gap-1">
@@ -368,7 +373,7 @@ const FitnessInfo = ({formData}) => {
   );
 };
 
-const OtherInfo = ({formData}) => {
+const OtherInfo = ({ formData, setFormData }) => {
   return (
     <>
       <div className="flex flex-col gap-1">
@@ -383,7 +388,7 @@ const OtherInfo = ({formData}) => {
           }
         />
       </div>
-      
+
       <div className="flex flex-col gap-1">
         <Label className="mb-2 font-medium" htmlFor="location">
           Location

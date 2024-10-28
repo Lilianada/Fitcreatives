@@ -2,7 +2,7 @@
 
 import React from "react";
 import HoverDevCards from "./HoverCards";
-import CustomDialog from "../form";
+import CommunityForm from "../form";
 
 export default function Hero() {
   return (
@@ -11,7 +11,7 @@ export default function Hero() {
         <p className="text-2xl sm:text-3xl font-medium text-center text-light max-w-[280px] sm:max-w-[350px] mb-4">
           Your fitness journey gets easier with us
         </p>
-        <CustomDialog
+        <CommunityForm
           triggerText={
             <>
               <div className="h-4 w-4 mr-4 rounded-full border-dashed border-2 border-light animate-spin"></div>
