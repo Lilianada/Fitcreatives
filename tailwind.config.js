@@ -66,6 +66,8 @@ module.exports = {
   			backdrop: "url('/assets/Untitled-design.png')",
 			darkLogoBg: "url('/assets/hero_bg.svg')",
 			lightLogoBg: "url('/assets/fitc_bg.png')",
+			gymHeroBg: "url('/assets/Dummbells.jpg')",
+			plateBg: "url('/assets/Plates.jpg')",
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

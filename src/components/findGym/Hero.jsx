@@ -3,7 +3,7 @@ import React from "react";
 export default function Hero() {
   return (
     <section className="w-full border rounded-2xl bg-background text-foreground flex flex-col">
-      <div className="grid place-items-center border m-4 bg-backdrop bg-cover bg-center py-12  rounded-tl-2xl rounded-tr-2xl bg-opacity-70 filter grayscale">
+      <div className="grid place-items-center border m-4 bg-gymHeroBg bg-cover bg-center py-12  rounded-tl-2xl rounded-tr-2xl bg-opacity-70 filter grayscale">
         <p className="text-2xl sm:text-3xl font-medium text-center text-light max-w-[280px] sm:max-w-[350px] mb-4">
          Easily locate gyms around you
         </p>
@@ -18,3 +18,5 @@ export default function Hero() {
     </section>
   )
 }
+
+
