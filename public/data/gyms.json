@@ -1,0 +1,522 @@
+{
+    "lagos": [
+        {
+            "id": 1,
+            "city": "lagos",
+            "name": "iFitness - Victoria Island",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 10000,
+                "quarterly": 27000,
+                "yearly": 100000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-VI-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 2,
+            "city": "lagos",
+            "name": "iFitness - Lekki",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 10000,
+                "quarterly": 27000,
+                "yearly": 100000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-Lekki-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 3,
+            "city": "lagos",
+            "name": "iFitness - Ikeja",
+            "openHour": "05:30",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 9500,
+                "quarterly": 26000,
+                "yearly": 95000,
+                "couple": 170000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-Ikeja-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 4,
+            "city": "lagos",
+            "name": "Pilates Studio Lagos",
+            "openHour": "06:00",
+            "closeHour": "21:00",
+            "fees": {
+                "singleClass": 3000,
+                "monthly": 15000,
+                "quarterly": 42000,
+                "yearly": 160000,
+                "couple": 300000,
+                "kids": 10000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Pilates-Studio-image.jpg",
+                "logo": "https://placeholder.com/Pilates-Logo.png"
+            },
+            "website": "https://pilateslagos.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/pilateslagos",
+                "facebook": "https://facebook.com/pilateslagos"
+            }
+        },
+        {
+            "id": 5,
+            "city": "lagos",
+            "name": "BodyLine Gym",
+            "openHour": "06:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2500,
+                "monthly": 12000,
+                "quarterly": 33000,
+                "yearly": 120000,
+                "couple": 210000,
+                "kids": 8000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/BodyLine-image.jpg",
+                "logo": "https://placeholder.com/BodyLine-logo.png"
+            },
+            "website": "https://bodyline.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/bodylinegym",
+                "facebook": "https://facebook.com/bodylinegym",
+                "twitter": "https://twitter.com/bodylinegym"
+            }
+        },
+        {
+            "id": 6,
+            "city": "lagos",
+            "name": "Fitness Central",
+            "openHour": "05:30",
+            "closeHour": "21:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 9000,
+                "quarterly": 25000,
+                "yearly": 95000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Fitness-Central-image.jpg",
+                "logo": "https://placeholder.com/Fitness-Central-logo.png"
+            },
+            "website": "https://fitnesscentral.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/fitnesscentral",
+                "facebook": "https://facebook.com/fitnesscentral"
+            }
+        },
+        {
+            "id": 7,
+            "city": "lagos",
+            "name": "FitHub Lagos",
+            "openHour": "06:00",
+            "closeHour": "23:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 10000,
+                "quarterly": 28000,
+                "yearly": 105000,
+                "couple": 190000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/FitHub-image.jpg",
+                "logo": "https://placeholder.com/FitHub-logo.png"
+            },
+            "website": "https://fithub.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/fithub",
+                "facebook": "https://facebook.com/fithub"
+            }
+        },
+        {
+            "id": 8,
+            "city": "lagos",
+            "name": "Muscle Factory Gym",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 3000,
+                "monthly": 12000,
+                "quarterly": 32000,
+                "yearly": 120000,
+                "couple": 220000,
+                "kids": 8000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Muscle-Factory-image.jpg",
+                "logo": "https://placeholder.com/Muscle-Factory-logo.png"
+            },
+            "website": "https://musclefactory.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/musclefactory",
+                "facebook": "https://facebook.com/musclefactory"
+            }
+        },
+        {
+            "id": 9,
+            "city": "lagos",
+            "name": "CrossFit Lagos",
+            "openHour": "06:00",
+            "closeHour": "20:00",
+            "fees": {
+                "daily": 3500,
+                "monthly": 15000,
+                "quarterly": 40000,
+                "yearly": 150000,
+                "couple": 270000,
+                "kids": 10000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/CrossFit-image.jpg",
+                "logo": "https://placeholder.com/CrossFit-logo.png"
+            },
+            "website": "https://crossfitlagos.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/crossfitlagos",
+                "facebook": "https://facebook.com/crossfitlagos"
+            }
+        },
+        {
+            "id": 10,
+            "city": "lagos",
+            "name": "Spartan Fitness",
+            "openHour": "07:00",
+            "closeHour": "21:00",
+            "fees": {
+                "daily": 2500,
+                "monthly": 11000,
+                "quarterly": 30000,
+                "yearly": 110000,
+                "couple": 200000,
+                "kids": 7500
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Spartan-Fitness-image.jpg",
+                "logo": "https://placeholder.com/Spartan-logo.png"
+            },
+            "website": "https://spartanfitness.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/spartanfitness",
+                "facebook": "https://facebook.com/spartanfitness"
+            }
+        },
+        {
+            "id": 11,
+            "city": "lagos",
+            "name": "EliteBox Fitness",
+            "openHour": "06:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 4000,
+                "monthly": 15000,
+                "quarterly": 43000,
+                "yearly": 160000,
+                "couple": 290000,
+                "kids": 11000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/EliteBox-image.jpg",
+                "logo": "https://placeholder.com/EliteBox-logo.png"
+            },
+            "website": "https://eliteboxfitness.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/eliteboxfitness",
+                "facebook": "https://facebook.com/eliteboxfitness"
+            }
+        },
+        {
+            "id": 12,
+            "city": "lagos",
+            "name": "BFit Fitness Club",
+            "openHour": "05:30",
+            "closeHour": "21:30",
+            "fees": {
+                "daily": 3000,
+                "monthly": 12000,
+                "quarterly": 32000,
+                "yearly": 125000,
+                "couple": 220000,
+                "kids": 8000
+            },
+              "images": {
+                "gymImage": "https://placeholder.com/EliteBox-image.jpg",
+                "logo": "https://placeholder.com/EliteBox-logo.png"
+            },
+            "website": "https://eliteboxfitness.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/eliteboxfitness",
+                "facebook": "https://facebook.com/eliteboxfitness"
+            }
+        },
+        {
+            "id": 13,
+            "city": "lagos",
+            "name": "Arena Gym & Fitness",
+            "openHour": "06:30",
+            "closeHour": "20:00",
+            "fees": {
+                "daily": 2500,
+                "monthly": 10000,
+                "quarterly": 28000,
+                "yearly": 105000,
+                "couple": 190000,
+                "kids": 7000
+            },
+              "images": {
+                "gymImage": "https://placeholder.com/EliteBox-image.jpg",
+                "logo": "https://placeholder.com/EliteBox-logo.png"
+            },
+            "website": "https://eliteboxfitness.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/eliteboxfitness",
+                "facebook": "https://facebook.com/eliteboxfitness"
+            }
+        },
+        {
+            "id": 14,
+            "city": "lagos",
+            "name": "Lagos Fit Gym",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 9500,
+                "quarterly": 26000,
+                "yearly": 98000,
+                "couple": 175000,
+                "kids": 6500
+            },
+              "images": {
+                "gymImage": "https://placeholder.com/EliteBox-image.jpg",
+                "logo": "https://placeholder.com/EliteBox-logo.png"
+            },
+            "website": "https://eliteboxfitness.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/eliteboxfitness",
+                "facebook": "https://facebook.com/eliteboxfitness"
+            }
+        }
+    ],
+    "abuja": [
+        {
+            "id": 1,
+            "city": "Abuja",
+            "name": "Bodyline Fitness and Gym - Gwarinpa",
+            "location": "First Avenue, Gwarinpa, Abuja",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2500,
+                "monthly": 15000,
+                "quarterly": 42000,
+                "yearly": 160000,
+                "couple": 280000,
+                "kids": 10000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Bodyline-Gwarinpa-image.jpg",
+                "logo": "https://placeholder.com/Bodyline-logo.png"
+            },
+            "website": "https://bodylinefitness.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/bodylinefitness",
+                "facebook": "https://facebook.com/bodylinefitness"
+            }
+        },
+        {
+            "id": 2,
+            "city": "Abuja",
+            "name": "Bodyline Fitness and Gym - Wuse 2",
+            "location": "Wuse 2, Abuja",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2500,
+                "monthly": 15000,
+                "quarterly": 42000,
+                "yearly": 160000,
+                "couple": 280000,
+                "kids": 10000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Bodyline-Wuse-image.jpg",
+                "logo": "https://placeholder.com/Bodyline-logo.png"
+            },
+            "website": "https://bodylinefitness.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/bodylinefitness",
+                "facebook": "https://facebook.com/bodylinefitness"
+            }
+        },
+        {
+            "id": 3,
+            "city": "Abuja",
+            "name": "iFitness - Gwarinpa",
+            "location": "First Avenue, Gwarinpa, Abuja",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 10000,
+                "quarterly": 27000,
+                "yearly": 100000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-Gwarinpa-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng"
+            }
+        },
+        {
+            "id": 4,
+            "city": "Abuja",
+            "name": "Dauchi Gym",
+            "location": "Gwarinpa, Abuja",
+            "openHour": "06:00",
+            "closeHour": "21:00",
+            "fees": {
+                "daily": 1800,
+                "monthly": 12000,
+                "quarterly": 32000,
+                "yearly": 125000,
+                "couple": 200000,
+                "kids": 8000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Dauchi-Gym-image.jpg",
+                "logo": "https://placeholder.com/Dauchi-logo.png"
+            },
+            "website": "https://dauchigym.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/dauchigym",
+                "facebook": "https://facebook.com/dauchigym"
+            }
+        },
+        {
+            "id": 5,
+            "city": "Abuja",
+            "name": "EcoFitness Gym",
+            "location": "Gwarinpa, Abuja",
+            "openHour": "05:30",
+            "closeHour": "21:30",
+            "fees": {
+                "daily": 2000,
+                "monthly": 12000,
+                "quarterly": 30000,
+                "yearly": 120000,
+                "couple": 220000,
+                "kids": 8500
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/EcoFitness-image.jpg",
+                "logo": "https://placeholder.com/EcoFitness-logo.png"
+            },
+            "website": "https://ecofitness.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ecofitness",
+                "facebook": "https://facebook.com/ecofitness"
+            }
+        },
+        {
+            "id": 6,
+            "city": "Abuja",
+            "name": "Transcorp Hilton Gym",
+            "location": "Transcorp Hilton, Maitama, Abuja",
+            "openHour": "06:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 3000,
+                "monthly": 18000,
+                "quarterly": 50000,
+                "yearly": 180000,
+                "couple": 320000,
+                "kids": 10000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Transcorp-Gym-image.jpg",
+                "logo": "https://placeholder.com/Transcorp-logo.png"
+            },
+            "website": "https://transcorphotel.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/transcorpgym",
+                "facebook": "https://facebook.com/transcorpgym"
+            }
+        },
+        {
+            "id": 7,
+            "city": "Abuja",
+            "name": "BluCabana Gym",
+            "location": "Mabushi, Abuja",
+            "openHour": "06:00",
+            "closeHour": "21:30",
+            "fees": {
+                "daily": 3500,
+                "monthly": 20000,
+                "quarterly": 55000,
+                "yearly": 200000,
+                "couple": 360000,
+                "kids": 12000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/BluCabana-Gym-image.jpg",
+                "logo": "https://placeholder.com/BluCabana-logo.png"
+            },
+            "website": "https://blucabana.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/blucabana",
+                "facebook": "https://facebook.com/blucabana"
+            }
+        }
+    ]
+    
+}

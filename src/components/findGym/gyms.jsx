@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -34,33 +36,6 @@ const LocationBox = () => {
   );
 };
 
-const places = [
-  {
-    name: "Lagos",
-    id: "lagos",
-  },
-  {
-    name: "Abuja",
-    id: "abuja",
-  },
-  {
-    name: "Port Harcourt",
-    id: "port-harcourt",
-  },
-  {
-    name: "Ibadan",
-    id: "ibadan",
-  },
-  {
-    name: "Enugu",
-    id: "enugu",
-  },
-  {
-    name: "Awka",
-    id: "awka",
-  },
-]
-
 const GymCard = ({ name, location, image }) => {
   return (
     <div className="border rounded-2xl p-4 grid gap-4">
@@ -72,9 +47,7 @@ const GymCard = ({ name, location, image }) => {
         />
       </div>
       <div className="grid place-items-center">
-        <h3 className="text-lg font-medium text-center text-light">
-          {name}
-        </h3>
+        <h3 className="text-lg font-medium text-center text-light">{name}</h3>
         <p className="text-muted-foreground text-sm">{location}</p>
       </div>
     </div>
@@ -82,6 +55,26 @@ const GymCard = ({ name, location, image }) => {
 };
 
 export default function Gyms() {
+  const [loading, setIsLoading] = useState(true);
+  const [places, setPlaces] = useState({});
+  const [selectedCity, setSelectedCity] = useState("lagos"); // Default to any city
+
+  useEffect(() => {
+    const fetchPlaces = async () => {
+      try {
+        const response = await fetch("/data/gyms.json");
+        const data = await response.json();
+        setPlaces(data);
+        console.log(data)
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchPlaces();
+  }, []);
+
   return (
     <section className="border rounded-2xl p-4 grid gap-4">
       <div className="grid place-items-center border p-4 rounded-xl">
@@ -94,21 +87,41 @@ export default function Gyms() {
       </div>
 
       <div className="grid place-items-center w-full">
-        <Tabs defaultValue="lagos" className="w-full grid">
+        {
+          loading ? (
+            <div className="grid place-items-center">
+              <p className="text-muted-foreground text-base">Loading...</p>
+            </div>
+          ) : (
+        <Tabs
+          defaultValue="lagos"
+          className="w-full grid"
+          onValueChange={setSelectedCity}
+        >
           <TabsList className="border rounded-xl bg-background mx-auto px-4 h-14 flex gap-3">
-            {
-              places.map((place) => (
-                <TabsTrigger key={place.id} value={place.id} className="rounded-lg font-semibold px-8 py-2">
-                  {place.name}
-                </TabsTrigger>
-              ))
-            }
+            {Object.keys(places).map((city) => (
+              <TabsTrigger key={city} value={city} className="rounded-lg font-semibold px-8 py-2">
+                {city.charAt(0).toUpperCase() + city.slice(1)}
+              </TabsTrigger>
+            ))}
           </TabsList>
-          <TabsContent value="lagos">
-            Make changes to your account here.
-          </TabsContent>
-          <TabsContent value="abuja">Change your password here.</TabsContent>
+
+          {Object.keys(places).map((city) => (
+            <TabsContent key={city} value={city}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {places[city].map((place) => (
+                  <GymCard
+                    key={place.id}
+                    name={place.name}
+                    image={place.images.gymImage}
+                    location={place.location}
+                  />
+                ))}
+              </div>
+            </TabsContent>
+          ))}
         </Tabs>
+          )}
       </div>
     </section>
   );
