@@ -43,11 +43,11 @@ const GymCard = ({ name, location, image }) => {
         <img
           src={image}
           alt={name}
-          className="w-20 h-20 rounded-full object-cover"
+          className="h-40 w-full rounded-lg bg-gray-700 object-cover"
         />
       </div>
       <div className="grid place-items-center">
-        <h3 className="text-lg font-medium text-center text-light">{name}</h3>
+        <p className="text-base font-medium text-center text-light">{name}</p>
         <p className="text-muted-foreground text-sm">{location}</p>
       </div>
     </div>
