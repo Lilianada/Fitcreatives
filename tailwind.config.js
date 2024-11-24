@@ -11,7 +11,8 @@ module.exports = {
 		screens: {
 			'smScreen': {'max': '809px'},
 			'mdScreen': {'min': '810px', 'max': '1439px'},
-			'lgScreen': {'min': '1440px'}
+			'lgScreen': {'min': '1440px'},
+			'min-800': {'min': '800px', 'max': '1023px'},
 		  },
   		colors: {
   			yellow: '#ffe14f',

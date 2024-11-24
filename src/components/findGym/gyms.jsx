@@ -42,8 +42,8 @@ const GymCard = ({ name, location, image }) => {
       <div className="grid place-items-center">
         <img
           src={image}
-          alt={name}
-          className="h-40 w-full rounded-lg bg-gray-700 object-cover"
+          alt='gym'
+          className="h-56 sm:h-40 min-800:h-56 lg:h-40 w-full rounded-lg bg-gray-700 object-cover"
         />
       </div>
       <div className="grid place-items-center">
