@@ -54,7 +54,7 @@ const GymCard = ({ name, location, image }) => {
   );
 };
 
-export default function Gyms() {
+export default function GymList() {
   const [loading, setIsLoading] = useState(true);
   const [places, setPlaces] = useState({});
   const [selectedCity, setSelectedCity] = useState("lagos"); // Default to any city
