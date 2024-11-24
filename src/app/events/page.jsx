@@ -12,5 +12,6 @@ export default function Events() {
       <Partners />
       <Organizers />
     </div>
-  );z
+  );
+  z;
 }
