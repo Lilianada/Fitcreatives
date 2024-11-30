@@ -341,6 +341,606 @@
             }
         }
     ],
+    "anambra": [
+        {
+            "id": 1,
+            "city": "lagos",
+            "name": "iFitness - Victoria Island",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 10000,
+                "quarterly": 27000,
+                "yearly": 100000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-VI-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 2,
+            "city": "lagos",
+            "name": "iFitness - Lekki",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 10000,
+                "quarterly": 27000,
+                "yearly": 100000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-Lekki-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 3,
+            "city": "lagos",
+            "name": "iFitness - Ikeja",
+            "openHour": "05:30",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 9500,
+                "quarterly": 26000,
+                "yearly": 95000,
+                "couple": 170000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-Ikeja-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 4,
+            "city": "lagos",
+            "name": "Pilates Studio Lagos",
+            "openHour": "06:00",
+            "closeHour": "21:00",
+            "fees": {
+                "singleClass": 3000,
+                "monthly": 15000,
+                "quarterly": 42000,
+                "yearly": 160000,
+                "couple": 300000,
+                "kids": 10000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Pilates-Studio-image.jpg",
+                "logo": "https://placeholder.com/Pilates-Logo.png"
+            },
+            "website": "https://pilateslagos.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/pilateslagos",
+                "facebook": "https://facebook.com/pilateslagos"
+            }
+        },
+        {
+            "id": 5,
+            "city": "lagos",
+            "name": "BodyLine Gym",
+            "openHour": "06:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2500,
+                "monthly": 12000,
+                "quarterly": 33000,
+                "yearly": 120000,
+                "couple": 210000,
+                "kids": 8000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/BodyLine-image.jpg",
+                "logo": "https://placeholder.com/BodyLine-logo.png"
+            },
+            "website": "https://bodyline.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/bodylinegym",
+                "facebook": "https://facebook.com/bodylinegym",
+                "twitter": "https://twitter.com/bodylinegym"
+            }
+        },
+        {
+            "id": 6,
+            "city": "lagos",
+            "name": "Fitness Central",
+            "openHour": "05:30",
+            "closeHour": "21:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 9000,
+                "quarterly": 25000,
+                "yearly": 95000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Fitness-Central-image.jpg",
+                "logo": "https://placeholder.com/Fitness-Central-logo.png"
+            },
+            "website": "https://fitnesscentral.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/fitnesscentral",
+                "facebook": "https://facebook.com/fitnesscentral"
+            }
+        }
+    ],
+    "ibadan": [
+        {
+            "id": 1,
+            "city": "lagos",
+            "name": "iFitness - Victoria Island",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 10000,
+                "quarterly": 27000,
+                "yearly": 100000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-VI-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 2,
+            "city": "lagos",
+            "name": "iFitness - Lekki",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 10000,
+                "quarterly": 27000,
+                "yearly": 100000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-Lekki-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 3,
+            "city": "lagos",
+            "name": "iFitness - Ikeja",
+            "openHour": "05:30",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 9500,
+                "quarterly": 26000,
+                "yearly": 95000,
+                "couple": 170000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-Ikeja-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 4,
+            "city": "lagos",
+            "name": "Pilates Studio Lagos",
+            "openHour": "06:00",
+            "closeHour": "21:00",
+            "fees": {
+                "singleClass": 3000,
+                "monthly": 15000,
+                "quarterly": 42000,
+                "yearly": 160000,
+                "couple": 300000,
+                "kids": 10000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Pilates-Studio-image.jpg",
+                "logo": "https://placeholder.com/Pilates-Logo.png"
+            },
+            "website": "https://pilateslagos.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/pilateslagos",
+                "facebook": "https://facebook.com/pilateslagos"
+            }
+        },
+        {
+            "id": 5,
+            "city": "lagos",
+            "name": "BodyLine Gym",
+            "openHour": "06:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2500,
+                "monthly": 12000,
+                "quarterly": 33000,
+                "yearly": 120000,
+                "couple": 210000,
+                "kids": 8000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/BodyLine-image.jpg",
+                "logo": "https://placeholder.com/BodyLine-logo.png"
+            },
+            "website": "https://bodyline.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/bodylinegym",
+                "facebook": "https://facebook.com/bodylinegym",
+                "twitter": "https://twitter.com/bodylinegym"
+            }
+        },
+        {
+            "id": 6,
+            "city": "lagos",
+            "name": "Fitness Central",
+            "openHour": "05:30",
+            "closeHour": "21:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 9000,
+                "quarterly": 25000,
+                "yearly": 95000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Fitness-Central-image.jpg",
+                "logo": "https://placeholder.com/Fitness-Central-logo.png"
+            },
+            "website": "https://fitnesscentral.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/fitnesscentral",
+                "facebook": "https://facebook.com/fitnesscentral"
+            }
+        }
+    ],
+    "port-hacourt": [
+        {
+            "id": 1,
+            "city": "lagos",
+            "name": "iFitness - Victoria Island",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 10000,
+                "quarterly": 27000,
+                "yearly": 100000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-VI-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 2,
+            "city": "lagos",
+            "name": "iFitness - Lekki",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 10000,
+                "quarterly": 27000,
+                "yearly": 100000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-Lekki-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 3,
+            "city": "lagos",
+            "name": "iFitness - Ikeja",
+            "openHour": "05:30",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 9500,
+                "quarterly": 26000,
+                "yearly": 95000,
+                "couple": 170000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-Ikeja-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 4,
+            "city": "lagos",
+            "name": "Pilates Studio Lagos",
+            "openHour": "06:00",
+            "closeHour": "21:00",
+            "fees": {
+                "singleClass": 3000,
+                "monthly": 15000,
+                "quarterly": 42000,
+                "yearly": 160000,
+                "couple": 300000,
+                "kids": 10000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Pilates-Studio-image.jpg",
+                "logo": "https://placeholder.com/Pilates-Logo.png"
+            },
+            "website": "https://pilateslagos.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/pilateslagos",
+                "facebook": "https://facebook.com/pilateslagos"
+            }
+        },
+        {
+            "id": 5,
+            "city": "lagos",
+            "name": "BodyLine Gym",
+            "openHour": "06:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2500,
+                "monthly": 12000,
+                "quarterly": 33000,
+                "yearly": 120000,
+                "couple": 210000,
+                "kids": 8000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/BodyLine-image.jpg",
+                "logo": "https://placeholder.com/BodyLine-logo.png"
+            },
+            "website": "https://bodyline.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/bodylinegym",
+                "facebook": "https://facebook.com/bodylinegym",
+                "twitter": "https://twitter.com/bodylinegym"
+            }
+        },
+        {
+            "id": 6,
+            "city": "lagos",
+            "name": "Fitness Central",
+            "openHour": "05:30",
+            "closeHour": "21:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 9000,
+                "quarterly": 25000,
+                "yearly": 95000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Fitness-Central-image.jpg",
+                "logo": "https://placeholder.com/Fitness-Central-logo.png"
+            },
+            "website": "https://fitnesscentral.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/fitnesscentral",
+                "facebook": "https://facebook.com/fitnesscentral"
+            }
+        }
+    ],
+    "enugu": [
+        {
+            "id": 1,
+            "city": "lagos",
+            "name": "iFitness - Victoria Island",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 10000,
+                "quarterly": 27000,
+                "yearly": 100000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-VI-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 2,
+            "city": "lagos",
+            "name": "iFitness - Lekki",
+            "openHour": "05:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 10000,
+                "quarterly": 27000,
+                "yearly": 100000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-Lekki-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 3,
+            "city": "lagos",
+            "name": "iFitness - Ikeja",
+            "openHour": "05:30",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 9500,
+                "quarterly": 26000,
+                "yearly": 95000,
+                "couple": 170000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/iFitness-Ikeja-image.jpg",
+                "logo": "https://placeholder.com/iFitness-logo.png"
+            },
+            "website": "https://ifitness.ng",
+            "socialMedia": {
+                "instagram": "https://instagram.com/ifitnessng",
+                "facebook": "https://facebook.com/ifitnessng",
+                "twitter": "https://twitter.com/ifitnessng"
+            }
+        },
+        {
+            "id": 4,
+            "city": "lagos",
+            "name": "Pilates Studio Lagos",
+            "openHour": "06:00",
+            "closeHour": "21:00",
+            "fees": {
+                "singleClass": 3000,
+                "monthly": 15000,
+                "quarterly": 42000,
+                "yearly": 160000,
+                "couple": 300000,
+                "kids": 10000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Pilates-Studio-image.jpg",
+                "logo": "https://placeholder.com/Pilates-Logo.png"
+            },
+            "website": "https://pilateslagos.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/pilateslagos",
+                "facebook": "https://facebook.com/pilateslagos"
+            }
+        },
+        {
+            "id": 5,
+            "city": "lagos",
+            "name": "BodyLine Gym",
+            "openHour": "06:00",
+            "closeHour": "22:00",
+            "fees": {
+                "daily": 2500,
+                "monthly": 12000,
+                "quarterly": 33000,
+                "yearly": 120000,
+                "couple": 210000,
+                "kids": 8000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/BodyLine-image.jpg",
+                "logo": "https://placeholder.com/BodyLine-logo.png"
+            },
+            "website": "https://bodyline.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/bodylinegym",
+                "facebook": "https://facebook.com/bodylinegym",
+                "twitter": "https://twitter.com/bodylinegym"
+            }
+        },
+        {
+            "id": 6,
+            "city": "lagos",
+            "name": "Fitness Central",
+            "openHour": "05:30",
+            "closeHour": "21:00",
+            "fees": {
+                "daily": 2000,
+                "monthly": 9000,
+                "quarterly": 25000,
+                "yearly": 95000,
+                "couple": 180000,
+                "kids": 7000
+            },
+            "images": {
+                "gymImage": "https://placeholder.com/Fitness-Central-image.jpg",
+                "logo": "https://placeholder.com/Fitness-Central-logo.png"
+            },
+            "website": "https://fitnesscentral.com",
+            "socialMedia": {
+                "instagram": "https://instagram.com/fitnesscentral",
+                "facebook": "https://facebook.com/fitnesscentral"
+            }
+        }
+    ],
     "abuja": [
         {
             "id": 1,

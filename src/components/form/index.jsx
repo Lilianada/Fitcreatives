@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -12,7 +12,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
   Form,
   FormControl,
@@ -24,15 +23,11 @@ import {
 } from "@/components/ui/form";
 
 import { Progress } from "@/components/ui/progress";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { useForm, FormProvider } from "react-hook-form";
+import { zodResolver } from '@hookform/resolvers/zod'
+import { StepSchemas } from "./validationSchema";
+import { PersonalInfo, IndividualInfo, FitnessInfo, OtherInfo } from "./steps";
+
 
 export function InputForm() {
   return (
@@ -60,361 +55,156 @@ export function InputForm() {
   );
 }
 
-export default function CommunityForm({ triggerText }) {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    contactNumber: "",
-    age: "",
-    location: "",
-    fitnessGoal: "",
-    experienceLevel: "",
-    creativeField: "",
-    fitnessPreferences: [],
-    workoutSchedule: "",
-    dietaryPreferences: "",
-    injuries: "",
-    fitnessExperience: "",
-    referral: "",
-    socialMediaLinks: "",
-    emergencyContact: "",
-    preferredClub: "",
-    consentTerms: false,
-    consentPrivacy: false,
+export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
+  
+  const methods = useForm({
+    resolver: zodResolver(StepSchemas),
+    defaultValues: {
+      name: "",
+      email: "",
+      contactNumber: "",
+      age: "",
+      location: "",
+      fitnessGoal: null,
+      experienceLevel: null,
+      creativeField: "",
+      fitnessPreferences: [],
+      workoutSchedule: "",
+      dietaryPreferences: "",
+      injuries: "",
+      fitnessExperience: "",
+      referral: "",
+      socialMediaLinks: "",
+      emergencyContact: "",
+      preferredClub: "",
+      consentTerms: false,
+      consentPrivacy: false,
+    },
+    mode: "onBlur"
   });
 
-  const [currentStep, setCurrentStep] = useState(0);
+  const { handleSubmit, watch, reset, trigger, formState } = methods;
+  const currentStep = watch("currentStep") || 0;
   const steps = 4;
-
-  const nextStep = () => {
-    if (currentStep < steps - 1) {
-      setCurrentStep(currentStep + 1);
+  
+  const nextStep = async () => {
+    const fieldsToValidate = getStepFields(currentStep)
+    const isStepValid = await trigger(fieldsToValidate);
+    if (!isStepValid) {
+      console.error("Validation failed:", formState.errors);
+      return;
     }
+    if (isStepValid) {
+      methods.setValue("currentStep", currentStep + 1);
+    }
+    
   };
+  
 
   const prevStep = () => {
     if (currentStep > 0) {
-      setCurrentStep(currentStep - 1);
+      methods.setValue("currentStep", currentStep - 1);
     }
   };
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
+  const onSubmit = (data) => {
+    //console.log("Form Submitted:", data);
+    setIsOpen(false);
+    reset();
   };
 
+  // const onSubmit = async (data) => {
+  //   console.log("Form Submitted:", data);
+
+  //   const webAppUrl = "https://script.google.com/macros/s/AKfycbxJI1jMyZQX19pgPZ6a7UuQ_7mLzOpevkqJ28n2F-K8e3JYncMN7ikqHZB2J6255gTw-g/exec"
+  //   try {
+  //     const response = await fetch(webAppUrl, {
+  //         method: 'POST',
+  //         headers: {
+  //             'Content-Type': 'application/json',
+  //         },
+  //         body: JSON.stringify(data), 
+  //     });
+
+  //     if (response.ok) {
+  //         reset(); 
+  //         setIsOpen(false); 
+  //     } else {
+  //         console.error('Error submitting form data:', response.statusText);
+  //     }
+  // } catch (error) {
+  //     console.error('Error during fetch request:', error);
+  // }
+  // };
+
   return (
-    <Dialog className="m-4">
+    <Dialog className="m-4" open={isOpen} onClose={() => setIsOpen(false)}>
       <DialogTrigger asChild>
         <Button
           variant="outline"
           size="lg"
+          onClick={() => setIsOpen(true)}
           className="cursor-pointer rounded-lg border border-foreground text-sm border-dashed px-4 py-2 text-muted-foreground bg-primary-background transition-all duration-300"
         >
           {triggerText}
         </Button>
       </DialogTrigger>
 
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>Community Membership Form</DialogTitle>
-          <DialogDescription className="">
-            Fill in the form to join the community
-          </DialogDescription>
-        </DialogHeader>
+      <DialogContent onClose={() => setIsOpen(false)}>
+        <FormProvider {...methods}>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <DialogHeader>
+              <DialogTitle>Community Membership Form</DialogTitle>
+              <DialogDescription className="">
+                Fill in the form to join the community
+              </DialogDescription>
+            </DialogHeader>
 
-        <Progress value={(currentStep + 1) * (100 / steps)} className="mb-4" />
+            <Progress value={(currentStep + 1) * (100 / steps)} className="mb-4" />
 
-        <div className="grid gap-4 py-4">
-          {currentStep === 0 && (
-            <PersonalInfo formData={formData} setFormData={setFormData} />
-          )}
+            <div className="grid gap-4 py-4">
+              {currentStep === 0 && <PersonalInfo />}
+              {currentStep === 1 && <IndividualInfo />}
+              {currentStep === 2 && <FitnessInfo />}
+              {currentStep === 3 && <OtherInfo />}
+            </div>
 
-          {currentStep === 1 && (
-            <IndividualInfo formData={formData} setFormData={setFormData} />
-          )}
-
-          {currentStep === 2 && (
-            <FitnessInfo formData={formData} setFormData={setFormData} />
-          )}
-
-          {currentStep === 3 && (
-            <OtherInfo formData={formData} setFormData={setFormData} />
-          )}
-        </div>
-
-        <DialogFooter className="flex justify-between">
-          {currentStep > 0 && (
-            <Button
-              variant="outline"
-              className="font-semibold"
-              onClick={prevStep}
-            >
-              Previous
-            </Button>
-          )}
-          {currentStep < steps - 1 ? (
-            <Button className="font-semibold" onClick={nextStep}>
-              Next
-            </Button>
-          ) : (
-            <Button onClick={handleSubmit}>Submit</Button>
-          )}
-        </DialogFooter>
+            <DialogFooter className="flex justify-between">
+              {currentStep > 0 && (
+                <Button
+                  variant="outline"
+                  className="font-semibold"
+                  onClick={prevStep}
+                >
+                  Previous
+                </Button>
+              )}
+              {currentStep < steps - 1 ? (
+                <Button className="font-semibold" onClick={nextStep}>
+                  Next
+                </Button>
+              ) : (
+                <Button onClick={onSubmit}>Submit</Button>
+              )}
+            </DialogFooter>
+          </form>
+        </FormProvider>
       </DialogContent>
     </Dialog>
   );
 }
 
-const PersonalInfo = ({ formData, setFormData }) => {
-  return (
-    <>
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="name">
-          Name
-        </Label>
-        <Input
-          id="name"
-          value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-        />
-      </div>
-
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="email">
-          Email Address
-        </Label>
-        <Input
-          id="email"
-          type="email"
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-        />
-      </div>
-
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="contactNumber">
-          Tel number
-        </Label>
-        <Input
-          id="contactNumber"
-          type="tel"
-          value={formData.contactNumber}
-          onChange={(e) =>
-            setFormData({ ...formData, contactNumber: e.target.value })
-          }
-        />
-      </div>
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="emergencyContact">
-          Emergency Contact Information
-        </Label>
-        <Input
-          id="emergencyContact"
-          placeholder="Emergency contact details"
-          value={formData.emergencyContact}
-          onChange={(e) =>
-            setFormData({
-              ...formData,
-              emergencyContact: e.target.value,
-            })
-          }
-        />
-      </div>
-    </>
-  );
-};
-
-const IndividualInfo = ({ formData, setFormData }) => {
-  return (
-    <>
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="age">
-          Age
-        </Label>
-        <Input
-          id="age"
-          type="number"
-          min="18"
-          value={formData.age}
-          onChange={(e) => setFormData({ ...formData, age: e.target.value })}
-        />
-      </div>
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="weight">
-          Weight (kg)
-        </Label>
-        <Input
-          id="weight"
-          type="number"
-          value={formData.weight}
-          onChange={(e) => setFormData({ ...formData, weight: e.target.value })}
-        />
-      </div>
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="height">
-          Height (cm)
-        </Label>
-        <Input
-          id="height"
-          type="number"
-          value={formData.height}
-          onChange={(e) => setFormData({ ...formData, height: e.target.value })}
-        />
-      </div>
-    </>
-  );
-};
-
-const FitnessInfo = ({ formData, setFormData }) => {
-  return (
-    <>
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="fitnessGoal">
-          Primary Fitness Goal
-        </Label>
-        <Select
-          id="fitnessGoal"
-          value={formData.fitnessGoal}
-          onValueChange={(value) =>
-            setFormData({ ...formData, fitnessGoal: value })
-          }
-        >
-          <SelectTrigger className="w-full">
-            <SelectValue placeholder="Select a goal" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              <SelectLabel>Goals</SelectLabel>
-              <SelectItem value="weight_loss">Weight Loss</SelectItem>
-              <SelectItem value="muscle_gain">Muscle Gain</SelectItem>
-              <SelectItem value="improved_endurance">
-                Improved Endurance
-              </SelectItem>
-              <SelectItem value="stress_reduction">Stress Reduction</SelectItem>
-              <SelectItem value="other">Other</SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
-      </div>
-
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="experienceLevel">
-          Experience Level
-        </Label>
-        <Select
-          id="experienceLevel"
-          value={formData.experienceLevel}
-          onValueChange={(value) =>
-            setFormData({ ...formData, experienceLevel: value })
-          }
-        >
-          <SelectTrigger className="w-full">
-            <SelectValue placeholder="Select a level" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              <SelectLabel>Levels</SelectLabel>
-              <SelectItem value="beginner">Beginner</SelectItem>
-              <SelectItem value="intermediate">Intermediate</SelectItem>
-              <SelectItem value="advanced">Advanced</SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
-      </div>
-
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="workoutSchedule">
-          Workout Schedule
-        </Label>
-        <Input
-          id="workoutSchedule"
-          placeholder="Preferred days and times for workouts"
-          value={formData.workoutSchedule}
-          onChange={(e) =>
-            setFormData({
-              ...formData,
-              workoutSchedule: e.target.value,
-            })
-          }
-        />
-      </div>
-
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="dietaryPreferences">
-          Dietary Restrictions or Preferences
-        </Label>
-        <Input
-          id="dietaryPreferences"
-          placeholder="e.g., vegetarian, vegan, allergies"
-          value={formData.dietaryPreferences}
-          onChange={(e) =>
-            setFormData({
-              ...formData,
-              dietaryPreferences: e.target.value,
-            })
-          }
-        />
-      </div>
-
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="injuries">
-          Injuries or Medical Conditions
-        </Label>
-        <Input
-          id="injuries"
-          placeholder="If applicable"
-          value={formData.injuries}
-          onChange={(e) =>
-            setFormData({ ...formData, injuries: e.target.value })
-          }
-        />
-      </div>
-    </>
-  );
-};
-
-const OtherInfo = ({ formData, setFormData }) => {
-  return (
-    <>
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="creativeField">
-          Creative Field (Optional)
-        </Label>
-        <Input
-          id="creativeField"
-          value={formData.creativeField}
-          onChange={(e) =>
-            setFormData({ ...formData, creativeField: e.target.value })
-          }
-        />
-      </div>
-
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="location">
-          Location
-        </Label>
-        <Input
-          id="location"
-          value={formData.location}
-          onChange={(e) =>
-            setFormData({ ...formData, location: e.target.value })
-          }
-        />
-      </div>
-
-      <div className="flex flex-col gap-1">
-        <Label className="mb-2 font-medium" htmlFor="referral">
-          Referral
-        </Label>
-        <Input
-          id="referral"
-          placeholder="How did you hear about FitCreatives?"
-          value={formData.referral}
-          onChange={(e) =>
-            setFormData({ ...formData, referral: e.target.value })
-          }
-        />
-      </div>
-    </>
-  );
+const getStepFields = (step) => {
+  switch (step) {
+    case 0:
+      return ["name", "email", "contactNumber", "emergencyContact"]; 
+    case 1:
+      return ["age", "weight", "height"]; 
+    case 2:
+      return ["fitnessGoal", "experienceLevel", "workoutSchedule", "dietaryPreferences", "injuries"]; 
+    case 3:
+      return ["creativeField", "location", "referral"]; 
+    default:
+      return [];
+  }
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 import CommunityForm from "../form";
@@ -43,6 +43,8 @@ const AvatarStack = () => (
 );
 
 export default function CallToAction() {
+  const [isOpen, setIsOpen] = useState(false);
+  
   return (
     <motion.section
       initial="initial"
@@ -83,7 +85,8 @@ export default function CallToAction() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <CommunityForm
+              <CommunityForm 
+                isOpen={isOpen} setIsOpen={setIsOpen}
                 triggerText={
                   <>
                     <div className="h-4 w-4 mr-3 rounded-full border-dashed border-2 border-primary animate-spin"></div>
