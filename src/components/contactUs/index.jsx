@@ -29,7 +29,7 @@ export default function Contact() {
   return (
     <div>
         <section className="w-full border rounded-2xl bg-background text-foreground flex flex-col mb-10">
-            <div className='grid place-items-center border m-5 pt-12 rounded-2xl bg-opacity-70'>
+            <div className='grid place-items-center border m-4 bg-backdrop bg-cover bg-center py-12 sm:py-16  rounded-tl-2xl rounded-tr-2xl bg-opacity-70 dark:filter dark:grayscale'>
                 <div className="rounded-lg border border-light text-sm border-dashed px-3 py-2 text-muted-foreground flex gap-2 my-3">
                     <div className="h-4 w-4 mr-4 rounded-full border-dashed border-2 border-light animate-spin"></div>
                     <p className="text-sm font-medium text-primary">Contact Us</p>
@@ -107,7 +107,7 @@ export default function Contact() {
                 onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                 }
-                className='p-3'
+                className='p-3 border rounded-2xl'
                 ></textarea>
             </div>
             <div className='my-3 flex items-center justify-center'>
