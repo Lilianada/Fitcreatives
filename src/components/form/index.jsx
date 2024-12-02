@@ -116,7 +116,7 @@ export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
   // const onSubmit = async (data) => {
   //   console.log("Form Submitted:", data);
 
-  //   const webAppUrl = "https://script.google.com/macros/s/AKfycbxJI1jMyZQX19pgPZ6a7UuQ_7mLzOpevkqJ28n2F-K8e3JYncMN7ikqHZB2J6255gTw-g/exec"
+  //   const webAppUrl = `https://script.google.com/macros/s/AKfycbxJI1jMyZQX19pgPZ6a7UuQ_7mLzOpevkqJ28n2F-K8e3JYncMN7ikqHZB2J6255gTw-g/exec`
   //   try {
   //     const response = await fetch(webAppUrl, {
   //         method: 'POST',
@@ -127,8 +127,8 @@ export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
   //     });
 
   //     if (response.ok) {
-  //         reset(); 
   //         setIsOpen(false); 
+  //         reset(); 
   //     } else {
   //         console.error('Error submitting form data:', response.statusText);
   //     }
