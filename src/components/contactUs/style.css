@@ -1,0 +1,29 @@
+/* Style the select field */
+select {
+    appearance: none; /* Removes native dropdown styles for custom styling */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    width: 100%; /* Adjust as needed */
+    cursor: pointer;
+  }
+  
+  /* Add a custom dropdown arrow */
+  select::after {
+    content: '▼'; /* Custom arrow */
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+  }
+  
+  /* Style dropdown options */
+  select option {
+    background-color: #f9f9f9; /* Dropdown background */
+    color: #333; /* Text color */
+    padding: 10px; /* Option padding */
+    font-size: 14px;
+  }
+  

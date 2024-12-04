@@ -1,6 +1,7 @@
 'use client'
 
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
+import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from '../ui/button';
@@ -12,19 +13,49 @@ import {
     SelectLabel,
     SelectTrigger,
     SelectValue,
-  } from "@/components/ui/select";
+} from "@/components/ui/select";
+import emailjs from 'emailjs-com';
+//import './style.css'
 
 export default function Contact() {
-    const [formData, setFormData] = useState({
+    const [status, setStatus] = useState('');
+    const form = useForm({
+        defaultValues: {
         name: "",
         email: "",
         message: "",
         category: "",
+        },
+        mode: "onSubmit"
     })
 
-    const handleSubmit = () => {
-        console.log("Form submitted:", formData);
-    };
+    const { register, handleSubmit, reset, setValue, formState: { errors } } = form;
+
+    const formRef = useRef(null);
+
+    const onSubmit = async (data) => {
+        try {
+            await emailjs.sendForm(
+                'service_8zxo8xv',
+                'template_4699adf',
+                formRef.current, 
+                '9t1mNFYawhe7JCJzi'
+            );
+    
+            setStatus('Message sent successfully!');
+
+            setTimeout(() => {
+              setStatus('');
+              reset(); 
+            }, 3000); 
+          } catch (error) {
+            setStatus('Failed to send the message. Please try again.');
+        
+            setTimeout(() => {
+              setStatus('');
+            }, 3000);
+          }
+    };    
 
   return (
     <div>
@@ -43,17 +74,19 @@ export default function Contact() {
             </div>  
         </section>
 
-        <section className="border rounded-2xl p-8 flex flex-col justify-center gap-4 my-3 px-20">
-            <div className="flex flex-col lg:flex-row gap-4">
+        <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="border rounded-2xl p-8 flex flex-col justify-center  my-3 px-20">
+            <div className="flex flex-col lg:flex-row gap-4 my-3">
                 <div className="flex flex-col gap-1">
                     <Label className="mb-2 font-medium" htmlFor="name">
                     Name
                     </Label>
                     <Input
                     id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    name="name"
+                    placeholder="John Doe"
+                    {...register('name', { required: 'Please enter your Name' })}
                     />
+                     {errors.name && <p className="text-red-600 text-sm">{errors.name.message}</p>}
                 </div>
                 <div className="flex flex-col gap-1">
                     <Label className="mb-2 font-medium" htmlFor="email">
@@ -62,9 +95,14 @@ export default function Contact() {
                     <Input
                     id="email"
                     type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    name="email"
+                    placeholder="john@gmail.com"
+                    {...register('email', {
+                        required: 'Enter your Email',
+                        pattern: { value: /^\S+@\S+\.\S+$/, message: 'Invalid email address' },
+                      })}
                     />
+                    {errors.email && <p className="text-red-600 text-sm">{errors.email.message}</p>}
                 </div>
             </div>
 
@@ -74,46 +112,46 @@ export default function Contact() {
                 </Label>
                 <Select
                 id="category"
-                value={formData.category}
-                onValueChange={(value) =>
-                    setFormData({ ...formData, category: value })
-                }
+                name='category'
+                onValueChange={(value) => setValue('category', value, { shouldValidate: true })} 
                 >
-                <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Feedback" className="italic" />
+                <SelectTrigger className="w-full" {...register('category', { required: 'Please select a category' })}>
+                    <SelectValue placeholder="Select a Category" />
                 </SelectTrigger>
                 <SelectContent>
                     <SelectGroup>
                     <SelectLabel>Category</SelectLabel>
-                    <SelectItem value="weight_loss">Feedback</SelectItem>
-                    <SelectItem value="muscle_gain">Support</SelectItem>
-                    <SelectItem value="improved_endurance">
+                    <SelectItem value="feedback">Feedback</SelectItem>
+                    <SelectItem value="support">Support</SelectItem>
+                    <SelectItem value="membership_enquiry">
                         Membership Enquiry
                     </SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
                     </SelectGroup>
                 </SelectContent>
                 </Select>
+                {errors.category && <p className="text-red-600 text-sm">{errors.category.message}</p>}
             </div>
             
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 my-3">
                 <Label className="mb-2 font-medium" htmlFor="message">
                 Message/Inquiry
                 </Label>
                 <textarea
                 id="message"
+                name='message'
                 placeholder="What's on your mind?"
                 rows="5"
-                value={formData.message}
-                onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                }
-                className='p-3 border rounded-2xl'
+                {...register('message', { required: 'Please enter a message' })}
+                className="rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                 ></textarea>
+                {errors.message && <p className="text-red-600 text-sm">{errors.message.message}</p>}
             </div>
             <div className='my-3 flex items-center justify-center'>
-            <Button onClick={handleSubmit}>Send Message</Button>
+            <Button type='submit'>Send Message</Button>
             </div>
-        </section>
+            {status && <p className='bg-transparent text-green-600 text-sm p-3'>{status}</p>}
+        </form>
     </div>
   )
 }
