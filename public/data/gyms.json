@@ -3,11 +3,11 @@
     {
       "id": 1,
       "city": "lagos",
-      //   "name": "iFitness -  Victoria Island", No branch in VI?
-      "openHour": "05:00",
-      "closeHour": "22:00",
+      "name": "iFitness -  Agungi",
+      "openHour": "06:00",
+      "closeHour": "21:00",
+      "location": "Club house, Friends Colony Estate, Lekki.",
       "fees": {
-        // "daily": 2000,
         "monthly": 38985,
         "quarterly": 98955,
         "yearly": 377820
@@ -27,15 +27,13 @@
       "id": 2,
       "city": "lagos",
       "name": "iFitness - Lekki",
-      "openHour": "06:00", //7:00 on saturday
-      "closeHour": "21:00", //20:00 on saturday
+      "openHour": "06:00",
+      "closeHour": "21:00",
       "location": "10, Gabby Adeosun str, off Admiralty way.",
       "fees": {
-        // "daily": 2000,
         "monthly": 38985,
         "quarterly": 98955,
         "yearly": 377820
-   
       },
       "images": {
         "gymImage": "https://placeholder.com/iFitness-Ikeja-image.jpg",
@@ -52,15 +50,13 @@
       "id": 3,
       "city": "lagos",
       "name": "iFitness - Ikeja",
-      "openHour": "06:00", //7:00 on saturday
-      "closeHour": "21:00", //20:00 on saturday
+      "openHour": "06:00",
+      "closeHour": "21:00",
       "location": "8A, NACCIMA Building, Oba Akinjobi way.",
       "fees": {
-        // "daily": 2000,
         "monthly": 38985,
         "quarterly": 98955,
         "yearly": 377820
-        \
       },
       "images": {
         "gymImage": "https://placeholder.com/iFitness-Ikeja-image.jpg",
@@ -76,15 +72,37 @@
     {
       "id": 4,
       "city": "lagos",
+      "name": "SkyFit Gym",
+      "openHour": "06:00",
+      "closeHour": "00:00",
+      "location": "3, Lekki-Epe expressway, Oriental Hotel, Victoria island",
+      "fees": {
+        "monthly": 75520,
+        "quarterly": 198875,
+        "yearly": 430000,
+        "couple": 752500
+      },
+      "images": {
+        "gymImage": "https://www.skyfitnessng.com/wp-content/uploads/2024/09/Hero-Design-images-stroke-deop-shadow.png",
+        "logo": "https://www.skyfitnessng.com/wp-content/uploads/2018/09/SKYFIT-GYM-new-logo-long.png"
+      },
+      "website": "https://www.skyfitnessng.com/",
+      "socialMedia": {
+        "instagram": "https://www.instagram.com/skyfitlagos/",
+        "facebook": "https://www.facebook.com/SkyFitlagos",
+        "twitter": "https://x.com/SkyfitLagos"
+      }
+    },
+    {
+      "id": 5,
+      "city": "lagos",
       "name": "LoStudio Pilates",
       "location": "4a Ologun Agbaje street , Victoria Island, Lagos, Nigeria",
-      "openHour": "07:00", //8pm on saturday
-      "closeHour": "20:30", //19:00 on saturday
+      "openHour": "07:00",
+      "closeHour": "20:30",
       "fees": {
-        // "singleClass": 3000,
         "monthly": 195000,
         "quarterly": 450000
-        // "yearly": 160000,
       },
       "images": {
         "gymImage": "https://img1.wsimg.com/isteam/ip/13cd9aa9-c59b-4795-85c0-f076f42e0889/WhatsApp%20Image%202024-11-01%20at%2009.04.27.jpeg/:/rs=w:1280,h:1280,cg:true,m/cr=w:1280,h:1280",
@@ -97,7 +115,7 @@
       }
     },
     {
-      "id": 5,
+      "id": 6,
       "city": "lagos",
       "name": "BodyLine Gym",
       "locations": [
@@ -106,16 +124,7 @@
         "NO. 2 Bank Road, Ikoyi",
         "7 Adenike Wole Ajibode Street, Lekki Phase I"
       ],
-      //   "openHour": "06:00",
-      //   "closeHour": "22:00",
-      //   "fees": {
-      //     "daily": 2500,
-      //     "monthly": 12000,
-      //     "quarterly": 33000,
-      //     "yearly": 120000,
-      //     "couple": 210000,
-      //     "kids": 8000
-      //   }, N/A
+
       "images": {
         "gymImage": "https://placeholder.com/BodyLine-image.jpg",
         "logo": "https://placeholder.com/BodyLine-logo.png"
@@ -126,63 +135,36 @@
         "facebook": "https://www.facebook.com/p/Bodyline-Fitness-Gym-100063792021836/"
       }
     },
-    // {
-    //   "id": 6,
-    //   "city": "lagos",
-    //   "name": "Fitness Central",
-    //   "openHour": "05:30",
-    //   "closeHour": "21:00",
-    //   "location": "Adekola Balogun Street, Perchstone & Graeys Cl, Lekki Phase I, Lagos",
-    //   "fees": {
-    //     "daily": 2000,
-    //     "monthly": 9000,
-    //     "quarterly": 25000,
-    //     "yearly": 95000,
-    //     "couple": 180000,
-    //     "kids": 7000
-    //   },
-    //   "images": {
-    //     "gymImage": "https://placeholder.com/Fitness-Central-image.jpg",
-    //     "logo": "https://placeholder.com/Fitness-Central-logo.png"
-    //   },
-    //   "website": "https://fitnesscentral.com",
-    //   "socialMedia": {
-    //     "instagram": "https://instagram.com/fitnesscentral",
-    //     "facebook": "https://facebook.com/fitnesscentral"
-    //   }
-    // }, This one is complex
+
     {
-      //done
       "id": 7,
       "city": "lagos",
       "name": "CrossFit Jagun",
-      "location": "6, Akin Olugbade street, Victoria Island, Lagos, Nigeria.",
-      //   "openHour": "06:00",
-      //   "closeHour": "20:00", N/A
+      "location": "14 Anifowoshe St, Victoria Island, Lagos.",
+      "openHour": "06:00",
+      "closeHour": "19:30",
       "fees": {
-        "daily": 9500,
-        "monthly": 90000,
-        "quarterly": 240000,
-        "yearly": 840000
+        "daily": 15000,
+        "monthly": 150000,
+        "quarterly": 400000,
+        "yearly": 1200000
       },
       "images": {
         "gymImage": "https://placeholder.com/CrossFit-image.jpg",
         "logo": "https://www.crossfitjagun.com/wp-content/uploads/2020/07/B1_BW-1.png"
       },
-      "website": "https://crossfitlagos.com",
+      "website": "https://crossfitjagun.com",
       "socialMedia": {
-        "instagram": "https://www.instagram.com/crossfitjagun",
-        "facebook": "https://m.facebook.com/CrossFit-Jagun-204443780128393/"
+        "instagram": "https://www.instagram.com/crossfitjagun"
       }
     },
     {
-      //done
       "id": 8,
       "city": "lagos",
       "name": "Fitness Factory",
       "location": "Block 114, Plot 5 Akiogun Road, Oniru, Lagos.",
-      //   "openHour": "07:00",
-      //   "closeHour": "21:00",
+      "openHour": "04:59",
+      "closeHour": "22:00",
       "fees": {
         "daily": 8000,
         "monthly": 51500,
@@ -190,7 +172,6 @@
         "yearly": 515500
       },
       "images": {
-        // "gymImage": "https://placeholder.com/Spartan-Fitness-image.jpg", I don't know?
         "logo": "https://www.fitnessfactory.ng/_vercel/image?url=%2Fimages%2Ffitness-factory.png&w=1536&q=100"
       },
       "website": "https://www.fitnessfactory.ng/",
@@ -200,32 +181,24 @@
       }
     },
     {
-      //NO website or anything
       "id": 9,
       "city": "lagos",
       "name": "EliteBox Fitness",
-      "openHour": "06:00",
-      "closeHour": "22:00",
-      "fees": {
-        "daily": 4000,
-        "monthly": 15000,
-        "quarterly": 43000,
-        "yearly": 160000,
-        "couple": 290000,
-        "kids": 11000
-      },
+      "openHour": "06:25",
+      "closeHour": "20:15",
+
       "images": {
         "gymImage": "https://placeholder.com/EliteBox-image.jpg",
         "logo": "https://placeholder.com/EliteBox-logo.png"
       },
-      "website": "https://eliteboxfitness.com",
       "socialMedia": {
         "instagram": "https://instagram.com/eliteboxfitness_gym",
-        "facebook": "https://www.facebook.com/elitebox.way/"
+        "facebook": "https://www.facebook.com/elitebox.way/",
+        "tiktok": "https://www.tiktok.com/@eliteboxfitness.ng"
       }
     },
 
-     {
+    {
       "id": 10,
       "city": "lagos",
       "name": "Lotus Fitness",
@@ -256,16 +229,9 @@
       "city": "Abuja",
       "name": "Bodyline Fitness and Gym - Gwarinpa",
       "location": "NO. 16, 1st Avenue, Gwarinpa",
-      //   "openHour": "05:00", N/A
-      //   "closeHour": "22:00", N/A
-      //   "fees": {
-      //     "daily": 2500,
-      //     "monthly": 15000,
-      //     "quarterly": 42000,
-      //     "yearly": 160000,
-      //     "couple": 280000,
-      //     "kids": 10000
-      //   }, N/A
+      "openHour": "06:00",
+      "closeHour": "22:00",
+
       "images": {
         "gymImage": "https://placeholder.com/Bodyline-Gwarinpa-image.jpg",
         "logo": "https://placeholder.com/Bodyline-logo.png"
@@ -277,21 +243,13 @@
       }
     },
     {
-      //done
       "id": 2,
       "city": "Abuja",
       "name": "Bodyline Fitness and Gym - Wuse",
       "location": "Sunshine park opposite city park, Ahmadu Bello way, Wuse 2 Abuja",
-      //   "openHour": "05:00", N/A
-      //   "closeHour": "22:00", N/A
-      //   "fees": {
-      //     "daily": 2500,
-      //     "monthly": 15000,
-      //     "quarterly": 42000,
-      //     "yearly": 160000,
-      //     "couple": 280000,
-      //     "kids": 10000
-      //   }, N/A
+      "openHour": "06:00",
+      "closeHour": "21:00",
+
       "images": {
         "gymImage": "https://placeholder.com/Bodyline-Wuse-image.jpg",
         "logo": "https://placeholder.com/Bodyline-logo.png"
@@ -303,19 +261,17 @@
       }
     },
     {
-      //done
       "id": 3,
       "city": "Abuja",
       "name": "iFitness - Gwarinpa",
       "location": "The Mall by Funab, No 1 Road 11, 1st Avenue Gwarinpa, (beside Oando filling station)",
-      "openHour": "06:00", //7am on saturday
-      "closeHour": "21:00", //20:00 on saturday
+      "openHour": "06:00",
+      "closeHour": "21:00",
       "fees": {
         "daily": 2000,
         "monthly": 38985,
         "quarterly": 98955,
         "yearly": 377820
-        
       },
       "images": {
         "gymImage": "https://placeholder.com/iFitness-Gwarinpa-image.jpg",
@@ -328,19 +284,14 @@
       }
     },
     {
-      //done
       "id": 4,
       "city": "Abuja",
       "name": "Dalchifit Gym",
       "location": "Plot C124, 5221 Road, 1st Avenue, Gwarinpa Estate, Abuja",
-      //   "openHour": "06:00", N/A
-      //   "closeHour": "21:00", N/A
+
       "fees": {
-        // "daily": 1800, N/A
-        // "monthly": 12000, N/A
         "quarterly": 100000,
         "yearly": 220000
-        
       },
       "images": {
         "gymImage": "https://placeholder.com/Dauchi-Gym-image.jpg",
@@ -353,12 +304,11 @@
       }
     },
     {
-      //done
       "id": 5,
       "city": "Abuja",
       "name": "EcoFitness Gym",
       "location": "4th Avenue, Gwarinpa, Abuja",
-      "openHour": "06:30", //4pm on sundays ??
+      "openHour": "06:30",
       "closeHour": "22:00",
       "fees": {
         "daily": 4999,
@@ -366,7 +316,6 @@
         "quarterly": 71875,
         "yearly": 275000,
         "couple": 220000
-        // "kids": 8500 -> I don't know
       },
       "images": {
         "gymImage": "https://placeholder.com/EcoFitness-image.jpg",
@@ -378,34 +327,8 @@
         "facebook": "https://facebook.com/ecofitnesshub"
       }
     },
+
     {
-      "id": 6,
-      "city": "Abuja",
-      "name": "Transcorp Hilton Gym",
-      "location": "Transcorp Hilton Abuja, 1 Aguiyi Ironsi Street, Maitama 900001, FCT Abuja, Nigeria.", //Dunno if I was suppsod to make it this detailed though
-      "openHour": "06:00",
-      "closeHour": "22:00",
-      "fees": {
-        // "daily": 3000,
-        // "monthly": 18000,
-        // "quarterly": 50000,
-        // "yearly": 180000,
-        // "couple": 320000,
-        // "kids": 10000 Didn't find any of these. Maybe the gym is restricted to only the hotel guests?
-      },
-      "images": {
-        "gymImage": "https://placeholder.com/Transcorp-Gym-image.jpg",
-        "logo": "https://placeholder.com/Transcorp-logo.png"
-      },
-      "website": "https://www.transcorphotels.com/transcorp-hilton-abuja-2/exercise-fitness-abuja/",
-      //   The general website has irrelevant information, but this doesn't have anything useful either
-      "socialMedia": {
-        "instagram": "https://www.instagram.com/transcorphiltonabuja/",
-        "facebook": "https://www.facebook.com/TranscorpHotelsPlc/"
-      }
-    },
-    {
-      //done
       "id": 7,
       "city": "Abuja",
       "name": "BluCabana Gym",
@@ -413,8 +336,6 @@
       "openHour": "09:00",
       "closeHour": "23:00",
       "fees": {
-        // "daily": 3500,
-        // "monthly": 20000,
         "quarterly": 196000,
         "yearly": 399000,
         "couple": 630000,
@@ -431,21 +352,12 @@
       }
     },
     {
-      //done
       "id": 7,
       "city": "Abuja",
       "name": "Bodyrox Fitness Studio",
       "location": "3rd Floor, Silverbird Entertainment Center, Plot 1161, Musa Yar’adua Center, Central Business District, Abuja, FCT",
       "openHour": "07:00",
-      "closeHour": "20:00", //12:00 on saturday
-      //   "fees": {
-      //     // // "daily": 3500,
-      //     // // "monthly": 20000,
-      //     // "quarterly": 196000,
-      //     // "yearly": 399000,
-      //     // "couple": 630000,
-      //     // "kids": 154000
-      //   }, Not found
+      "closeHour": "20:00",
       "images": {
         "gymImage": "https://placeholder.com/BluCabana-Gym-image.jpg",
         "logo": "https://bodyroxfs.com/wp-content/uploads/2018/02/Icebox-Bodyrox-Logo-1.2sm.png"
@@ -464,8 +376,8 @@
       "city": "Port Harcourt",
       "name": "iFitness - Port Harcourt",
       "location": "214 Ordinance Road Trans-Amadi Portharcourt, Rivers State",
-      "openHour": "06:00", //7:00 on saturday
-      "closeHour": "21:00", //20:00 on saturday
+      "openHour": "06:00",
+      "closeHour": "21:00",
       "fees": {
         "monthly": 38985,
         "quarterly": 98955,
@@ -487,18 +399,7 @@
       "city": "Port Harcourt",
       "name": "Jasabi fitness",
       "location": "Hon. Adoki close, by Prof Okujagwu Street off Odili Road, Port Harcourt",
-      "openHour": "06:00", //7:00 on saturday
-      "closeHour": "21:00", //20:00 on saturday
-      "fees": {
-        "monthly": 38985,
-        "quarterly": 98955,
-        "yearly": 377820
-      },
-      "images": {
-        "gymImage": "https://placeholder.com/iFitness-VI-image.jpg",
-        "logo": "https://placeholder.com/iFitness-logo.png"
-      },
-      "website": "www.jasabifitness.com", //not working
+
       "socialMedia": {
         "instagram": "https://www.instagram.com/jasabifitness",
         "facebook": "https://facebook.com/jasabifitness",
@@ -510,22 +411,16 @@
       "city": "Port Harcourt",
       "name": "Charlie's Total fitness",
       "location": "Plot 56/57 Stadium road GRA Phase IV, Port Harcourt",
-      "openHour": "06:00", 
-      "closeHour": "21:00", // Couldn't find
-       "fees": {
-        "monthly": 38985,
-        "quarterly": 98955,
-        "yearly": 377820
-      },
+      "openHour": "06:00",
+      "closeHour": "22:00",
+
       "images": {
         "gymImage": "https://placeholder.com/iFitness-VI-image.jpg",
         "logo": "https://placeholder.com/iFitness-logo.png"
       },
-      "website": "https://charliesgym.net/", //not working either
       "socialMedia": {
         "instagram": "https://www.instagram.com/charliesfitnesscenter",
         "facebook": "https://facebook.com/charliesfitnesscenter"
-        
       }
     },
     {
@@ -533,22 +428,16 @@
       "city": "Port Harcourt",
       "name": "Go Wellness",
       "location": "23/25 Nembe Road, Rumuibekwe, Port Harcourt 500102, Rivers",
-      "openHour": "06:00", //12:00pm on sunday
-      "closeHour": "20:30", 
-    //    "fees": {
-    //     "monthly": 38985,
-    //     "quarterly": 98955,
-    //     "yearly": 377820
-    //   },
+      "openHour": "06:00",
+      "closeHour": "20:30",
+
       "images": {
         "gymImage": "https://placeholder.com/iFitness-VI-image.jpg",
         "logo": "https://placeholder.com/iFitness-logo.png"
       },
-      "website": "https://charliesgym.net/", //not working either
       "socialMedia": {
         "instagram": "https://www.instagram.com/charliesfitnesscenter",
         "facebook": "https://facebook.com/charliesfitnesscenter"
-        
       }
     },
     {
@@ -556,21 +445,12 @@
       "city": "Port Harcourt",
       "name": "ImagePlus Health and Fitness Club",
       "location": "15, Ada-George Road, Port Harcourt, Rivers",
-      "openHour": "08:00", 
-      "closeHour": "18:00", 
-    //    "fees": {
-    //     "monthly": 38985,
-    //     "quarterly": 98955,
-    //     "yearly": 377820
-    //   },
-      "images": {
-        "gymImage": "https://placeholder.com/iFitness-VI-image.jpg",
-        "logo": "https://placeholder.com/iFitness-logo.png"
-      },
+      "openHour": "08:00",
+      "closeHour": "18:00",
+
       "socialMedia": {
         "instagram": "https://www.instagram.com/imageplus_club/",
         "facebook": "https://www.facebook.com/imageplusng/"
-        
       }
     },
     {
@@ -578,13 +458,12 @@
       "city": "Port Harcourt",
       "name": "DeSculpture Gym",
       "location": "77, Obiwali Road, Opposite Winners Chapel, Rumuigbo, Port Harcourt, Rivers",
-      "openHour": "05:30", 
-      "closeHour": "21:00", 
-   
+      "openHour": "05:30",
+      "closeHour": "21:00",
+
       "socialMedia": {
         "instagram": "https://www.instagram.com/desculpturegym/",
         "facebook": "https://www.facebook.com/DeSculpture/"
-        
       }
     },
     {
@@ -592,26 +471,22 @@
       "city": "Port Harcourt",
       "name": "Synergym Fitness Centre",
       "location": "9, Apara Link Road by Y Junction, Rumuigbo, Port Harcourt, Rivers",
-      "openHour": "06:00", 
-      "closeHour": "20:00", 
-   
+      "openHour": "06:00",
+      "closeHour": "20:00",
+
       "socialMedia": {
         "facebook": "https://www.facebook.com/Synergymfitnesscenter/"
-        
       }
     }
-    
-    
-  ], 
+  ],
   "ibadan": [
-
     {
       "id": 1,
       "city": "Ibadan",
       "name": "Fly Fitness - Akobo",
       "locations": "2nd Floor, Plot 1 Block C, Beside Victoria Plaza, Akobo Olorunda-Abaa Road, Akobo, Ibadan, Nigeria.",
-       "openHour": "07:00",
-      "closeHour": "19:00", 
+      "openHour": "07:00",
+      "closeHour": "19:00",
       "fees": {
         "monthly": 15000,
         "quarterly": 40000
@@ -631,8 +506,8 @@
       "city": "Ibadan",
       "name": "Fly Fitness - Eleyele",
       "locations": "Ariwola House, Opposite Ansarudeen School, Sango-Eleyele Road,Ibadan, Nigeria.",
-       "openHour": "07:30",
-      "closeHour": "19:00", 
+      "openHour": "07:30",
+      "closeHour": "19:00",
       "fees": {
         "monthly": 15000,
         "quarterly": 40000
@@ -652,12 +527,11 @@
       "city": "Ibadan",
       "name": "Dynamo Fitness",
       "location": "No. 12, Ashi Bodija Road, Beside Deeper Life Bible Church, Ibadan, Oyo",
-      "openHour": "06:30",  // 3:00pm on Sunday
-      "closeHour": "21:00", // 20:00pm on Sunday
-   
+      "openHour": "06:30",
+      "closeHour": "21:00",
+
       "socialMedia": {
         "instagram": "https://www.instagram.com/dynamo_fitness_centre/"
-        
       }
     },
     {
@@ -665,13 +539,12 @@
       "city": "Ibadan",
       "name": "Yayan Fitness",
       "location": "Atimaggies Resorts, Ogbomosho 210214, Oyo",
-      "openHour": "07:00", 
-      "closeHour": "20:00", 
-   
+      "openHour": "07:00",
+      "closeHour": "20:00",
+
       "socialMedia": {
         "instagram": "https://www.instagram.com/yayanfitness_array/",
         "facebook": "https://www.facebook.com/yayanfitness19/"
-        
       }
     },
     {
@@ -679,12 +552,11 @@
       "city": "Ibadan",
       "name": "Pearlsburg Fitness Center",
       "location": "Palace Complex Iletuntun, Jericho/Nihort Road, Opposite DSS Land, Ibadan, Oyo",
-      "openHour": "07:00", 
+      "openHour": "07:00",
       "closeHour": "12:00",
-   
+
       "socialMedia": {
         "facebook": "https://www.facebook.com/p/Pearlsburg-Fitness-Center-100076434836609/"
-        
       }
     },
     {
@@ -692,12 +564,11 @@
       "city": "Ibadan",
       "name": "542 Fitness Club",
       "location": "Elephant Bus Stop, No 16, Zone 5, Road 1, Alaka Street, Oluyole Estate Road, Ibadan, Oyo",
-      "openHour": "06:00", 
+      "openHour": "06:00",
       "closeHour": "20:00",
-   
+
       "socialMedia": {
         "instagram": "https://www.instagram.com/542fitnesscenter/"
-        
       }
     },
     {
@@ -705,12 +576,11 @@
       "city": "Ibadan",
       "name": "Gym House Club",
       "location": "Road 1, General Gas, Akobo Road, Ibadan, Oyo",
-      "openHour": "07:00", 
-      "closeHour": "20:00", //14:00 on sunday
-   
+      "openHour": "07:00",
+      "closeHour": "20:00",
+
       "socialMedia": {
         "facebook": "https://www.facebook.com/gymhousefitness/"
-        
       }
     },
     {
@@ -718,202 +588,212 @@
       "city": "Ibadan",
       "name": "24 Hour Fitness",
       "location": "Oni and sons junctions, opposite palms mall, ShopRite Ringroad",
-      "openHour": "07:00", 
+      "openHour": "07:00",
       "closeHour": "21:00",
-   
+
       "socialMedia": {
         "instagram": "https://www.instagram.com/24hourfitness.official/"
-        
+      }
+    },
+    {
+      "id": 9,
+      "city": "Ibadan",
+      "name": "iFitness - Ibadan",
+      "location": "The Palms Shopping Mall, Ring Road, Ibadan",
+      "openHour": "06:00",
+      "closeHour": "21:00",
+      "fees": {
+        "monthly": 28985,
+        "quarterly": 74955,
+        "yearly": "275,820"
+      },
+      "images": {
+        "gymImage": "https://placeholder.com/iFitness-VI-image.jpg",
+        "logo": "https://placeholder.com/iFitness-logo.png"
+      },
+      "website": "https://ifitness.ng",
+      "socialMedia": {
+        "instagram": "https://instagram.com/ifitnessng",
+        "facebook": "https://facebook.com/ifitnessng",
+        "twitter": "https://twitter.com/ifitnessng"
       }
     }
   ],
 
   "enugu": [
     {
-        "id": 1,
-        "city": "Enugu",
-        "name": "Fortress Fitness Center",
-        "location": "Polyster Mall, Garden Ave, opposite All Saint Bus Stop, GRA, Enugu 400102, Enugu, Nigeria",
+      "id": 1,
+      "city": "Enugu",
+      "name": "Fortress Fitness Center",
+      "location": "Polyster Mall, Garden Ave, opposite All Saint Bus Stop, GRA, Enugu 400102, Enugu, Nigeria",
 
-        "openHour": "06:30", 
+      "openHour": "06:30",
       "closeHour": "20:00",
-       
-     
-    //   "website": "https://charliesgym.net/", //not working either
+
       "socialMedia": {
-        "instagram": "https://www.instagram.com/fortressfit_ness/",
-        
+        "instagram": "https://www.instagram.com/fortressfit_ness/"
       }
-        
     },
     {
-         "id": 2,
-        "city": "Enugu",
-        "name": "Phantom Gym and Fitness",
-        "location": "Amokwe Bus Stop, 131 Agbani Road, Uwani, Enugu",
+      "id": 2,
+      "city": "Enugu",
+      "name": "Phantom Gym and Fitness",
+      "location": "Amokwe Bus Stop, 131 Agbani Road, Uwani, Enugu",
 
-        "openHour": "06:30", 
-      "closeHour": "20:00", //2pm on saturday
-       
-     
-    //   "website": "https://charliesgym.net/", //not working either
+      "openHour": "06:30",
+      "closeHour": "20:00",
       "socialMedia": {
-        "instagram": "https://www.instagram.com/fortressfit_ness/",
-        
+        "instagram": "https://www.instagram.com/fortressfit_ness/"
       }
     },
     {
-        "id": 3,
-        "city": "Enugu",
-        "name": "Bellisima Fitness and Health Studio",
-        "location": "Amokwe Bus Stop, 131 Agbani Road, Uwani, Enugu",
+      "id": 3,
+      "city": "Enugu",
+      "name": "Bellisima Fitness and Health Studio",
+      "location": "Amokwe Bus Stop, 131 Agbani Road, Uwani, Enugu",
 
-        "openHour": "06:30", 
-        "closeHour": "20:00", //2pm on saturday
-       
-     
-    //   "website": "https://charliesgym.net/", //not working either
+      "openHour": "06:30",
+      "closeHour": "20:00",
+
       "socialMedia": {
-        "instagram": "https://www.instagram.com/fortressfit_ness/",
-        
+        "instagram": "https://www.instagram.com/fortressfit_ness/"
       }
     },
     {
-        "id": 4,
-        "city": "Enugu",
-        "name": "Liberty Fitness Center",
-        "location": "7, Holy Trinity Street, Independence Layout, Enugu",
+      "id": 4,
+      "city": "Enugu",
+      "name": "Liberty Fitness Center",
+      "location": "7, Holy Trinity Street, Independence Layout, Enugu",
 
-        "openHour": "06:00", 
-        "closeHour": "20:00", 
-        "socialMedia": {
-        "instagram": "https://www.instagram.com/libertyfitness2/",
-        
+      "openHour": "06:00",
+      "closeHour": "20:00",
+      "socialMedia": {
+        "instagram": "https://www.instagram.com/libertyfitness2/"
       }
     },
     {
-        "id": 5,
-        "city": "Enugu",
-        "name": "Infinity Fitness Center",
-        "location": "Plot 36, Chief Iyke Ogbodo Street, Off Ugwuaji Road, Independence Layout, Enugu",
+      "id": 5,
+      "city": "Enugu",
+      "name": "Infinity Fitness Center",
+      "location": "Plot 36, Chief Iyke Ogbodo Street, Off Ugwuaji Road, Independence Layout, Enugu",
 
-        "openHour": "06:30", 
-        "closeHour": "20:00", 
-        "socialMedia": {
-            "instagram": "https://www.instagram.com/libertyfitness2/"
-        }
-    },
-    {
-        "id": 6,
-        "city": "Enugu",
-        "name": "Klub 042",
-        "location": "Plot 8, Klub 042 Avenue Premier Layout, Enugu",
-
-        "openHour": "06:30", 
-        "closeHour": "20:00", //16:00 on Sunday
-        "socialMedia": {
-            "instagram": "https://www.instagram.com/klub042_fitness_center",
-            "facebook": "https://www.facebook.com/klub042/"  
+      "openHour": "06:30",
+      "closeHour": "20:00",
+      "socialMedia": {
+        "instagram": "https://www.instagram.com/libertyfitness2/"
       }
     },
     {
-        "id": 7,
-        "city": "Enugu",
-        "name": "Klub 042",
-        "location": "No. 2, LilBurn Avenue, New Haven Extension, Enugu",
+      "id": 6,
+      "city": "Enugu",
+      "name": "Klub 042",
+      "location": "Plot 8, Klub 042 Avenue Premier Layout, Enugu",
 
-        "openHour": "06:00", //13:00 on Sunday
-        "closeHour": "20:00", //23:00 on Sunday
-        "socialMedia": {
-            "instagram": "https://www.instagram.com/lilburn_services",
-            "facebook": "https://www.facebook.com/LilburnGym/"  
+      "openHour": "06:30",
+      "closeHour": "20:00",
+      "socialMedia": {
+        "instagram": "https://www.instagram.com/klub042_fitness_center",
+        "facebook": "https://www.facebook.com/klub042/"
+      }
+    },
+    {
+      "id": 7,
+      "city": "Enugu",
+      "name": "Klub 042",
+      "location": "No. 2, LilBurn Avenue, New Haven Extension, Enugu",
+
+      "openHour": "06:00",
+      "closeHour": "20:00",
+      "socialMedia": {
+        "instagram": "https://www.instagram.com/lilburn_services",
+        "facebook": "https://www.facebook.com/LilburnGym/"
       }
     }
   ],
   "anambra": [
     {
-         "id": 1,
-        "city": "Anambra",
-        "name": "XFit Hub",
-        "location": "Plot B18 Executive Business District Opp Alex Ekwueme Square Awka, Anambra state",
+      "id": 1,
+      "city": "Anambra",
+      "name": "XFit Hub",
+      "location": "Plot B18 Executive Business District Opp Alex Ekwueme Square Awka, Anambra state",
 
-        "openHour": "06:30", 
-       "closeHour": "20:00", 
-     
+      "openHour": "06:30",
+      "closeHour": "20:00",
+
       "socialMedia": {
         "instagram": "https://www.instagram.com/xfit_hub/",
-        "facebook": "https://www.facebook.com/hubxfit/"        
+        "facebook": "https://www.facebook.com/hubxfit/"
       }
     },
     {
-        "id": 2,
-        "city": "Anambra",
-        "name": "Body Fitness by UcheFitness",
-        "location": "Abakaliki Street, 52 Club Road, Awka 500020, Anambra",
+      "id": 2,
+      "city": "Anambra",
+      "name": "Body Fitness by UcheFitness",
+      "location": "Abakaliki Street, 52 Club Road, Awka 500020, Anambra",
 
-        "openHour": "06:00", //11am on sunday
-        "closeHour": "20:00",
-     
+      "openHour": "06:00",
+      "closeHour": "20:00",
+
       "socialMedia": {
         "instagram": "",
-        "facebook": ""        
+        "facebook": ""
       }
     },
     {
-        "id": 3,
-        "city": "Anambra",
-        "name": "Kenora Fitness Center",
-        "location": "1st and 2nd Floor, Kenora Complex II GRA, Agu-Awka, Awka, Anambra",
+      "id": 3,
+      "city": "Anambra",
+      "name": "Kenora Fitness Center",
+      "location": "1st and 2nd Floor, Kenora Complex II GRA, Agu-Awka, Awka, Anambra",
 
-        "openHour": "06:30",
-        "closeHour": "20:00",
-        "fees": {
-            "monthly": 20000,
-            "couple":36000
+      "openHour": "06:30",
+      "closeHour": "20:00",
+      "fees": {
+        "monthly": 20000,
+        "couple": 36000
       },
-     
+
       "socialMedia": {
         "instagram": "https://www.instagram.com/kenorafitnessspa/",
-        "facebook": ""        
+        "facebook": ""
       }
     },
     {
-        "id": 4,
-        "city": "Anambra",
-        "name": "XFit Gym and Aerobics Center",
-        "location": "Judiciary Road, Awka 420109, Anambra",
+      "id": 4,
+      "city": "Anambra",
+      "name": "XFit Gym and Aerobics Center",
+      "location": "Judiciary Road, Awka 420109, Anambra",
 
-        "openHour": "00:00", 
-       "closeHour": "00:00", //open 24 hours
-     
+      "openHour": "00:00",
+      "closeHour": "00:00",
+
       "socialMedia": {
-        "facebook": "https://www.facebook.com/xfithub/"        
+        "facebook": "https://www.facebook.com/xfithub/"
       }
     },
     {
-        "id": 5,
-        "city": "Anambra",
-        "name": "Eagle Gym",
-        "location": "10, Emeka Orazulume Street, Nnewi, Anambra",
+      "id": 5,
+      "city": "Anambra",
+      "name": "Eagle Gym",
+      "location": "10, Emeka Orazulume Street, Nnewi, Anambra",
 
-        "openHour": "06:30", 
-       "closeHour": "20:00",
-     
+      "openHour": "06:30",
+      "closeHour": "20:00",
+
       "socialMedia": {
-        "facebook": "https://www.facebook.com/eaglefitcenter/"        
+        "facebook": "https://www.facebook.com/eaglefitcenter/"
       }
     },
     {
-        "id": 6,
-        "city": "Anambra",
-        "name": "Olive Fitness Center",
-        "location": "No. 5, All Saints Cathedral Road, Opposite GRA Gate, Onitsha, Anambra",
+      "id": 6,
+      "city": "Anambra",
+      "name": "Olive Fitness Center",
+      "location": "No. 5, All Saints Cathedral Road, Opposite GRA Gate, Onitsha, Anambra",
 
-        "openHour": "06:30", //10:00 am on sunday
-       "closeHour": "19:00", //12:00pm on sunday
-     
+      "openHour": "06:30",
+      "closeHour": "19:00",
+
       "socialMedia": {
-        "facebook": "https://www.facebook.com/eaglefitcenter/"        
+        "facebook": "https://www.facebook.com/eaglefitcenter/"
       }
     }
   ]
