@@ -107,30 +107,36 @@ export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
     }
   };
 
-  
   const onSubmit = async (data) => {
     console.log("Form Submitted:", data);
+    setIsOpen(false); 
+    reset(); 
 
-    const webAppUrl = `https://script.google.com/macros/s/AKfycbxJI1jMyZQX19pgPZ6a7UuQ_7mLzOpevkqJ28n2F-K8e3JYncMN7ikqHZB2J6255gTw-g/exec`
-    try {
-      const response = await fetch(webAppUrl, {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data), 
-      });
-
-      if (response.ok) {
-          setIsOpen(false); 
-          reset(); 
-      } else {
-          console.error('Error submitting form data:', response.statusText);
-      }
-  } catch (error) {
-      console.error('Error during fetch request:', error);
   }
-  };
+  
+  // const onSubmit = async (data) => {
+  //   console.log("Form Submitted:", data);
+
+  //   const webAppUrl = `https://script.google.com/macros/s/AKfycbxJI1jMyZQX19pgPZ6a7UuQ_7mLzOpevkqJ28n2F-K8e3JYncMN7ikqHZB2J6255gTw-g/exec`
+  //   try {
+  //     const response = await fetch(webAppUrl, {
+  //         method: 'POST',
+  //         headers: {
+  //             'Content-Type': 'application/json',
+  //         },
+  //         body: JSON.stringify(data), 
+  //     });
+
+  //     if (response.ok) {
+  //         setIsOpen(false); 
+  //         reset(); 
+  //     } else {
+  //         console.error('Error submitting form data:', response.statusText);
+  //     }
+  // } catch (error) {
+  //     console.error('Error during fetch request:', error);
+  // }
+  // };
 
   return (
     <Dialog className="m-4" open={isOpen} onClose={() => setIsOpen(false)}>
