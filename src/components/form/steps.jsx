@@ -26,6 +26,7 @@ export const PersonalInfo = () => {
           </Label>
           <Input
             id="name"
+            name="name"
             {...register("name")}
           />
           {errors.name && touchedFields.name && <span className="text-red-500 text-xs py-0 my-0">{errors.name.message}</span>}
@@ -38,6 +39,7 @@ export const PersonalInfo = () => {
           <Input
             id="email"
             type="email"
+            name="email"
             {...register("email")}
           />
           {errors.email && touchedFields.email && <span className="text-red-500 text-xs py-0 my-0">{errors.email.message}</span>}
@@ -50,6 +52,7 @@ export const PersonalInfo = () => {
           <Input
             id="contactNumber"
             type="tel"
+            name="contactNumber"
             {...register("contactNumber")}
           />
           {errors.contactNumber && touchedFields.contactNumber && <span className="text-red-500 text-xs py-0 my-0">{errors.contactNumber.message}</span>}
@@ -61,6 +64,7 @@ export const PersonalInfo = () => {
           <Input
             id="emergencyContact"
             placeholder="Emergency contact details"
+            name="emergencyContact"
             {...register("emergencyContact")}
           />
           {errors.emergencyContact && touchedFields.emergencyContact && <span className="text-red-500 text-xs py-0 my-0">{errors.emergencyContact.message}</span>}
@@ -82,6 +86,7 @@ export const PersonalInfo = () => {
           <Input
             id="age"
             type="number"
+            name="age"
             min="18"
             {...register("age")}
           />
@@ -94,6 +99,7 @@ export const PersonalInfo = () => {
           <Input
             id="weight"
             type="number"
+            name="weight"
             {...register("weight")}
             // value={formData.weight}
             // onChange={(e) => setFormData({ ...formData, weight: e.target.value })}
@@ -106,6 +112,7 @@ export const PersonalInfo = () => {
           <Input
             id="height"
             type="number"
+            name="height"
             {...register("height")}
           />
         </div>
@@ -131,6 +138,7 @@ export const FitnessInfo = () => {
             </Label>
             <Select
                 id="fitnessGoal"
+                name="fitnessGoal"
                 onValueChange={(value) => {
                   setValue("fitnessGoal", value, { shouldValidate: true });
                 }}
@@ -164,6 +172,7 @@ export const FitnessInfo = () => {
           </Label>
           <Select
             id="experienceLevel"
+            name="experienceLevel"
             onValueChange={(value) => {
               setValue("experienceLevel", value, { shouldValidate: true });
             }}
@@ -195,6 +204,7 @@ export const FitnessInfo = () => {
           </Label>
           <Input
             id="workoutSchedule"
+            name="workoutSchedule"
             placeholder="Preferred days and times for workouts"
             {...register("workoutSchedule")}
           />
@@ -206,6 +216,7 @@ export const FitnessInfo = () => {
           </Label>
           <Input
             id="dietaryPreferences"
+            name="dietaryPreferences"
             placeholder="e.g., vegetarian, vegan, allergies"
             {...register("dietaryPreferences")}
           />
@@ -217,6 +228,7 @@ export const FitnessInfo = () => {
           </Label>
           <Input
             id="injuries"
+            name="injuries"
             placeholder="If applicable"
             {...register("injuries")}
           />
@@ -236,6 +248,7 @@ export const OtherInfo = () => {
           </Label>
           <Input
             id="creativeField"
+            name="creativeField"
             {...register("creativeField")}
           />
         </div>
@@ -246,6 +259,7 @@ export const OtherInfo = () => {
           </Label>
           <Input
             id="location"
+            name="location"
             {...register("location")}
           />
         </div>
@@ -256,6 +270,7 @@ export const OtherInfo = () => {
           </Label>
           <Input
             id="referral"
+            name="referral"
             placeholder="How did you hear about FitCreatives?"
             {...register("referral")}
           />

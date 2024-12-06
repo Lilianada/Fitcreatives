@@ -68,17 +68,17 @@ export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
       fitnessGoal: null,
       experienceLevel: null,
       creativeField: "",
-      fitnessPreferences: [],
+      //fitnessPreferences: [],
       workoutSchedule: "",
       dietaryPreferences: "",
       injuries: "",
-      fitnessExperience: "",
+      //fitnessExperience: "",
       referral: "",
-      socialMediaLinks: "",
+      //socialMediaLinks: "",
       emergencyContact: "",
-      preferredClub: "",
-      consentTerms: false,
-      consentPrivacy: false,
+      // preferredClub: "",
+      // consentTerms: false,
+      // consentPrivacy: false,
     },
     mode: "onBlur"
   });
@@ -107,12 +107,36 @@ export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
     }
   };
 
-  const onSubmit = (data) => {
-    //console.log("Form Submitted:", data);
-    setIsOpen(false);
-    reset();
-  };
+  const onSubmit = async (data) => {
+    try {
+      const formData = new FormData();
 
+      for (const [key, value] of Object.entries(data)) {
+        formData.append(key, value);
+      }
+
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbxJI1jMyZQX19pgPZ6a7UuQ_7mLzOpevkqJ28n2F-K8e3JYncMN7ikqHZB2J6255gTw-g/exec",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const result = await response.json();
+      console.log("Response from Google Sheets:", result);
+
+      if (result.status === "error") {
+        alert(`Error: ${result.message}`);
+      } else {
+        alert("Form submitted successfully!");
+        reset();
+      }
+    } catch (error) {
+      console.error("Error submitting to Google Sheets:", error);
+    }
+  };
+  
   // const onSubmit = async (data) => {
   //   console.log("Form Submitted:", data);
 
