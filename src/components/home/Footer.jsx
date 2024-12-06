@@ -18,7 +18,7 @@ const navItems = [
     },
     {
         title: "Contact Us",
-        url: "/",
+        url: "/contactUs",
         icon: MessageSquareIcon,
     },
 ]
