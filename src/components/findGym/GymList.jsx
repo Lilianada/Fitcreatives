@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -36,10 +37,12 @@ const LocationBox = () => {
   );
 };
 
-const GymCard = ({ name, location, image }) => {
+const GymCard = ({ gymId, name, location, image }) => {
+  
   return (
+    <Link href={`/find-gym/${gymId}`}>
     <div className="border rounded-2xl p-4 grid gap-4">
-      <div className="grid place-items-center">
+      <div className="grid place-items-center" >
         <img
           src={image}
           alt='gym'
@@ -51,13 +54,14 @@ const GymCard = ({ name, location, image }) => {
         <p className="text-muted-foreground text-sm">{location}</p>
       </div>
     </div>
+    </Link>
   );
 };
 
 export default function GymList() {
   const [loading, setIsLoading] = useState(true);
   const [places, setPlaces] = useState({});
-  const [selectedCity, setSelectedCity] = useState("lagos"); // Default to any city
+  const [selectedCity, setSelectedCity] = useState("lagos");
 
   useEffect(() => {
     const fetchPlaces = async () => {
@@ -115,6 +119,7 @@ export default function GymList() {
                     name={place.name}
                     image={place.images.gymImage}
                     location={place.location}
+                    gymId={place.id}
                   />
                 ))}
               </div>

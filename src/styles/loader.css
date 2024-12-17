@@ -1,0 +1,20 @@
+/* Spinner animation */
+.animateSpinner {
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 4px solid #FF9933; 
+    border-radius: 50%;
+    animation: spinner-rotate 1s infinite linear;
+    border-top-color: #ff9932; 
+    margin: 0 auto;
+}
+
+@keyframes spinner-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
