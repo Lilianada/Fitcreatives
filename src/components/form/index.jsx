@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -56,9 +56,8 @@ export function InputForm() {
 }
 
 export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
-  const formRef = useRef(null)
-
-   const methods = useForm({
+  
+  const methods = useForm({
     resolver: zodResolver(StepSchemas),
     defaultValues: {
       name: "",
@@ -66,22 +65,16 @@ export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
       contactNumber: "",
       age: "",
       weight: "",
-      height: "",
+      height:"",
       location: "",
       fitnessGoal: null,
       experienceLevel: null,
       creativeField: "",
-      //fitnessPreferences: [],
       workoutSchedule: "",
       dietaryPreferences: "",
       injuries: "",
-      //fitnessExperience: "",
       referral: "",
-      //socialMediaLinks: "",
       emergencyContact: "",
-      // preferredClub: "",
-      // consentTerms: false,
-      // consentPrivacy: false,
     },
     mode: "onTouched"
   });
@@ -111,13 +104,6 @@ export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
     }
   };
 
-  // const onSubmit = async (data) => {
-  //   console.log("Form Submitted:", data);
-  //   setIsOpen(false); 
-  //   reset(); 
-
-  // }
-  
   const onSubmit = async (data) => {
     console.log("Form Submitted:", data);
 
@@ -129,67 +115,18 @@ export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
               'Content-Type': 'application/json',
           },
           body: JSON.stringify(data),
-          mode: "no-cors", 
+          mode: "no-cors"
       });
-      setIsOpen(false); // Close modal
-          reset(); // Reset form fields
-          console.log("Form successfully submitted to Google Sheets.");
-        } catch (error) {
-            console.error('Error during fetch request:', error);
-        }
- }
 
-//  const onSubmit = async (data) => {
-//   try {
-//     const formData = new FormData();
+    setIsOpen(false); 
+      reset(); 
+      console.log("Form successfully submitted to Google Sheets.");
+    } catch (error) {
+        console.error('Error during fetch request:', error);
+    }
+  };
 
-//     for (const [key, value] of Object.entries(data)) {
-//       formData.append(key, value);
-//     }
-
-//     const response = await fetch(
-//       "https://script.google.com/macros/s/AKfycbxJI1jMyZQX19pgPZ6a7UuQ_7mLzOpevkqJ28n2F-K8e3JYncMN7ikqHZB2J6255gTw-g/exec",
-//       {
-//         method: "POST",
-//         body: formData,
-//         mode: "no-cors", 
-//       }
-//     );
-
-//     const result = await response.json();
-//     console.log("Response from Google Sheets:", result);
-
-//     if (result.status === "error") {
-//       alert(`Error: ${result.message}`);
-//     } else {
-//       alert("Form submitted successfully!");
-//       reset();
-//     }
-//   } catch (error) {
-//     console.error("Error submitting to Google Sheets:", error);
-//   }
-// };
   
-  // const onSubmit = (data) => {
-  //   const formEle = formRef.current;
-  //   const formData = new FormData(formEle);
-  //   const webAppUrl = `https://script.google.com/macros/s/AKfycbxJI1jMyZQX19pgPZ6a7UuQ_7mLzOpevkqJ28n2F-K8e3JYncMN7ikqHZB2J6255gTw-g/exec`
-
-  //   fetch(webAppUrl, {
-  //     method: "POST",
-  //     body: formData,
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(formData);
-  //       setIsOpen(false);
-  //       reset(); 
-  //     })
-  //     .catch((error) => {
-  //       console.log("Error submitting form:", error);
-  //     });    
-  //   }
-
   return (
     <Dialog className="m-4" open={isOpen} onClose={() => setIsOpen(false)}>
       <DialogTrigger asChild>
