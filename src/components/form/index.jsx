@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -56,14 +56,17 @@ export function InputForm() {
 }
 
 export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
-  
-  const methods = useForm({
+  const formRef = useRef(null)
+
+   const methods = useForm({
     resolver: zodResolver(StepSchemas),
     defaultValues: {
       name: "",
       email: "",
       contactNumber: "",
       age: "",
+      weight: "",
+      height: "",
       location: "",
       fitnessGoal: null,
       experienceLevel: null,
@@ -80,8 +83,9 @@ export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
       // consentTerms: false,
       // consentPrivacy: false,
     },
-    mode: "onBlur"
+    mode: "onTouched"
   });
+
 
   const { handleSubmit, watch, reset, trigger, formState } = methods;
   const currentStep = watch("currentStep") || 0;
@@ -107,36 +111,84 @@ export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
     }
   };
 
-  const onSubmit = async (data) => {
-    console.log("Form Submitted:", data);
-    setIsOpen(false); 
-    reset(); 
-
-  }
-  
   // const onSubmit = async (data) => {
   //   console.log("Form Submitted:", data);
+  //   setIsOpen(false); 
+  //   reset(); 
 
-  //   const webAppUrl = `https://script.google.com/macros/s/AKfycbxJI1jMyZQX19pgPZ6a7UuQ_7mLzOpevkqJ28n2F-K8e3JYncMN7ikqHZB2J6255gTw-g/exec`
-  //   try {
-  //     const response = await fetch(webAppUrl, {
-  //         method: 'POST',
-  //         headers: {
-  //             'Content-Type': 'application/json',
-  //         },
-  //         body: JSON.stringify(data), 
-  //     });
-
-  //     if (response.ok) {
-  //         setIsOpen(false); 
-  //         reset(); 
-  //     } else {
-  //         console.error('Error submitting form data:', response.statusText);
-  //     }
-  // } catch (error) {
-  //     console.error('Error during fetch request:', error);
   // }
-  // };
+  
+  const onSubmit = async (data) => {
+    console.log("Form Submitted:", data);
+
+    const webAppUrl = `https://script.google.com/macros/s/AKfycbxJI1jMyZQX19pgPZ6a7UuQ_7mLzOpevkqJ28n2F-K8e3JYncMN7ikqHZB2J6255gTw-g/exec`
+    try {
+      const response = await fetch(webAppUrl, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+          mode: "no-cors", 
+      });
+      setIsOpen(false); // Close modal
+          reset(); // Reset form fields
+          console.log("Form successfully submitted to Google Sheets.");
+        } catch (error) {
+            console.error('Error during fetch request:', error);
+        }
+ }
+
+//  const onSubmit = async (data) => {
+//   try {
+//     const formData = new FormData();
+
+//     for (const [key, value] of Object.entries(data)) {
+//       formData.append(key, value);
+//     }
+
+//     const response = await fetch(
+//       "https://script.google.com/macros/s/AKfycbxJI1jMyZQX19pgPZ6a7UuQ_7mLzOpevkqJ28n2F-K8e3JYncMN7ikqHZB2J6255gTw-g/exec",
+//       {
+//         method: "POST",
+//         body: formData,
+//         mode: "no-cors", 
+//       }
+//     );
+
+//     const result = await response.json();
+//     console.log("Response from Google Sheets:", result);
+
+//     if (result.status === "error") {
+//       alert(`Error: ${result.message}`);
+//     } else {
+//       alert("Form submitted successfully!");
+//       reset();
+//     }
+//   } catch (error) {
+//     console.error("Error submitting to Google Sheets:", error);
+//   }
+// };
+  
+  // const onSubmit = (data) => {
+  //   const formEle = formRef.current;
+  //   const formData = new FormData(formEle);
+  //   const webAppUrl = `https://script.google.com/macros/s/AKfycbxJI1jMyZQX19pgPZ6a7UuQ_7mLzOpevkqJ28n2F-K8e3JYncMN7ikqHZB2J6255gTw-g/exec`
+
+  //   fetch(webAppUrl, {
+  //     method: "POST",
+  //     body: formData,
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(formData);
+  //       setIsOpen(false);
+  //       reset(); 
+  //     })
+  //     .catch((error) => {
+  //       console.log("Error submitting form:", error);
+  //     });    
+  //   }
 
   return (
     <Dialog className="m-4" open={isOpen} onClose={() => setIsOpen(false)}>
@@ -175,13 +227,14 @@ export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
                 <Button
                   variant="outline"
                   className="font-semibold"
+                  type="button"
                   onClick={prevStep}
                 >
                   Previous
                 </Button>
               )}
               {currentStep < steps - 1 ? (
-                <Button className="font-semibold" onClick={nextStep}>
+                <Button className="font-semibold" type="button" onClick={nextStep}>
                   Next
                 </Button>
               ) : (
