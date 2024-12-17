@@ -101,8 +101,6 @@ export const PersonalInfo = () => {
             type="number"
             name="weight"
             {...register("weight")}
-            // value={formData.weight}
-            // onChange={(e) => setFormData({ ...formData, weight: e.target.value })}
           />
         </div>
         <div className="flex flex-col gap-1">

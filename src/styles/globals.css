@@ -67,6 +67,10 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+  html {
+    scroll-behavior: smooth;
+  }
+  
 }
 
 @layer base {
@@ -94,3 +98,26 @@ h1 {
   padding: 0;
   margin: 0;
 }
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #FF9933; 
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #FF9933, 0 0 5px #FF9933;
+}
+
+#nprogress .spinner {
+  display: none;
+}
+

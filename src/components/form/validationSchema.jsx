@@ -8,6 +8,8 @@ export const StepSchemas = z.object({
     contactNumber: z.coerce.number().min(10, "Contact number must be at least 10 digits"),
     emergencyContact: z.string().min(1, "Please enter an emergency contact details"),
     age: z.coerce.number().min(1, "Please enter your age").min(18, "You must be at least 18 years old").max(100, "Age must be below 100"),
+    weight: z.coerce.number().optional(), 
+    height: z.coerce.number().optional(), 
     fitnessGoal: z.enum(FITNESS_GOAL_OPTIONS).nullable() 
     .refine((val) => val !== null, {
       message: "Please select a fitness goal",
@@ -16,5 +18,10 @@ export const StepSchemas = z.object({
     .refine((val) => val !== null, {
       message: "Please select your experience level",
     }),
+    dietaryPreferences: z.string().optional(),
+    workoutSchedule: z.string().optional(),
+    injuries: z.string().optional(),
+    creativeField: z.string().optional(),
+    location: z.string().optional(),
     referral: z.string().min(1, "This can't be empty")   
 })

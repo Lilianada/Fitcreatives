@@ -64,21 +64,17 @@ export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
       email: "",
       contactNumber: "",
       age: "",
+      weight: "",
+      height:"",
       location: "",
       fitnessGoal: null,
       experienceLevel: null,
       creativeField: "",
-      //fitnessPreferences: [],
       workoutSchedule: "",
       dietaryPreferences: "",
       injuries: "",
-      //fitnessExperience: "",
       referral: "",
-      //socialMediaLinks: "",
       emergencyContact: "",
-      // preferredClub: "",
-      // consentTerms: false,
-      // consentPrivacy: false,
     },
     mode: "onBlur"
   });
@@ -107,36 +103,6 @@ export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
     }
   };
 
-  // const onSubmit = async (data) => {
-  //   try {
-  //     const formData = new FormData();
-
-  //     for (const [key, value] of Object.entries(data)) {
-  //       formData.append(key, value);
-  //     }
-
-  //     const response = await fetch(
-  //       "https://script.google.com/macros/s/AKfycbxJI1jMyZQX19pgPZ6a7UuQ_7mLzOpevkqJ28n2F-K8e3JYncMN7ikqHZB2J6255gTw-g/exec",
-  //       {
-  //         method: "POST",
-  //         body: formData,
-  //       }
-  //     );
-
-  //     const result = await response.json();
-  //     console.log("Response from Google Sheets:", result);
-
-  //     if (result.status === "error") {
-  //       alert(`Error: ${result.message}`);
-  //     } else {
-  //       alert("Form submitted successfully!");
-  //       reset();
-  //     }
-  //   } catch (error) {
-  //     console.error("Error submitting to Google Sheets:", error);
-  //   }
-  // };
-  
   const onSubmit = async (data) => {
     console.log("Form Submitted:", data);
 
@@ -147,21 +113,19 @@ export default function CommunityForm({ triggerText, isOpen, setIsOpen }) {
           headers: {
               'Content-Type': 'application/json',
           },
-          body: JSON.stringify(data), 
+          body: JSON.stringify(data),
           mode: "no-cors"
       });
 
-      if (response.ok) {
-          setIsOpen(false); 
-          reset(); 
-      } else {
-          console.error('Error submitting form data:', response.statusText);
-      }
-  } catch (error) {
-      console.error('Error during fetch request:', error);
-  }
+    setIsOpen(false); 
+      reset(); 
+      console.log("Form successfully submitted to Google Sheets.");
+    } catch (error) {
+        console.error('Error during fetch request:', error);
+    }
   };
 
+  
   return (
     <Dialog className="m-4" open={isOpen} onClose={() => setIsOpen(false)}>
       <DialogTrigger asChild>
