@@ -1,7 +1,7 @@
 {
     "lagos": [
     {
-      "id": 1,
+      "id": "gym1",
       "city": "lagos",
       "name": "iFitness -  Agungi",
       "openHour": "06:00",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "gym2",
       "city": "lagos",
       "name": "iFitness - Lekki",
       "openHour": "06:00",
@@ -47,7 +47,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "gym3",
       "city": "lagos",
       "name": "iFitness - Ikeja",
       "openHour": "06:00",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "id": 4,
+      "id": "gym4",
       "city": "lagos",
       "name": "SkyFit Gym",
       "openHour": "06:00",
@@ -94,7 +94,7 @@
       }
     },
     {
-      "id": 5,
+      "id": "gym5",
       "city": "lagos",
       "name": "LoStudio Pilates",
       "location": "4a Ologun Agbaje street , Victoria Island, Lagos, Nigeria",
@@ -115,7 +115,7 @@
       }
     },
     {
-      "id": 6,
+      "id": "gym6",
       "city": "lagos",
       "name": "BodyLine Gym",
       "locations": [
@@ -137,7 +137,7 @@
     },
 
     {
-      "id": 7,
+      "id": "gym7",
       "city": "lagos",
       "name": "CrossFit Jagun",
       "location": "14 Anifowoshe St, Victoria Island, Lagos.",
@@ -159,7 +159,7 @@
       }
     },
     {
-      "id": 8,
+      "id": "gym8",
       "city": "lagos",
       "name": "Fitness Factory",
       "location": "Block 114, Plot 5 Akiogun Road, Oniru, Lagos.",
@@ -181,7 +181,7 @@
       }
     },
     {
-      "id": 9,
+      "id": "gym9",
       "city": "lagos",
       "name": "EliteBox Fitness",
       "openHour": "06:25",
@@ -199,7 +199,7 @@
     },
 
     {
-      "id": 10,
+      "id": "gym10",
       "city": "lagos",
       "name": "Lotus Fitness",
       "location": "4a, Samuel Manuwa Street, Victoria Island",
@@ -224,8 +224,8 @@
   ],
     "anambra": [
         {
-            "id": 11,
-            "city": "lagos",
+            "id": "gym11",
+            "city": "anambra",
             "name": "iFitness - Victoria Island",
             "openHour": "05:00",
             "closeHour": "22:00",
@@ -249,8 +249,8 @@
             }
         },
         {
-            "id": 12,
-            "city": "lagos",
+            "id": "gym12",
+            "city": "anambra",
             "name": "iFitness - Lekki",
             "openHour": "05:00",
             "closeHour": "22:00",
@@ -274,8 +274,8 @@
             }
         },
         {
-            "id": 13,
-            "city": "lagos",
+            "id": "gym13",
+            "city": "anambra",
             "name": "iFitness - Ikeja",
             "openHour": "05:30",
             "closeHour": "22:00",
@@ -299,9 +299,9 @@
             }
         },
         {
-            "id": 14,
-            "city": "lagos",
-            "name": "Pilates Studio Lagos",
+            "id": "gym14",
+            "city": "anambra",
+            "name": "Pilates Studio anambra",
             "openHour": "06:00",
             "closeHour": "21:00",
             "fees": {
@@ -316,15 +316,15 @@
                 "gymImage": "https://placeholder.com/Pilates-Studio-image.jpg",
                 "logo": "https://placeholder.com/Pilates-Logo.png"
             },
-            "website": "https://pilateslagos.com",
+            "website": "https://pilatesanambra.com",
             "socialMedia": {
-                "instagram": "https://instagram.com/pilateslagos",
-                "facebook": "https://facebook.com/pilateslagos"
+                "instagram": "https://instagram.com/pilatesanambra",
+                "facebook": "https://facebook.com/pilatesanambra"
             }
         },
         {
-            "id": 15,
-            "city": "lagos",
+            "id": "gym15",
+            "city": "anambra",
             "name": "BodyLine Gym",
             "openHour": "06:00",
             "closeHour": "22:00",
@@ -348,8 +348,8 @@
             }
         },
         {
-            "id": 16,
-            "city": "lagos",
+            "id": "gym16",
+            "city": "anambra",
             "name": "Fitness Central",
             "openHour": "05:30",
             "closeHour": "21:00",
@@ -374,8 +374,8 @@
     ],
     "ibadan": [
         {
-            "id": 17,
-            "city": "lagos",
+            "id": "gym17",
+            "city": "ibadan",
             "name": "iFitness - Victoria Island",
             "openHour": "05:00",
             "closeHour": "22:00",
@@ -399,8 +399,8 @@
             }
         },
         {
-            "id": 18,
-            "city": "lagos",
+            "id": "gym18",
+            "city": "ibadan",
             "name": "iFitness - Lekki",
             "openHour": "05:00",
             "closeHour": "22:00",
@@ -424,8 +424,8 @@
             }
         },
         {
-            "id": 19,
-            "city": "lagos",
+            "id": "gym19",
+            "city": "ibadan",
             "name": "iFitness - Ikeja",
             "openHour": "05:30",
             "closeHour": "22:00",
@@ -449,9 +449,9 @@
             }
         },
         {
-            "id": 20,
-            "city": "lagos",
-            "name": "Pilates Studio Lagos",
+            "id": "gym20",
+            "city": "ibadan",
+            "name": "Pilates Studio ibadan",
             "openHour": "06:00",
             "closeHour": "21:00",
             "fees": {
@@ -466,15 +466,15 @@
                 "gymImage": "https://placeholder.com/Pilates-Studio-image.jpg",
                 "logo": "https://placeholder.com/Pilates-Logo.png"
             },
-            "website": "https://pilateslagos.com",
+            "website": "https://pilatesibadan.com",
             "socialMedia": {
-                "instagram": "https://instagram.com/pilateslagos",
-                "facebook": "https://facebook.com/pilateslagos"
+                "instagram": "https://instagram.com/pilatesibadan",
+                "facebook": "https://facebook.com/pilatesibadan"
             }
         },
         {
-            "id": 21,
-            "city": "lagos",
+            "id": "gym21",
+            "city": "ibadan",
             "name": "BodyLine Gym",
             "openHour": "06:00",
             "closeHour": "22:00",
@@ -498,8 +498,8 @@
             }
         },
         {
-            "id": 22,
-            "city": "lagos",
+            "id": "gym22",
+            "city": "ibadan",
             "name": "Fitness Central",
             "openHour": "05:30",
             "closeHour": "21:00",
@@ -524,8 +524,8 @@
     ],
     "port-hacourt": [
         {
-            "id": 23,
-            "city": "lagos",
+            "id": "gym23",
+            "city": "port-hacourt",
             "name": "iFitness - Victoria Island",
             "openHour": "05:00",
             "closeHour": "22:00",
@@ -549,8 +549,8 @@
             }
         },
         {
-            "id": 24,
-            "city": "lagos",
+            "id": "gym24",
+            "city": "port-hacourt",
             "name": "iFitness - Lekki",
             "openHour": "05:00",
             "closeHour": "22:00",
@@ -574,8 +574,8 @@
             }
         },
         {
-            "id": 25,
-            "city": "lagos",
+            "id": "gym25",
+            "city": "port-hacourt",
             "name": "iFitness - Ikeja",
             "openHour": "05:30",
             "closeHour": "22:00",
@@ -599,9 +599,9 @@
             }
         },
         {
-            "id": 26,
-            "city": "lagos",
-            "name": "Pilates Studio Lagos",
+            "id": "gym26",
+            "city": "port-hacourt",
+            "name": "Pilates Studio port-hacourt",
             "openHour": "06:00",
             "closeHour": "21:00",
             "fees": {
@@ -616,15 +616,15 @@
                 "gymImage": "https://placeholder.com/Pilates-Studio-image.jpg",
                 "logo": "https://placeholder.com/Pilates-Logo.png"
             },
-            "website": "https://pilateslagos.com",
+            "website": "https://pilatesport-hacourt.com",
             "socialMedia": {
-                "instagram": "https://instagram.com/pilateslagos",
-                "facebook": "https://facebook.com/pilateslagos"
+                "instagram": "https://instagram.com/pilatesport-hacourt",
+                "facebook": "https://facebook.com/pilatesport-hacourt"
             }
         },
         {
-            "id": 27,
-            "city": "lagos",
+            "id": "gym27",
+            "city": "port-hacourt",
             "name": "BodyLine Gym",
             "openHour": "06:00",
             "closeHour": "22:00",
@@ -648,8 +648,8 @@
             }
         },
         {
-            "id": 28,
-            "city": "lagos",
+            "id": "gym28",
+            "city": "port-hacourt",
             "name": "Fitness Central",
             "openHour": "05:30",
             "closeHour": "21:00",
@@ -674,8 +674,8 @@
     ],
     "enugu": [
         {
-            "id": 29,
-            "city": "lagos",
+            "id": "gym29",
+            "city": "enugu",
             "name": "iFitness - Victoria Island",
             "openHour": "05:00",
             "closeHour": "22:00",
@@ -699,8 +699,8 @@
             }
         },
         {
-            "id": 30,
-            "city": "lagos",
+            "id": "gym30",
+            "city": "enugu",
             "name": "iFitness - Lekki",
             "openHour": "05:00",
             "closeHour": "22:00",
@@ -724,8 +724,8 @@
             }
         },
         {
-            "id": 31,
-            "city": "lagos",
+            "id": "gym31",
+            "city": "enugu",
             "name": "iFitness - Ikeja",
             "openHour": "05:30",
             "closeHour": "22:00",
@@ -749,9 +749,9 @@
             }
         },
         {
-            "id": 32,
-            "city": "lagos",
-            "name": "Pilates Studio Lagos",
+            "id": "gym32",
+            "city": "enugu",
+            "name": "Pilates Studio enugu",
             "openHour": "06:00",
             "closeHour": "21:00",
             "fees": {
@@ -766,15 +766,15 @@
                 "gymImage": "https://placeholder.com/Pilates-Studio-image.jpg",
                 "logo": "https://placeholder.com/Pilates-Logo.png"
             },
-            "website": "https://pilateslagos.com",
+            "website": "https://pilatesenugu.com",
             "socialMedia": {
-                "instagram": "https://instagram.com/pilateslagos",
-                "facebook": "https://facebook.com/pilateslagos"
+                "instagram": "https://instagram.com/pilatesenugu",
+                "facebook": "https://facebook.com/pilatesenugu"
             }
         },
         {
-            "id": 33,
-            "city": "lagos",
+            "id": "gym33",
+            "city": "enugu",
             "name": "BodyLine Gym",
             "openHour": "06:00",
             "closeHour": "22:00",
@@ -798,8 +798,8 @@
             }
         },
         {
-            "id": 34,
-            "city": "lagos",
+            "id": "gym34",
+            "city": "enugu",
             "name": "Fitness Central",
             "openHour": "05:30",
             "closeHour": "21:00",
@@ -824,7 +824,7 @@
     ],
     "abuja": [
         {
-            "id": 35,
+            "id": "gym35",
             "city": "Abuja",
             "name": "Bodyline Fitness and Gym - Gwarinpa",
             "location": "First Avenue, Gwarinpa, Abuja",
@@ -849,7 +849,7 @@
             }
         },
         {
-            "id": 36,
+            "id": "gym36",
             "city": "Abuja",
             "name": "Bodyline Fitness and Gym - Wuse 2",
             "location": "Wuse 2, Abuja",
@@ -874,7 +874,7 @@
             }
         },
         {
-            "id": 37,
+            "id": "gym37",
             "city": "Abuja",
             "name": "iFitness - Gwarinpa",
             "location": "First Avenue, Gwarinpa, Abuja",
@@ -899,7 +899,7 @@
             }
         },
         {
-            "id": 38,
+            "id": "gym38",
             "city": "Abuja",
             "name": "Dauchi Gym",
             "location": "Gwarinpa, Abuja",
@@ -924,7 +924,7 @@
             }
         },
         {
-            "id": 39,
+            "id": "gym39",
             "city": "Abuja",
             "name": "EcoFitness Gym",
             "location": "Gwarinpa, Abuja",
@@ -949,7 +949,7 @@
             }
         },
         {
-            "id": 40,
+            "id": "gym40",
             "city": "Abuja",
             "name": "Transcorp Hilton Gym",
             "location": "Transcorp Hilton, Maitama, Abuja",
@@ -974,7 +974,7 @@
             }
         },
         {
-            "id": 41,
+            "id": "gym41",
             "city": "Abuja",
             "name": "BluCabana Gym",
             "location": "Mabushi, Abuja",

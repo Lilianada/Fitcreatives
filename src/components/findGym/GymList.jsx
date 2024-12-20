@@ -69,7 +69,7 @@ export default function GymList() {
         const response = await fetch("/data/gyms.json");
         const data = await response.json();
         setPlaces(data);
-        console.log(data)
+        //console.log(data)
       } catch (error) {
         console.error(error);
       } finally {

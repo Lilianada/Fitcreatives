@@ -1,46 +1,46 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation"; 
+import Link from "next/link";
 
 export default function GymDetails() {
   const { id } = useParams(); 
   const [gym, setGym] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchGymDetails = async () => {
       try {
-        setIsLoading(true);
+        setLoading(true);
+
         const response = await fetch("/data/gyms.json"); 
         const data = await response.json();
 
         let selectedGym = null;
         Object.keys(data).forEach((city) => {
           const gym = data[city].find((gym) => gym.id === id);
-          if (gym) {
-            selectedGym = gym;
-          }
+          if (gym) selectedGym = gym;
         });
 
         if (!selectedGym) {
-          setError(<p className="my-6 text-center font-semibold">Gym not found.</p>);
+          setError("Gym not found.");
         } else {
-          setGym(selectedGym); 
+          setGym(selectedGym);
         }
-      } catch (error) {
+      } catch (err) {
         setError("Failed to fetch gym details.");
       } finally {
-        setIsLoading(false);
+        setLoading(false);
       }
     };
 
     fetchGymDetails();
-  }, [id]); 
+  }, [id]);
 
-  if (isLoading) {
-    return <p className="text-center my-6">Loading gym details...</p>;
+  if (loading) {
+    return <p>Loading gym details...</p>;
   }
 
   if (error) {
@@ -56,7 +56,11 @@ export default function GymDetails() {
         alt={gym.name}
         className="my-4 w-full h-64 object-cover rounded"
       />
-      <p>{gym.openHour}</p>
+      <div className="flex gap-3">
+      <p>{gym.openHour}</p> -
+      <p>{gym.closeHour}</p>
+      </div>
+      <p className="py-4">Get more info aout this gym by visiting their official <Link href={gym.website} className="text-[#FF9933]"> Website</Link></p>
     </div>
   );
 }
